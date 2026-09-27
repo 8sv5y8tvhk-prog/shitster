@@ -204,7 +204,6 @@ function renderHome(transition = 'fade') {
     <button class="drink-card" data-a="drink">
       <span class="drink-icon">${icon('glass')}</span>
       <div class="body"><div class="dt">Trinkspiel</div><div class="dd">Schlücke statt Tokens · Duelle</div></div>
-      <span class="age">18+</span>
       <span class="chev">${icon('chev')}</span>
     </button>
     ${canResume ? `
@@ -287,7 +286,7 @@ function renderRules() {
       <p><b>HITSTER!</b> (1 Token): Glaubst du, die Person am Zug liegt falsch? Setz einen Token auf eine andere Lücke. Liegst du richtig, klaust du die Karte für deine eigene Zeitleiste.</p>
       <p><b>Karte kaufen</b> (3 Tokens): Jederzeit über die Spielerübersicht – die Karte wandert direkt richtig einsortiert in deine Zeitleiste.</p>
     </div></div></div>
-    <div class="section"><div class="section-header">Trinkspiel (ab 18)</div><div class="list"><div class="prose" style="padding-top:12px">
+    <div class="section"><div class="section-header">Trinkspiel</div><div class="list"><div class="prose" style="padding-top:12px">
       <p>Gleiche Zeitleiste, aber ohne Tokens. Nach jedem Aufdecken sagt die App an, wer trinkt und wer verteilt (Stufe „Normal“):</p>
       <p><b>Falsch eingeordnet:</b> 2 trinken · <b>Richtig:</b> 1 verteilen<br><b>Titel &amp; Interpret gewusst:</b> +2 verteilen<br><b>Genaues Jahr:</b> alle anderen trinken 1<br><b>Alles perfekt:</b> Ex-Karte – jemand leert sein Glas oder du verteilst 5</p>
       <p><b>Konter:</b> Wählt eine andere Lücke. Richtig → du klaust die Karte und die Person am Zug trinkt 1 extra. Falsch → du trinkst 2. Konter lassen sich abschalten oder begrenzen.</p>
@@ -302,18 +301,7 @@ function renderRules() {
 /* ───────────────────────── Setup ───────────────────────── */
 const DRINK_DEFAULTS = { intensity: 'normal', counter: 'unlimited', counterLimit: 3, duel: true };
 
-async function openDrinkSetup() {
-  if (!prefs.drinkAck) {
-    const ok = await alertBox({
-      icon: 'glass', tone: 'gold',
-      title: 'Trinkspiel ab 18',
-      message: 'Dieser Modus ist für Erwachsene. Trinkt verantwortungsvoll, kennt eure Grenzen und niemand muss mittrinken – Wasser, Limo oder Alkoholfreies zählen genauso.',
-      actions: [{ label: 'Wir sind 18+ – los geht’s', value: true, style: 'primary' }, { label: 'Abbrechen', value: false, style: 'cancel' }],
-    });
-    if (!ok) return;
-    prefs.drinkAck = true;
-    store.savePrefs(prefs);
-  }
+function openDrinkSetup() {
   renderSetup('drink');
 }
 
