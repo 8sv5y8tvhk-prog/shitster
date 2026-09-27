@@ -5,6 +5,12 @@ export const START_TOKENS = 2;
 export const MAX_TOKENS = 5;
 export const BUY_COST = 3;
 
+// Trinkspiel: Basis-Schlücke (Stufe „Normal“), werden mit der Intensität skaliert
+export const SIPS = { wrong: 2, right: 1, title: 2, year: 1, stolen: 1, counterWrong: 2, skip: 1, duel: 3, duelTie: 1 };
+export const INTENSITY = { chill: 'Chillig', normal: 'Normal', hard: 'Eskalation' };
+const DUEL_CHANCE = 0.22;
+const DUEL_MIN_GAP = 3;
+
 const PLAYER_COLORS = ['#FF375F', '#0A84FF', '#30D158', '#FF9F0A', '#BF5AF2', '#64D2FF', '#FFD60A', '#FF6482', '#5E5CE6', '#AC8E68'];
 
 export function shuffle(arr) {
@@ -16,18 +22,21 @@ export function shuffle(arr) {
   return a;
 }
 
-export function createGame({ names, songs, target, categories }) {
+export function createGame({ names, songs, target, categories, mode = 'classic', drink = null }) {
   const seen = new Set();
   const unique = songs.filter(s => !seen.has(s.id) && seen.add(s.id));
+  const isDrink = mode === 'drink';
   const state = {
     version: 1,
     createdAt: Date.now(),
-    settings: { target, categories },
+    settings: { target, categories, mode, drink: isDrink ? drink : null },
     players: names.map((name, i) => ({
       id: 'p' + i,
       name,
       color: PLAYER_COLORS[i % PLAYER_COLORS.length],
-      tokens: START_TOKENS,
+      tokens: isDrink ? 0 : START_TOKENS,
+      // null = unbegrenzt
+      counters: isDrink && drink.counter === 'limited' ? drink.counterLimit : null,
       timeline: [],
     })),
     deck: shuffle(unique),
@@ -35,12 +44,24 @@ export function createGame({ names, songs, target, categories }) {
     current: 0,
     phase: 'listen',
     turn: null,
+    duel: null,
+    turnsSinceDuel: 0,
     lastResult: null,
     winner: null,
   };
   for (const p of state.players) p.timeline.push(draw(state));
   startTurn(state);
   return state;
+}
+
+export const isDrink = s => s.settings.mode === 'drink';
+
+// Schluckzahl nach Intensität
+export function sips(s, base) {
+  const i = s.settings.drink?.intensity || 'normal';
+  if (i === 'chill') return Math.max(1, Math.round(base / 2));
+  if (i === 'hard') return base * 2;
+  return base;
 }
 
 function draw(state) {
@@ -53,12 +74,14 @@ function draw(state) {
 
 function startTurn(state) {
   state.phase = 'listen';
-  state.turn = { card: draw(state), gap: null, challenges: [], bonus: false };
+  state.turn = { card: draw(state), gap: null, challenges: [], bonus: false, title: false, year: false };
   state.lastResult = null;
+  state.duel = null;
 }
 
 export const activePlayer = s => s.players[s.current];
 export const playerById = (s, id) => s.players.find(p => p.id === id);
+export const currentCard = s => (s.phase === 'duel' ? s.duel?.card : s.turn?.card);
 
 export function fits(timeline, gap, year) {
   const left = gap > 0 ? timeline[gap - 1].year : -Infinity;
@@ -79,19 +102,23 @@ export function selectGap(s, gap) {
 }
 
 export function canSkip(s) {
-  return s.phase === 'listen' && activePlayer(s).tokens >= 1;
+  return s.phase === 'listen' && (isDrink(s) || activePlayer(s).tokens >= 1);
 }
 
 export function skip(s) {
   if (!canSkip(s)) return false;
-  activePlayer(s).tokens -= 1;
+  if (!isDrink(s)) activePlayer(s).tokens -= 1;
   s.discard.push(s.turn.card);
-  s.turn = { card: draw(s), gap: null, challenges: [], bonus: false };
+  s.turn = { card: draw(s), gap: null, challenges: [], bonus: false, title: false, year: false };
   return true;
 }
 
 // Song nicht abspielbar → ohne Kosten austauschen
 export function replaceUnplayable(s) {
+  if (s.phase === 'duel') {
+    s.duel.card = draw(s);
+    return;
+  }
   s.turn.card = draw(s);
   s.turn.gap = null;
 }
@@ -105,22 +132,40 @@ export function takenGaps(s) {
   return new Set([s.turn.gap, ...s.turn.challenges.map(c => c.gap)]);
 }
 
+// Darf diese Person grundsätzlich kontern (Tokens bzw. Konter übrig)?
+export function canChallenge(s, p) {
+  if (isDrink(s)) {
+    if (s.settings.drink.counter === 'off') return false;
+    return p.counters == null || p.counters > 0;
+  }
+  return p.tokens >= 1;
+}
+
 export function challengers(s) {
   const done = new Set(s.turn.challenges.map(c => c.playerId));
-  return s.players.filter((p, i) => i !== s.current && p.tokens >= 1 && !done.has(p.id));
+  return s.players.filter((p, i) => i !== s.current && canChallenge(s, p) && !done.has(p.id));
 }
 
 export function addChallenge(s, playerId, gap) {
   const p = playerById(s, playerId);
-  if (s.phase !== 'challenge' || !p || p.tokens < 1 || takenGaps(s).has(gap)) return;
-  p.tokens -= 1;
+  if (s.phase !== 'challenge' || !p || !canChallenge(s, p) || takenGaps(s).has(gap)) return;
+  if (isDrink(s)) {
+    if (p.counters != null) p.counters -= 1;
+  } else {
+    p.tokens -= 1;
+  }
   s.turn.challenges.push({ playerId, gap });
 }
 
 export function removeChallenge(s, playerId) {
   const idx = s.turn.challenges.findIndex(c => c.playerId === playerId);
   if (idx < 0) return;
-  playerById(s, playerId).tokens += 1;
+  const p = playerById(s, playerId);
+  if (isDrink(s)) {
+    if (p.counters != null) p.counters += 1;
+  } else {
+    p.tokens += 1;
+  }
   s.turn.challenges.splice(idx, 1);
 }
 
@@ -129,6 +174,8 @@ export function reveal(s) {
   const me = activePlayer(s);
   const card = s.turn.card;
   const correct = fits(me.timeline, s.turn.gap, card.year);
+  // Konter vor dem Einsortieren auswerten (Lücken-Indizes beziehen sich auf die alte Zeitleiste)
+  const challengeResults = s.turn.challenges.map(c => ({ playerId: c.playerId, correct: fits(me.timeline, c.gap, card.year) }));
   let winnerId = null;
   if (correct) {
     me.timeline.splice(s.turn.gap, 0, card);
@@ -142,7 +189,7 @@ export function reveal(s) {
       s.discard.push(card);
     }
   }
-  s.lastResult = { correct, winnerId, gap: s.turn.gap };
+  s.lastResult = { correct, winnerId, gap: s.turn.gap, challenges: challengeResults };
   s.phase = 'reveal';
   checkWinner(s);
 }
@@ -161,9 +208,34 @@ export function toggleBonus(s) {
   }
 }
 
+// Trinkspiel: „Titel & Interpret“ bzw. „Genaues Jahr“ umschalten
+export function toggleFlag(s, flag) {
+  if (s.phase !== 'reveal' || !isDrink(s)) return;
+  s.turn[flag] = !s.turn[flag];
+}
+
+// Trinkbilanz des aktuellen Zugs – rein angesagt, nichts wird gespeichert
+export function drinkTally(s) {
+  const me = activePlayer(s);
+  const r = s.lastResult;
+  const rows = new Map(s.players.map(p => [p.id, { player: p, drink: 0, give: 0 }]));
+  const add = (id, key, base) => (rows.get(id)[key] += sips(s, base));
+  if (r.correct) add(me.id, 'give', SIPS.right);
+  else add(me.id, 'drink', SIPS.wrong);
+  if (r.winnerId && r.winnerId !== me.id) add(me.id, 'drink', SIPS.stolen);
+  if (s.turn.title) add(me.id, 'give', SIPS.title);
+  if (s.turn.year) for (const p of s.players) if (p.id !== me.id) add(p.id, 'drink', SIPS.year);
+  for (const c of r.challenges || []) if (!c.correct) add(c.playerId, 'drink', SIPS.counterWrong);
+  const exCard = r.correct && s.turn.title && s.turn.year && s.settings.drink.intensity !== 'chill';
+  return {
+    rows: [...rows.values()].filter(x => x.drink || x.give).sort((a, b) => b.drink - a.drink || b.give - a.give),
+    exCard,
+  };
+}
+
 export function canBuy(s, playerId) {
   const p = playerById(s, playerId);
-  return p && p.tokens >= BUY_COST && s.phase !== 'over';
+  return !isDrink(s) && p && p.tokens >= BUY_COST && s.phase !== 'over';
 }
 
 export function buyCard(s, playerId) {
@@ -182,11 +254,40 @@ function checkWinner(s) {
   if (w && !s.winner) s.winner = w.id;
 }
 
+function shouldDuel(s) {
+  return isDrink(s) && s.settings.drink.duel && s.players.length >= 2 && s.turnsSinceDuel >= DUEL_MIN_GAP && Math.random() < DUEL_CHANCE;
+}
+
 export function nextTurn(s) {
   if (s.winner) {
     s.phase = 'over';
     return;
   }
   s.current = (s.current + 1) % s.players.length;
+  if (shouldDuel(s)) {
+    const [a, b] = shuffle(s.players);
+    s.turnsSinceDuel = 0;
+    s.phase = 'duel';
+    s.turn = null;
+    s.lastResult = null;
+    s.duel = { a: a.id, b: b.id, card: draw(s), revealed: false, loser: null };
+    return;
+  }
+  s.turnsSinceDuel += 1;
+  startTurn(s);
+}
+
+export function revealDuel(s) {
+  if (s.phase === 'duel') s.duel.revealed = true;
+}
+
+// loser: Spieler-ID oder 'tie'
+export function resolveDuel(s, loser) {
+  if (s.phase === 'duel' && s.duel.revealed) s.duel.loser = loser;
+}
+
+export function finishDuel(s) {
+  if (s.phase !== 'duel') return;
+  s.discard.push(s.duel.card);
   startTurn(s);
 }

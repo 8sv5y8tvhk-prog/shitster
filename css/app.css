@@ -19,6 +19,7 @@
   --fill-2: rgba(120, 120, 128, 0.2);
   --bar: rgba(249, 249, 249, 0.78);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --seg-on: #ffffff;
 
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
   --font-rounded: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -49,6 +50,7 @@
     --fill-2: rgba(120, 120, 128, 0.32);
     --bar: rgba(22, 22, 24, 0.78);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --seg-on: #636366;
   }
 }
 
@@ -71,6 +73,7 @@ body {
 }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; letter-spacing: inherit; }
 input { font: inherit; letter-spacing: inherit; user-select: text; -webkit-user-select: text; }
+[hidden] { display: none !important; }
 svg.i { width: 1em; height: 1em; display: block; flex: none; }
 
 #app { position: fixed; inset: 0; overflow: hidden; }
@@ -326,6 +329,31 @@ button.row:active, .row.tappable:active { background: var(--cell-pressed); trans
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand-logo { width: 34px; height: 34px; border-radius: 9px; flex: none; box-shadow: 0 2px 6px rgba(255, 45, 85, 0.35); }
 
+/* Trinkspiel-Karte auf dem Startbildschirm */
+.drink-card {
+  display: flex; align-items: center; gap: 14px; width: calc(100% - 32px); margin: -12px 16px 28px; padding: 14px 16px;
+  border-radius: 20px; text-align: left; color: #fff; position: relative; overflow: hidden;
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(255, 214, 10, 0.55), transparent 60%),
+    linear-gradient(135deg, #ff9f0a, #d9480f 70%, #7a1f0a);
+  box-shadow: 0 14px 30px -12px rgba(255, 140, 0, 0.6);
+  transition: transform 0.2s var(--ease);
+}
+.drink-card:active { transform: scale(0.98); }
+.drink-card .drink-icon { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; font-size: 24px; background: rgba(255, 255, 255, 0.22); flex: none; }
+.drink-card .body { flex: 1; min-width: 0; }
+.drink-card .dt { font-size: 19px; font-weight: 800; letter-spacing: -0.2px; }
+.drink-card .dd { font-size: 14px; opacity: 0.88; letter-spacing: -0.15px; }
+.drink-card .age { font-family: var(--font-rounded); font-size: 12px; font-weight: 800; padding: 3px 7px; border-radius: 7px; background: rgba(0, 0, 0, 0.22); }
+.drink-card .chev { opacity: 0.7; font-size: 14px; }
+
+/* Segmented Control */
+.row.col { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 11px; padding-bottom: 12px; }
+.segmented { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; background: var(--fill); border-radius: 9px; padding: 2px; }
+.segmented button { height: 30px; border-radius: 7px; font-size: 14px; font-weight: 500; letter-spacing: -0.1px; transition: background 0.2s, box-shadow 0.2s; }
+.segmented button.on { background: var(--seg-on); box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 3px 1px rgba(0, 0, 0, 0.04); font-weight: 600; }
+.btn.amber { background: linear-gradient(135deg, #ff9f0a, #e8590c); }
+
 /* Song list in category */
 .year-pill {
   font-family: var(--font-rounded); font-weight: 700; font-size: 15px;
@@ -574,6 +602,72 @@ button.row:active, .row.tappable:active { background: var(--cell-pressed); trans
 .bonus-row .body { flex: 1; min-width: 0; }
 .bonus-row .ttl { font-size: 15px; font-weight: 600; }
 .bonus-row .sub { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+/* Trinkspiel im Spiel */
+.no-anim, .no-anim * { animation: none !important; }
+.mode-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; height: 26px; padding: 0 11px; border-radius: 13px; background: rgba(255, 159, 10, 0.18); color: #ffc15a; font-size: 13px; font-weight: 600; }
+.mode-pill .i { font-size: 14px; }
+.score-chip .t.k, .chip-left { display: inline-flex; align-items: center; gap: 1px; color: #ffd60a; font-family: var(--font-rounded); }
+.chip-left { font-size: 13px; opacity: 0.85; }
+.score-chip .t.k .i, .chip-left .i { font-size: 12px; }
+.konter-left { display: inline-flex; align-items: center; gap: 3px; font-size: 14px; font-weight: 600; color: var(--orange); }
+.pill-btn .i + .i, .pill-btn .i:last-child { font-size: 15px; }
+
+.flip.compact { width: min(46vw, 180px, 21vh); }
+.flip.compact .year { font-size: 42px; left: 12px; bottom: 10px; }
+
+.flags { display: flex; gap: 8px; justify-content: center; padding: 4px 16px 0; animation: rise 0.5s var(--ease) 1.1s both; }
+.flag {
+  display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 15px; font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s var(--ease), background 0.2s, box-shadow 0.2s;
+}
+.flag:active { transform: scale(0.95); }
+.flag .i { font-size: 16px; }
+.flag.on { background: rgba(48, 209, 88, 0.22); color: #4be27a; box-shadow: inset 0 0 0 1.5px rgba(48, 209, 88, 0.6); }
+.flags-hint { text-align: center; font-size: 12px; color: rgba(255, 255, 255, 0.5); margin: 6px 0 10px; animation: rise 0.5s var(--ease) 1.15s both; }
+
+.tally {
+  margin: 0 16px 6px; padding: 12px 14px 6px; border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08); box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px);
+  animation: rise 0.5s var(--ease) 1.2s both;
+}
+.tally.quick { animation: pop 0.5s var(--spring) both; }
+.tally-head { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #ffc15a; margin-bottom: 4px; }
+.tally-head .i { font-size: 15px; }
+.tally-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; }
+.tally-row + .tally-row { box-shadow: 0 -0.5px 0 rgba(255, 255, 255, 0.1); }
+.tally-row .avatar { width: 28px; height: 28px; font-size: 12px; }
+.tally-row .nm { flex: 1; font-weight: 600; font-size: 16px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sip { font-family: var(--font-rounded); font-weight: 700; font-size: 14px; height: 28px; padding: 0 11px; border-radius: 14px; display: inline-flex; align-items: center; flex: none; }
+.sip.drink { background: rgba(255, 159, 10, 0.2); color: #ffb340; }
+.sip.give { background: rgba(10, 132, 255, 0.2); color: #64b5ff; }
+.ex-card {
+  display: flex; gap: 10px; align-items: center; padding: 10px 12px; margin: 6px 0 4px; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 214, 10, 0.25), rgba(255, 55, 95, 0.25)); box-shadow: inset 0 0 0 1px rgba(255, 214, 10, 0.4);
+}
+.ex-card .i { font-size: 22px; color: #ffd60a; }
+.ex-card b { display: block; font-size: 15px; }
+.ex-card span { font-size: 13px; color: rgba(255, 255, 255, 0.75); }
+
+.duel-vs { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 22px; animation: pop 0.6s var(--spring) both; }
+.duelist { display: flex; flex-direction: column; align-items: center; gap: 6px; font-weight: 700; font-size: 16px; min-width: 90px; }
+.duelist .avatar { width: 54px; height: 54px; font-size: 22px; box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85), 0 0 24px var(--c); }
+.duel-vs .vs { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 22px; background: linear-gradient(145deg, #ffd60a, #ff9f0a); color: #3a1a00; box-shadow: 0 8px 20px -6px #ff9f0a; }
+.duel-ask { text-align: center; font-size: 15px; font-weight: 600; color: rgba(255, 255, 255, 0.75); margin: 4px 0 10px; }
+.duel-choice { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 16px 6px; }
+.duel-choice button {
+  display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1); box-shadow: inset 0 0 0 1.5px var(--c); font-weight: 700; font-size: 16px; color: #fff;
+  transition: transform 0.2s var(--ease);
+}
+.duel-choice button:active { transform: scale(0.96); }
+.duel-choice button .avatar { width: 28px; height: 28px; font-size: 12px; }
+.duel-choice .tie { grid-column: 1 / -1; height: 44px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2); font-weight: 600; color: rgba(255, 255, 255, 0.85); }
+
+.final-sip { display: inline-flex; align-items: center; gap: 8px; margin: -10px 0 22px; padding: 8px 14px; border-radius: 16px; background: rgba(255, 159, 10, 0.18); color: #ffc15a; font-weight: 600; font-size: 15px; animation: rise 0.6s var(--ease) 0.55s both; }
 
 /* ───────────────────────── Sheet ───────────────────────── */
 .sheet-backdrop {
