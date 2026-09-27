@@ -3,3 +3,4 @@ tools/*.json
 tools/*.log
 !tools/songs.txt
 .claude/
+CLAUDE.md
