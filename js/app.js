@@ -57,17 +57,26 @@ function toast(msg, ms = 2200) {
   setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 300); }, ms);
 }
 
-function alertBox({ title, message, actions, vertical }) {
+function alertBox({ title, message, actions, icon: ic, tone = 'accent' }) {
   return new Promise(resolve => {
     const bd = document.createElement('div');
     bd.className = 'alert-backdrop';
-    bd.innerHTML = `<div class="alert" role="alertdialog"><div class="content"><h4>${title}</h4>${message ? `<p>${message}</p>` : ''}</div>
-      <div class="actions ${vertical || actions.length > 2 ? 'vertical' : ''}">${actions.map((a, i) => `<button data-i="${i}" class="${a.style || ''}">${a.label}</button>`).join('')}</div></div>`;
+    bd.innerHTML = `
+      <div class="alert" role="alertdialog" aria-labelledby="alert-title">
+        ${ic ? `<div class="alert-icon ${tone}">${icon(ic)}</div>` : ''}
+        <h4 id="alert-title">${title}</h4>
+        ${message ? `<p>${message}</p>` : ''}
+        <div class="actions">${actions.map((a, i) => `<button data-i="${i}" class="${a.style || 'cancel'}">${a.label}</button>`).join('')}</div>
+      </div>`;
+    const close = value => {
+      bd.classList.add('closing');
+      setTimeout(() => bd.remove(), 200);
+      resolve(value);
+    };
     bd.addEventListener('click', e => {
       const b = e.target.closest('button[data-i]');
-      if (!b) return;
-      bd.remove();
-      resolve(actions[+b.dataset.i].value);
+      if (b) { haptic(6); close(actions[+b.dataset.i].value); }
+      else if (e.target === bd) close(actions.find(a => a.style === 'cancel' || !a.style)?.value ?? null);
     });
     document.body.appendChild(bd);
   });
@@ -588,7 +597,7 @@ function paintBottom() {
     b.innerHTML = `
       <label class="bonus-row">
         <div class="body"><div class="ttl">Titel &amp; Interpret gewusst?</div><div class="sub">${full ? 'Maximum von 5 Tokens erreicht' : `+1 Token für ${esc(me.name)}`}</div></div>
-        <span class="switch"><input type="checkbox" data-a="bonus" ${s.turn.bonus ? 'checked' : ''} ${full ? 'disabled' : ''}><span></span></span>
+        <span class="switch ${full ? 'maxed' : ''}"><input type="checkbox" data-a="bonus" ${s.turn.bonus ? 'checked' : ''}><span></span></span>
       </label>
       <button class="btn" data-a="next">${s.winner ? icon('trophy') + 'Zur Siegerehrung' : 'Nächster Zug' + icon('chev')}</button>`;
   }
@@ -709,6 +718,18 @@ async function onGameClick(e) {
     return;
   }
   if (a === 'bonus') {
+    const me = G.activePlayer(s);
+    if (!s.turn.bonus && me.tokens >= G.MAX_TOKENS) {
+      e.preventDefault();
+      haptic([30, 50, 30]);
+      alertBox({
+        icon: 'sparkle', tone: 'gold',
+        title: 'Token-Maximum erreicht',
+        message: `${esc(me.name)} hat schon 5 Tokens – mehr passen nicht in die Tasche. Setz sie ein: <b>Skip</b> oder <b>HITSTER!</b> für 1 Token, oder <b>3 Tokens</b> gegen eine Karte (über die Spielerübersicht).`,
+        actions: [{ label: 'Verstanden', value: true, style: 'primary' }],
+      });
+      return;
+    }
     G.toggleBonus(s);
     haptic(10);
     save();
@@ -736,16 +757,28 @@ async function onGameClick(e) {
   if (a === 'menu') {
     haptic(6);
     const v = await alertBox({
+      icon: 'pause',
       title: 'Spiel pausieren?',
-      message: 'Der Spielstand wird gespeichert – du kannst jederzeit weitermachen.',
+      message: 'Der Spielstand wird gespeichert – ihr könnt jederzeit genau hier weitermachen.',
       actions: [
-        { label: 'Pausieren', value: 'pause', style: 'bold' },
+        { label: 'Pausieren', value: 'pause', style: 'primary' },
         { label: 'Spiel beenden', value: 'end', style: 'destructive' },
-        { label: 'Abbrechen', value: null },
+        { label: 'Weiterspielen', value: null, style: 'cancel' },
       ],
     });
     if (v === 'pause') { unsubAudio?.(); renderHome('fade'); }
-    if (v === 'end') { unsubAudio?.(); store.clearGame(); game = null; renderHome('fade'); }
+    if (v === 'end') {
+      const sure = await alertBox({
+        icon: 'x', tone: 'red',
+        title: 'Spiel wirklich beenden?',
+        message: 'Der Spielstand wird gelöscht und kann nicht wiederhergestellt werden.',
+        actions: [
+          { label: 'Beenden', value: true, style: 'destructive' },
+          { label: 'Abbrechen', value: false, style: 'cancel' },
+        ],
+      });
+      if (sure) { unsubAudio?.(); store.clearGame(); game = null; renderHome('fade'); }
+    }
   }
 }
 
@@ -775,7 +808,12 @@ function openScores() {
     const b = e.target.closest('[data-buy]');
     if (!b) return;
     const p = G.playerById(s, b.dataset.buy);
-    const ok = await alertBox({ title: 'Karte kaufen?', message: `${esc(p.name)} tauscht 3 Tokens gegen eine Karte vom Stapel.`, actions: [{ label: 'Abbrechen', value: false }, { label: 'Kaufen', value: true, style: 'bold' }] });
+    const ok = await alertBox({
+      icon: 'sparkle', tone: 'gold',
+      title: 'Karte kaufen?',
+      message: `${esc(p.name)} tauscht 3 Tokens gegen eine Karte vom Stapel. Sie wird automatisch richtig einsortiert.`,
+      actions: [{ label: 'Kaufen · 3 Tokens', value: true, style: 'primary' }, { label: 'Abbrechen', value: false, style: 'cancel' }],
+    });
     if (!ok) return;
     const card = G.buyCard(s, p.id);
     if (!card) return;
