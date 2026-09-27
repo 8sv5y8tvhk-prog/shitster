@@ -189,8 +189,13 @@ const navbar = (title, { back, right = '' } = {}) => `
   </div>`;
 
 /* ───────────────────────── Home ───────────────────────── */
-function renderHome(transition = 'fade') {
+function resetTrack() {
   audio.clear();
+  Object.assign(ui, { preparedId: null, track: null, loading: false, wantPlay: false });
+}
+
+function renderHome(transition = 'fade') {
+  resetTrack();
   const canResume = game && game.phase !== 'over';
   const el = mount(`
     ${navbar('Shitster')}
@@ -748,7 +753,8 @@ async function ensureTrack() {
   const s = game;
   const card = s.phase === 'over' ? null : G.currentCard(s);
   if (!card) return;
-  if (ui.preparedId === card.id) return;
+  // Nur überspringen, wenn der Song wirklich noch im Player steckt (nach Pause ist er geleert)
+  if (ui.preparedId === card.id && (ui.loading || audio.hasSource())) return;
   ui.preparedId = card.id;
   ui.track = null;
   ui.loading = true;
@@ -765,7 +771,10 @@ async function ensureTrack() {
     if (t.cover) new Image().src = t.cover;
     const front = screen?.querySelector('.flip-front');
     if (front && t.cover) front.style.backgroundImage = `url('${t.cover}')`;
-    if (ui.wantPlay) { ui.wantPlay = false; audio.play(); }
+    if (ui.wantPlay) {
+      ui.wantPlay = false;
+      if (!(await audio.play())) toast('Song ist bereit – tippe auf Play');
+    }
     updatePlayerUI(audio.state());
   } catch (err) {
     if (ui.preparedId !== card.id) return;
@@ -792,9 +801,14 @@ async function onGameClick(e) {
 
   if (a === 'toggle') {
     haptic(8);
-    if (!ui.track) { ui.wantPlay = true; ui.preparedId = null; ensureTrack(); return; }
+    if (!ui.track || !audio.hasSource()) { ui.wantPlay = true; ui.preparedId = null; ensureTrack(); return; }
     if (audio.state().playing) audio.pause();
-    else if (!(await audio.play())) toast('Tippe nochmal auf Play');
+    else if (!(await audio.play())) {
+      // Wiedergabe gescheitert → Song frisch laden und direkt erneut versuchen
+      ui.wantPlay = true;
+      ui.preparedId = null;
+      ensureTrack();
+    }
     if (s.phase === 'challenge') paintStage();
     return;
   }
@@ -1015,7 +1029,7 @@ function openScores() {
 
 /* ───────────────────────── Sieger ───────────────────────── */
 function renderWinner(transition = 'fade') {
-  audio.clear();
+  resetTrack();
   unsubAudio?.();
   const s = game;
   const w = G.playerById(s, s.winner);

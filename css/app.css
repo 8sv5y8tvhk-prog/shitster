@@ -538,6 +538,12 @@ button.row:active, .row.tappable:active { background: var(--cell-pressed); trans
 .gap.edge-hint .slot::after { content: attr(data-hint); }
 
 .game-bottom { padding: 8px 16px calc(12px + var(--safe-bottom)); }
+/* Aktionsknopf bleibt immer sichtbar, Inhalt scrollt darunter durch */
+.game #g-bottom {
+  position: sticky; bottom: 0; z-index: 5; margin-top: auto;
+  padding-top: 22px;
+  background: linear-gradient(to top, rgba(7, 7, 11, 0.94) 55%, rgba(7, 7, 11, 0));
+}
 .hint { text-align: center; font-size: 14px; color: rgba(255,255,255,0.6); margin: 0 20px 10px; min-height: 18px; letter-spacing: -0.15px; }
 
 /* Challenge */

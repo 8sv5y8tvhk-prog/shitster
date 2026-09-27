@@ -25,6 +25,8 @@ export function onChange(fn) {
   return () => listeners.delete(fn);
 }
 
+export const hasSource = () => !!el.getAttribute('src');
+
 export function load(url) {
   if (el.src === url) return;
   stop();
