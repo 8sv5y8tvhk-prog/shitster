@@ -1026,7 +1026,7 @@ function renderWinner(transition = 'fade') {
       <div class="trophy">${icon('trophy')}</div>
       <h1>${esc(w.name)} gewinnt!</h1>
       <p>mit ${w.timeline.length} Karten in der Zeitleiste</p>
-      ${G.isDrink(s) ? `<div class="final-sip">${icon('glass')}Abschlussrunde: Alle außer ${esc(w.name)} trinken ${G.sips(s, 2)}</div>` : ''}
+      ${G.isDrink(s) ? `<div class="final-sip">${icon('glass')}Abschlussrunde: Alle anderen trinken ${G.sips(s, 2)}</div>` : ''}
     </div>
     <div class="ranking">${ranking.map((p, i) => `
       <div class="r"><span class="pos">${i + 1}</span>${avatar(p)}<span class="nm">${esc(p.name)}</span><span class="sc">${p.timeline.length}</span></div>`).join('')}
