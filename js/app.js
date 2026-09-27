@@ -292,7 +292,6 @@ function renderRules() {
       <p><b>Konter:</b> Wählt eine andere Lücke. Richtig → du klaust die Karte und die Person am Zug trinkt 1 extra. Falsch → du trinkst 2. Konter lassen sich abschalten oder begrenzen.</p>
       <p><b>Duell:</b> Ab und zu treten zwei zufällig gewählte Personen gegeneinander an: Beide sagen ein Jahr, wer weiter weg liegt, trinkt 3.</p>
       <p><b>Skip:</b> kostet 1 Schluck. <b>Chillig</b> halbiert alle Schlücke, <b>Eskalation</b> verdoppelt sie.</p>
-      <p>Trinkt verantwortungsvoll – Wasser, Limo oder Alkoholfreies zählen genauso.</p>
     </div></div></div>
   `);
   el.addEventListener('click', e => { if (e.target.closest('[data-a="back"]')) renderHome('pop'); });
