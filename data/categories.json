@@ -26,5 +26,33 @@
   "count": 135,
   "from": 1996,
   "to": 2025
+ },
+ {
+  "id": "dekaden",
+  "name": "80er, 90er & 2000er",
+  "description": "Die größten Hits aus drei Jahrzehnten – von Michael Jackson über Eurodance bis Eminem.",
+  "file": "dekaden.json",
+  "icon": "cassette",
+  "colors": [
+   "#40c8e0",
+   "#5e5ce6"
+  ],
+  "count": 137,
+  "from": 1980,
+  "to": 2009
+ },
+ {
+  "id": "rock",
+  "name": "Rock & Metal",
+  "description": "Von Led Zeppelin bis Sleep Token – Rock-Hymnen, Grunge, Nu-Metal und Metal zum Mitgrölen.",
+  "file": "rock.json",
+  "icon": "flame",
+  "colors": [
+   "#ff453a",
+   "#3a0a0a"
+  ],
+  "count": 140,
+  "from": 1964,
+  "to": 2023
  }
 ]

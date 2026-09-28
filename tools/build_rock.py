@@ -1,0 +1,88 @@
+"""Kategorie „Rock & Metal“ – bekannte Klassiker bis heute, auch härtere Sachen, wenige deutsche Bands."""
+from catbuild import build
+
+X = None  # bewusst nicht aufgenommen
+YEAR = {
+ # 60er/70er
+ "The Rolling Stones|(I Can't Get No) Satisfaction": 1965, 'The Rolling Stones|Paint It Black': 1966,
+ 'The Kinks|You Really Got Me': 1964, "The Who|Baba O'Riley": 1971, 'Jimi Hendrix|All Along the Watchtower': 1968,
+ 'Jimi Hendrix|Purple Haze': X, 'The Doors|Light My Fire': 1967, 'Steppenwolf|Born to Be Wild': 1968,
+ 'Deep Purple|Smoke on the Water': 1972, 'Led Zeppelin|Whole Lotta Love': 1969, 'Led Zeppelin|Stairway to Heaven': 1971,
+ 'Led Zeppelin|Immigrant Song': X, 'Black Sabbath|Paranoid': 1970, 'Black Sabbath|Iron Man': X,
+ 'Creedence Clearwater Revival|Fortunate Son': 1969, 'Lynyrd Skynyrd|Sweet Home Alabama': 1974, 'Lynyrd Skynyrd|Free Bird': X,
+ 'Queen|Bohemian Rhapsody': 1975, 'Queen|We Will Rock You': 1977, "Queen|Don't Stop Me Now": 1978,
+ 'AC/DC|Highway to Hell': 1979, 'AC/DC|Back in Black': 1980, 'AC/DC|Thunderstruck': 1990, 'AC/DC|T.N.T.': X,
+ "KISS|I Was Made for Lovin' You": 1979, 'KISS|Rock and Roll All Nite': X, 'Aerosmith|Dream On': 1973, 'Aerosmith|Walk This Way': X,
+ 'Eagles|Hotel California': 1976, 'Boston|More Than a Feeling': X, "Blue Öyster Cult|(Don't Fear) The Reaper": 1976,
+ 'Pink Floyd|Another Brick in the Wall, Pt. 2': 1979, 'The Clash|Should I Stay or Should I Go': 1982,
+ 'Ramones|Blitzkrieg Bop': 1976, 'Sex Pistols|Anarchy in the U.K.': X, 'Thin Lizzy|The Boys Are Back in Town': 1976,
+ "Alice Cooper|School's Out": 1972, 'Alice Cooper|Poison': X, "Meat Loaf|I'd Do Anything for Love (But I Won't Do That)": 1993,
+ 'Motörhead|Ace of Spades': 1980, "Status Quo|Rockin' All Over the World": X,
+ # 80er
+ 'Scorpions|Rock You Like a Hurricane': 1984, 'Scorpions|Wind of Change': 1990, 'Judas Priest|Breaking the Law': 1980,
+ 'Iron Maiden|The Number of the Beast': 1982, 'Iron Maiden|Run to the Hills': X, 'Iron Maiden|Fear of the Dark': 1992,
+ 'Def Leppard|Pour Some Sugar on Me': 1987, "Bon Jovi|Livin' on a Prayer": 1986, 'Bon Jovi|You Give Love a Bad Name': X,
+ "Bon Jovi|It's My Life": 2000, 'Van Halen|Jump': 1983, "Guns N' Roses|Sweet Child O' Mine": 1987,
+ "Guns N' Roses|Welcome to the Jungle": X, "Guns N' Roses|Paradise City": 1987, "Guns N' Roses|November Rain": 1991,
+ "Twisted Sister|We're Not Gonna Take It": 1984, 'Mötley Crüe|Kickstart My Heart': X, 'Whitesnake|Here I Go Again': X,
+ 'Billy Idol|White Wedding': 1982, 'Billy Idol|Rebel Yell': X, 'Dire Straits|Money for Nothing': 1985,
+ 'Dire Straits|Sultans of Swing': X, 'ZZ Top|Sharp Dressed Man': X, 'Metallica|Master of Puppets': 1986,
+ 'Metallica|Enter Sandman': 1991, 'Metallica|Nothing Else Matters': 1991, 'Metallica|One': X, 'Slayer|Raining Blood': 1986,
+ 'Slayer|Angel of Death': X, 'Megadeth|Symphony of Destruction': 1992, 'Pantera|Walk': 1992, 'Pantera|Cowboys from Hell': X,
+ 'Sepultura|Roots Bloody Roots': 1996, 'Ozzy Osbourne|Crazy Train': 1980, 'Dio|Holy Diver': X,
+ # 90er
+ 'Nirvana|Smells Like Teen Spirit': 1991, 'Nirvana|Come as You Are': 1991, 'Nirvana|Lithium': X, 'Nirvana|Heart-Shaped Box': 1993,
+ 'Pearl Jam|Alive': 1991, 'Pearl Jam|Even Flow': X, 'Soundgarden|Black Hole Sun': 1994, 'Alice in Chains|Man in the Box': 1990,
+ 'Alice in Chains|Rooster': X, 'Red Hot Chili Peppers|Under the Bridge': 1991, 'Red Hot Chili Peppers|Californication': 1999,
+ "Red Hot Chili Peppers|Can't Stop": 2002, 'Red Hot Chili Peppers|Give It Away': X,
+ 'Rage Against the Machine|Killing in the Name': 1992, 'Rage Against the Machine|Bulls on Parade': X,
+ 'Foo Fighters|Everlong': 1997, 'Foo Fighters|The Pretender': 2007, 'Foo Fighters|Learn to Fly': X, 'Foo Fighters|Best of You': X,
+ 'R.E.M.|Losing My Religion': 1991, 'The Cranberries|Zombie': 1994, 'Blur|Song 2': 1997, 'Radiohead|Creep': 1992,
+ 'The Smashing Pumpkins|Bullet with Butterfly Wings': X, 'Green Day|Basket Case': 1994, 'Green Day|American Idiot': 2004,
+ 'Green Day|Boulevard of Broken Dreams': 2004, 'Green Day|Wake Me Up When September Ends': X, 'The Offspring|Self Esteem': 1994,
+ 'The Offspring|Pretty Fly (For a White Guy)': 1998, "The Offspring|The Kids Aren't Alright": X,
+ 'blink-182|All the Small Things': 1999, "blink-182|What's My Age Again?": X, 'blink-182|I Miss You': 2003,
+ "Weezer|Say It Ain't So": X, 'Bloodhound Gang|The Bad Touch': 1999, 'Deftones|Change (In the House of Flies)': 2000,
+ 'Marilyn Manson|The Beautiful People': 1996, 'Tool|Schism': X, 'Rammstein|Du hast': 1997, 'Rammstein|Engel': X,
+ 'Die Ärzte|Schrei nach Liebe': 1993, 'Die Toten Hosen|Hier kommt Alex': X,
+ # 2000er
+ 'Papa Roach|Last Resort': 2000, 'Limp Bizkit|Break Stuff': 1999, "Limp Bizkit|Rollin' (Air Raid Vehicle)": X,
+ 'System of a Down|Chop Suey!': 2001, 'System of a Down|Toxicity': 2001, 'System of a Down|B.Y.O.B.': 2005,
+ 'System of a Down|Aerials': X, 'Linkin Park|In the End': 2000, 'Linkin Park|Numb': 2003, 'Linkin Park|Crawling': X,
+ 'Linkin Park|Faint': X, "Linkin Park|What I've Done": 2007, 'Linkin Park|One Step Closer': X, 'Slipknot|Duality': 2004,
+ 'Slipknot|Psychosocial': 2008, 'Slipknot|Wait and Bleed': X, 'Slipknot|Before I Forget': X,
+ 'Disturbed|Down with the Sickness': 2000, 'Drowning Pool|Bodies': 2001, 'Evanescence|Bring Me to Life': 2003,
+ 'Queens of the Stone Age|No One Knows': 2002, 'The White Stripes|Seven Nation Army': 2003, 'The Strokes|Last Nite': X,
+ 'Franz Ferdinand|Take Me Out': 2004, 'The Killers|Somebody Told Me': X,
+ 'Arctic Monkeys|I Bet You Look Good on the Dancefloor': 2005, 'Kings of Leon|Sex on Fire': 2008,
+ 'Kings of Leon|Use Somebody': X, 'Muse|Supermassive Black Hole': 2006, 'Muse|Uprising': 2009, 'Muse|Hysteria': X,
+ 'The Hives|Hate to Say I Told You So': X, 'Jet|Are You Gonna Be My Girl': 2003, 'Audioslave|Like a Stone': 2002,
+ 'Nickelback|How You Remind Me': 2001, 'Nickelback|Rockstar': X, 'Three Days Grace|Animal I Have Become': 2006,
+ 'Three Days Grace|I Hate Everything About You': X, 'Avenged Sevenfold|Bat Country': 2005,
+ 'My Chemical Romance|Welcome to the Black Parade': 2006, 'My Chemical Romance|Helena': X,
+ "My Chemical Romance|I'm Not Okay (I Promise)": 2004, "Fall Out Boy|Sugar, We're Goin Down": 2005,
+ "Fall Out Boy|This Ain't a Scene, It's an Arms Race": X, 'Paramore|Misery Business': 2007, 'Thirty Seconds to Mars|The Kill': 2005,
+ 'Billy Talent|Red Flag': X, 'The Rasmus|In the Shadows': 2003, 'HIM|Wings of a Butterfly': X, 'Nightwish|Nemo': 2004,
+ 'Nightwish|Wish I Had an Angel': X, "Bullet for My Valentine|Tears Don't Fall": 2005,
+ 'The Darkness|I Believe in a Thing Called Love': 2003, 'Tenacious D|Tribute': X, 'Wolfmother|Joker and the Thief': 2005,
+ 'Sum 41|Fat Lip': 2001, 'Sum 41|In Too Deep': X, 'Rammstein|Sonne': 2001, 'Die Toten Hosen|Tage wie diese': 2012,
+ 'Amon Amarth|Twilight of the Thunder God': 2008, 'Lamb of God|Redneck': X,
+ # 2010er bis heute
+ 'Arctic Monkeys|Do I Wanna Know?': 2013, 'Arctic Monkeys|R U Mine?': X, 'The Black Keys|Lonely Boy': 2011,
+ 'Avenged Sevenfold|Hail to the King': X, 'Fall Out Boy|Centuries': 2014, 'Imagine Dragons|Radioactive': 2012,
+ 'Royal Blood|Figure It Out': X, 'Ghost|Square Hammer': 2016, 'Ghost|Mary on a Cross': 2019, 'Sabaton|Primo Victoria': 2005,
+ 'Powerwolf|Army of the Night': X, "Powerwolf|Demons Are a Girl's Best Friend": 2018, 'Bring Me the Horizon|Throne': 2015,
+ 'Bring Me the Horizon|Can You Feel My Heart': X, 'Bring Me the Horizon|Drown': X, 'Disturbed|The Sound of Silence': 2015,
+ "Måneskin|Beggin'": 2017, 'Måneskin|I Wanna Be Your Slave': 2021, 'Greta Van Fleet|Highway Tune': 2017, 'Rise Against|Savior': 2008,
+ 'Volbeat|Still Counting': 2008, 'Electric Callboy|Hypa Hypa': 2020, 'Falling in Reverse|Popular Monster': 2019,
+ 'Bad Omens|Just Pretend': 2022, 'Sleep Token|The Summoning': 2023, 'Rammstein|Deutschland': 2019,
+ 'Parkway Drive|Wild Eyes': X, 'Five Finger Death Punch|Wrong Side of Heaven': X,
+}
+ID_FIX = {
+ 'Ozzy Osbourne|Crazy Train': 1078203362, 'Audioslave|Like a Stone': 614322, 'Three Days Grace|Animal I Have Become': 13167070,
+ "Bullet for My Valentine|Tears Don't Fall": 7675142,
+}
+TITLE = {"Guns N' Roses|Sweet Child O' Mine": "Sweet Child O' Mine"}
+
+build('rock', 'Rock & Metal', 'Von Led Zeppelin bis Sleep Token – Rock-Hymnen, Grunge, Nu-Metal und Metal zum Mitgrölen.',
+      YEAR, ID_FIX, title=TITLE)

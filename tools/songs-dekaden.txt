@@ -1,0 +1,187 @@
+# 80er
+Michael Jackson|Billie Jean
+Michael Jackson|Beat It
+Michael Jackson|Thriller
+Michael Jackson|Smooth Criminal
+Madonna|Like a Virgin
+Madonna|Like a Prayer
+Madonna|La Isla Bonita
+Whitney Houston|I Wanna Dance with Somebody (Who Loves Me)
+Cyndi Lauper|Girls Just Want to Have Fun
+a-ha|Take On Me
+Toto|Africa
+Journey|Don't Stop Believin'
+Europe|The Final Countdown
+Survivor|Eye of the Tiger
+Wham!|Wake Me Up Before You Go-Go
+George Michael|Careless Whisper
+Duran Duran|Hungry Like the Wolf
+Tears for Fears|Everybody Wants to Rule the World
+Eurythmics|Sweet Dreams (Are Made of This)
+Soft Cell|Tainted Love
+The Human League|Don't You Want Me
+Depeche Mode|Just Can't Get Enough
+Kim Wilde|Kids in America
+Rick Astley|Never Gonna Give You Up
+Prince|Purple Rain
+Prince|Kiss
+Lionel Richie|All Night Long (All Night)
+Kenny Loggins|Footloose
+Irene Cara|Flashdance... What a Feeling
+Dexys Midnight Runners|Come On Eileen
+Simple Minds|Don't You (Forget About Me)
+The Police|Every Breath You Take
+Phil Collins|In the Air Tonight
+Bonnie Tyler|Total Eclipse of the Heart
+Modern Talking|You're My Heart, You're My Soul
+Nena|99 Luftballons
+Falco|Rock Me Amadeus
+Peter Schilling|Major Tom (völlig losgelöst)
+Opus|Live Is Life
+Baltimora|Tarzan Boy
+Men at Work|Down Under
+Bananarama|Venus
+Dead or Alive|You Spin Me Round (Like a Record)
+Culture Club|Karma Chameleon
+Spandau Ballet|True
+Bobby McFerrin|Don't Worry Be Happy
+UB40|Red Red Wine
+Tina Turner|What's Love Got to Do with It
+Tina Turner|The Best
+Starship|Nothing's Gonna Stop Us Now
+Belinda Carlisle|Heaven Is a Place on Earth
+Roxette|The Look
+Salt-N-Pepa|Push It
+Paula Abdul|Straight Up
+Queen|Another One Bites the Dust
+Kate Bush|Running Up That Hill (A Deal with God)
+Pet Shop Boys|West End Girls
+Frankie Goes to Hollywood|Relax
+# 90er
+Backstreet Boys|Everybody (Backstreet's Back)
+Spice Girls|Spice Up Your Life
+Haddaway|What Is Love
+Dr. Alban|It's My Life
+Scatman John|Scatman (Ski-Ba-Bop-Ba-Dop-Bop)
+Captain Hollywood Project|More and More
+2 Unlimited|No Limit
+Snap!|Rhythm Is a Dancer
+Culture Beat|Mr. Vain
+La Bouche|Be My Lover
+Vengaboys|Boom, Boom, Boom, Boom!!
+Vengaboys|We're Going to Ibiza
+Aqua|Barbie Girl
+Eiffel 65|Blue (Da Ba Dee)
+Lou Bega|Mambo No. 5 (A Little Bit of...)
+Ricky Martin|Livin' la Vida Loca
+Los Del Rio|Macarena
+Coolio|Gangsta's Paradise
+Fugees|Killing Me Softly
+TLC|No Scrubs
+TLC|Waterfalls
+Mariah Carey|Fantasy
+Whitney Houston|I Will Always Love You
+Celine Dion|My Heart Will Go On
+Oasis|Wonderwall
+Alanis Morissette|Ironic
+No Doubt|Don't Speak
+Robbie Williams|Angels
+Take That|Back for Good
+Chumbawamba|Tubthumping
+Mr. President|Coco Jamboo
+Sash!|Ecuador
+DJ BoBo|Somebody Dance with Me
+Die Fantastischen Vier|Die Da!?!
+Scooter|How Much Is the Fish?
+Ace of Base|All That She Wants
+Ace of Base|The Sign
+Roxette|It Must Have Been Love
+Vanilla Ice|Ice Ice Baby
+MC Hammer|U Can't Touch This
+Will Smith|Men in Black
+Will Smith|Gettin' Jiggy Wit It
+Dr. Dre|Still D.R.E.
+2Pac|California Love
+The Notorious B.I.G.|Hypnotize
+Puff Daddy|I'll Be Missing You
+Eminem|My Name Is
+Madonna|Vogue
+Michael Jackson|Black or White
+Seal|Kiss from a Rose
+Bryan Adams|(Everything I Do) I Do It for You
+Faithless|Insomnia
+ATB|9 PM (Till I Come)
+Darude|Sandstorm
+Alice Deejay|Better Off Alone
+Rednex|Cotton Eye Joe
+Gala|Freed from Desire
+Corona|The Rhythm of the Night
+Sixpence None the Richer|Kiss Me
+Savage Garden|Truly Madly Deeply
+Hanson|MMMBop
+The Verve|Bitter Sweet Symphony
+Natalie Imbruglia|Torn
+Des'ree|You Gotta Be
+Depeche Mode|Enjoy the Silence
+The Prodigy|Firestarter
+# 2000er
+Eminem|The Real Slim Shady
+Eminem|Without Me
+Eminem|Lose Yourself
+50 Cent|In da Club
+Nelly|Hot in Herre
+Black Eyed Peas|Where Is the Love?
+Black Eyed Peas|Pump It
+Usher|Yeah!
+Sean Paul|Get Busy
+Sean Paul|Temperature
+Shaggy|It Wasn't Me
+Daniel Powter|Bad Day
+James Blunt|You're Beautiful
+Coldplay|Viva la Vida
+Coldplay|Clocks
+Las Ketchup|The Ketchup Song (Aserejé)
+Eric Prydz|Call on Me
+Bob Sinclar|Love Generation
+Benny Benassi|Satisfaction
+David Guetta|When Love Takes Over
+Kanye West|Stronger
+Kanye West|Gold Digger
+Timbaland|The Way I Are
+Akon|Smack That
+Akon|Lonely
+Justin Timberlake|SexyBack
+Justin Timberlake|Cry Me a River
+Gnarls Barkley|Crazy
+Mika|Grace Kelly
+Gorillaz|Feel Good Inc.
+Robbie Williams|Feel
+Crazy Frog|Axel F
+Snoop Dogg|Drop It Like It's Hot
+Missy Elliott|Get Ur Freak On
+Missy Elliott|Work It
+Flo Rida|Low
+Jay-Z|Empire State of Mind
+Alicia Keys|Fallin'
+Craig David|7 Days
+Modjo|Lady (Hear Me Tonight)
+Spiller|Groovejet (If This Ain't Love)
+Tokio Hotel|Durch den Monsun
+Peter Fox|Haus am See
+Leona Lewis|Bleeding Love
+Duffy|Mercy
+MGMT|Kids
+Keane|Somewhere Only We Know
+The Fray|How to Save a Life
+Timbaland|Apologize
+Maroon 5|This Love
+Pitbull|I Know You Want Me (Calle Ocho)
+Basshunter|Now You're Gone
+Mariah Carey|We Belong Together
+Destiny's Child|Say My Name
+Rihanna|Pon de Replay
+Nelly Furtado|Say It Right
+Amy Winehouse|Valerie
+Kelis|Milkshake
+OneRepublic|Stop and Stare
+Train|Hey, Soul Sister

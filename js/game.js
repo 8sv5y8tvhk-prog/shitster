@@ -22,9 +22,21 @@ export function shuffle(arr) {
   return a;
 }
 
+// Gleicher Song in mehreren Kategorien (auch mit anderer Deezer-ID) → nur einmal ins Spiel
+export function songKey(s) {
+  const n = x => x.toLowerCase().normalize('NFKD').replace(/\(.*?\)|\[.*?\]/g, '').replace(/[^a-z0-9]/g, '');
+  const mainArtist = s.artist.split(/ feat\. | & |, /)[0];
+  return `${n(mainArtist)}|${n(s.title)}`;
+}
+
 export function createGame({ names, songs, target, categories, mode = 'classic', drink = null }) {
   const seen = new Set();
-  const unique = songs.filter(s => !seen.has(s.id) && seen.add(s.id));
+  const unique = songs.filter(s => {
+    const keys = [String(s.id), songKey(s)];
+    if (keys.some(k => seen.has(k))) return false;
+    keys.forEach(k => seen.add(k));
+    return true;
+  });
   const isDrink = mode === 'drink';
   const state = {
     version: 1,

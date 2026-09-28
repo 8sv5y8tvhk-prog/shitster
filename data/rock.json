@@ -1,0 +1,847 @@
+{
+ "id": "rock",
+ "name": "Rock & Metal",
+ "description": "Von Led Zeppelin bis Sleep Token – Rock-Hymnen, Grunge, Nu-Metal und Metal zum Mitgrölen.",
+ "songs": [
+  {
+   "id": 2319655705,
+   "artist": "The Kinks",
+   "title": "You Really Got Me",
+   "year": 1964
+  },
+  {
+   "id": 7677778,
+   "artist": "The Rolling Stones",
+   "title": "(I Can't Get No) Satisfaction",
+   "year": 1965
+  },
+  {
+   "id": 7818900,
+   "artist": "The Rolling Stones",
+   "title": "Paint It Black",
+   "year": 1966
+  },
+  {
+   "id": 3614129,
+   "artist": "The Doors",
+   "title": "Light My Fire",
+   "year": 1967
+  },
+  {
+   "id": 4952889,
+   "artist": "Jimi Hendrix",
+   "title": "All Along the Watchtower",
+   "year": 1968
+  },
+  {
+   "id": 540202122,
+   "artist": "Steppenwolf",
+   "title": "Born to Be Wild",
+   "year": 1968
+  },
+  {
+   "id": 883648,
+   "artist": "Creedence Clearwater Revival",
+   "title": "Fortunate Son",
+   "year": 1969
+  },
+  {
+   "id": 78671026,
+   "artist": "Led Zeppelin",
+   "title": "Whole Lotta Love",
+   "year": 1969
+  },
+  {
+   "id": 3788156052,
+   "artist": "Black Sabbath",
+   "title": "Paranoid",
+   "year": 1970
+  },
+  {
+   "id": 88003859,
+   "artist": "Led Zeppelin",
+   "title": "Stairway to Heaven",
+   "year": 1971
+  },
+  {
+   "id": 2121805,
+   "artist": "The Who",
+   "title": "Baba O'Riley",
+   "year": 1971
+  },
+  {
+   "id": 730866,
+   "artist": "Alice Cooper",
+   "title": "School's Out",
+   "year": 1972
+  },
+  {
+   "id": 60840057,
+   "artist": "Deep Purple",
+   "title": "Smoke on the Water",
+   "year": 1972
+  },
+  {
+   "id": 2431707315,
+   "artist": "Aerosmith",
+   "title": "Dream On",
+   "year": 1973
+  },
+  {
+   "id": 24949681,
+   "artist": "Lynyrd Skynyrd",
+   "title": "Sweet Home Alabama",
+   "year": 1974
+  },
+  {
+   "id": 4091937401,
+   "artist": "Queen",
+   "title": "Bohemian Rhapsody",
+   "year": 1975
+  },
+  {
+   "id": 82692320,
+   "artist": "Blue Öyster Cult",
+   "title": "(Don't Fear) The Reaper",
+   "year": 1976
+  },
+  {
+   "id": 426703682,
+   "artist": "Eagles",
+   "title": "Hotel California",
+   "year": 1976
+  },
+  {
+   "id": 131744724,
+   "artist": "Ramones",
+   "title": "Blitzkrieg Bop",
+   "year": 1976
+  },
+  {
+   "id": 1101200,
+   "artist": "Thin Lizzy",
+   "title": "The Boys Are Back in Town",
+   "year": 1976
+  },
+  {
+   "id": 4092312801,
+   "artist": "Queen",
+   "title": "We Will Rock You",
+   "year": 1977
+  },
+  {
+   "id": 4092329741,
+   "artist": "Queen",
+   "title": "Don't Stop Me Now",
+   "year": 1978
+  },
+  {
+   "id": 92719900,
+   "artist": "AC/DC",
+   "title": "Highway to Hell",
+   "year": 1979
+  },
+  {
+   "id": 2267042,
+   "artist": "KISS",
+   "title": "I Was Made for Lovin' You",
+   "year": 1979
+  },
+  {
+   "id": 116914094,
+   "artist": "Pink Floyd",
+   "title": "Another Brick in the Wall, Pt. 2",
+   "year": 1979
+  },
+  {
+   "id": 92720046,
+   "artist": "AC/DC",
+   "title": "Back in Black",
+   "year": 1980
+  },
+  {
+   "id": 557625,
+   "artist": "Judas Priest",
+   "title": "Breaking the Law",
+   "year": 1980
+  },
+  {
+   "id": 3803071362,
+   "artist": "Motörhead",
+   "title": "Ace of Spades",
+   "year": 1980
+  },
+  {
+   "id": 1078203362,
+   "artist": "Ozzy Osbourne",
+   "title": "Crazy Train",
+   "year": 1980
+  },
+  {
+   "id": 355108531,
+   "artist": "Billy Idol",
+   "title": "White Wedding",
+   "year": 1982
+  },
+  {
+   "id": 585704632,
+   "artist": "Iron Maiden",
+   "title": "The Number of the Beast",
+   "year": 1982
+  },
+  {
+   "id": 69962764,
+   "artist": "The Clash",
+   "title": "Should I Stay or Should I Go",
+   "year": 1982
+  },
+  {
+   "id": 97098410,
+   "artist": "Van Halen",
+   "title": "Jump",
+   "year": 1983
+  },
+  {
+   "id": 14299460,
+   "artist": "Scorpions",
+   "title": "Rock You Like a Hurricane",
+   "year": 1984
+  },
+  {
+   "id": 3803466302,
+   "artist": "Twisted Sister",
+   "title": "We're Not Gonna Take It",
+   "year": 1984
+  },
+  {
+   "id": 2514681,
+   "artist": "Dire Straits",
+   "title": "Money for Nothing",
+   "year": 1985
+  },
+  {
+   "id": 538660022,
+   "artist": "Bon Jovi",
+   "title": "Livin' on a Prayer",
+   "year": 1986
+  },
+  {
+   "id": 424565232,
+   "artist": "Metallica",
+   "title": "Master of Puppets",
+   "year": 1986
+  },
+  {
+   "id": 65690449,
+   "artist": "Slayer",
+   "title": "Raining Blood",
+   "year": 1986
+  },
+  {
+   "id": 447552822,
+   "artist": "Def Leppard",
+   "title": "Pour Some Sugar on Me",
+   "year": 1987
+  },
+  {
+   "id": 518458172,
+   "artist": "Guns N' Roses",
+   "title": "Sweet Child O' Mine",
+   "year": 1987
+  },
+  {
+   "id": 518458142,
+   "artist": "Guns N' Roses",
+   "title": "Paradise City",
+   "year": 1987
+  },
+  {
+   "id": 92720102,
+   "artist": "AC/DC",
+   "title": "Thunderstruck",
+   "year": 1990
+  },
+  {
+   "id": 15523335,
+   "artist": "Alice in Chains",
+   "title": "Man in the Box",
+   "year": 1990
+  },
+  {
+   "id": 927900,
+   "artist": "Scorpions",
+   "title": "Wind of Change",
+   "year": 1990
+  },
+  {
+   "id": 1169683,
+   "artist": "Guns N' Roses",
+   "title": "November Rain",
+   "year": 1991
+  },
+  {
+   "id": 1483825212,
+   "artist": "Metallica",
+   "title": "Enter Sandman",
+   "year": 1991
+  },
+  {
+   "id": 1483825282,
+   "artist": "Metallica",
+   "title": "Nothing Else Matters",
+   "year": 1991
+  },
+  {
+   "id": 13791930,
+   "artist": "Nirvana",
+   "title": "Smells Like Teen Spirit",
+   "year": 1991
+  },
+  {
+   "id": 13791932,
+   "artist": "Nirvana",
+   "title": "Come as You Are",
+   "year": 1991
+  },
+  {
+   "id": 7675130,
+   "artist": "Pearl Jam",
+   "title": "Alive",
+   "year": 1991
+  },
+  {
+   "id": 136334560,
+   "artist": "R.E.M.",
+   "title": "Losing My Religion",
+   "year": 1991
+  },
+  {
+   "id": 785176,
+   "artist": "Red Hot Chili Peppers",
+   "title": "Under the Bridge",
+   "year": 1991
+  },
+  {
+   "id": 585608872,
+   "artist": "Iron Maiden",
+   "title": "Fear of the Dark",
+   "year": 1992
+  },
+  {
+   "id": 61382107,
+   "artist": "Megadeth",
+   "title": "Symphony of Destruction",
+   "year": 1992
+  },
+  {
+   "id": 662879,
+   "artist": "Pantera",
+   "title": "Walk",
+   "year": 1992
+  },
+  {
+   "id": 138547415,
+   "artist": "Radiohead",
+   "title": "Creep",
+   "year": 1992
+  },
+  {
+   "id": 62082829,
+   "artist": "Rage Against the Machine",
+   "title": "Killing in the Name",
+   "year": 1992
+  },
+  {
+   "id": 1006163552,
+   "artist": "Die Ärzte",
+   "title": "Schrei nach Liebe",
+   "year": 1993
+  },
+  {
+   "id": 3166759,
+   "artist": "Meat Loaf",
+   "title": "I'd Do Anything for Love (But I Won't Do That)",
+   "year": 1993
+  },
+  {
+   "id": 70466227,
+   "artist": "Nirvana",
+   "title": "Heart-Shaped Box",
+   "year": 1993
+  },
+  {
+   "id": 678044,
+   "artist": "Green Day",
+   "title": "Basket Case",
+   "year": 1994
+  },
+  {
+   "id": 78631539,
+   "artist": "Soundgarden",
+   "title": "Black Hole Sun",
+   "year": 1994
+  },
+  {
+   "id": 952788,
+   "artist": "The Cranberries",
+   "title": "Zombie",
+   "year": 1994
+  },
+  {
+   "id": 378299601,
+   "artist": "The Offspring",
+   "title": "Self Esteem",
+   "year": 1994
+  },
+  {
+   "id": 87938845,
+   "artist": "Marilyn Manson",
+   "title": "The Beautiful People",
+   "year": 1996
+  },
+  {
+   "id": 717542,
+   "artist": "Sepultura",
+   "title": "Roots Bloody Roots",
+   "year": 1996
+  },
+  {
+   "id": 3102130,
+   "artist": "Blur",
+   "title": "Song 2",
+   "year": 1997
+  },
+  {
+   "id": 4762041,
+   "artist": "Foo Fighters",
+   "title": "Everlong",
+   "year": 1997
+  },
+  {
+   "id": 630595142,
+   "artist": "Rammstein",
+   "title": "Du hast",
+   "year": 1997
+  },
+  {
+   "id": 137233982,
+   "artist": "The Offspring",
+   "title": "Pretty Fly (For a White Guy)",
+   "year": 1998
+  },
+  {
+   "id": 89748393,
+   "artist": "Bloodhound Gang",
+   "title": "The Bad Touch",
+   "year": 1999
+  },
+  {
+   "id": 94613616,
+   "artist": "Limp Bizkit",
+   "title": "Break Stuff",
+   "year": 1999
+  },
+  {
+   "id": 725274,
+   "artist": "Red Hot Chili Peppers",
+   "title": "Californication",
+   "year": 1999
+  },
+  {
+   "id": 127354207,
+   "artist": "blink-182",
+   "title": "All the Small Things",
+   "year": 1999
+  },
+  {
+   "id": 577487252,
+   "artist": "Bon Jovi",
+   "title": "It's My Life",
+   "year": 2000
+  },
+  {
+   "id": 1169696172,
+   "artist": "Deftones",
+   "title": "Change (In the House of Flies)",
+   "year": 2000
+  },
+  {
+   "id": 663984,
+   "artist": "Disturbed",
+   "title": "Down with the Sickness",
+   "year": 2000
+  },
+  {
+   "id": 676183,
+   "artist": "Linkin Park",
+   "title": "In the End",
+   "year": 2000
+  },
+  {
+   "id": 6435662,
+   "artist": "Papa Roach",
+   "title": "Last Resort",
+   "year": 2000
+  },
+  {
+   "id": 80274568,
+   "artist": "Drowning Pool",
+   "title": "Bodies",
+   "year": 2001
+  },
+  {
+   "id": 71828723,
+   "artist": "Nickelback",
+   "title": "How You Remind Me",
+   "year": 2001
+  },
+  {
+   "id": 14381638,
+   "artist": "Rammstein",
+   "title": "Sonne",
+   "year": 2001
+  },
+  {
+   "id": 1125079,
+   "artist": "Sum 41",
+   "title": "Fat Lip",
+   "year": 2001
+  },
+  {
+   "id": 859699,
+   "artist": "System of a Down",
+   "title": "Chop Suey!",
+   "year": 2001
+  },
+  {
+   "id": 15523793,
+   "artist": "System of a Down",
+   "title": "Toxicity",
+   "year": 2001
+  },
+  {
+   "id": 614322,
+   "artist": "Audioslave",
+   "title": "Like a Stone",
+   "year": 2002
+  },
+  {
+   "id": 7179758,
+   "artist": "Queens of the Stone Age",
+   "title": "No One Knows",
+   "year": 2002
+  },
+  {
+   "id": 725971,
+   "artist": "Red Hot Chili Peppers",
+   "title": "Can't Stop",
+   "year": 2002
+  },
+  {
+   "id": 80274512,
+   "artist": "Evanescence",
+   "title": "Bring Me to Life",
+   "year": 2003
+  },
+  {
+   "id": 1148692172,
+   "artist": "Jet",
+   "title": "Are You Gonna Be My Girl",
+   "year": 2003
+  },
+  {
+   "id": 677232,
+   "artist": "Linkin Park",
+   "title": "Numb",
+   "year": 2003
+  },
+  {
+   "id": 3868470,
+   "artist": "The Darkness",
+   "title": "I Believe in a Thing Called Love",
+   "year": 2003
+  },
+  {
+   "id": 61914316,
+   "artist": "The Rasmus",
+   "title": "In the Shadows",
+   "year": 2003
+  },
+  {
+   "id": 1153182282,
+   "artist": "The White Stripes",
+   "title": "Seven Nation Army",
+   "year": 2003
+  },
+  {
+   "id": 127673047,
+   "artist": "blink-182",
+   "title": "I Miss You",
+   "year": 2003
+  },
+  {
+   "id": 4315684,
+   "artist": "Franz Ferdinand",
+   "title": "Take Me Out",
+   "year": 2004
+  },
+  {
+   "id": 773367,
+   "artist": "Green Day",
+   "title": "American Idiot",
+   "year": 2004
+  },
+  {
+   "id": 6611231,
+   "artist": "Green Day",
+   "title": "Boulevard of Broken Dreams",
+   "year": 2004
+  },
+  {
+   "id": 785961,
+   "artist": "My Chemical Romance",
+   "title": "I'm Not Okay (I Promise)",
+   "year": 2004
+  },
+  {
+   "id": 668823972,
+   "artist": "Nightwish",
+   "title": "Nemo",
+   "year": 2004
+  },
+  {
+   "id": 3819908,
+   "artist": "Slipknot",
+   "title": "Duality",
+   "year": 2004
+  },
+  {
+   "id": 4315310,
+   "artist": "Arctic Monkeys",
+   "title": "I Bet You Look Good on the Dancefloor",
+   "year": 2005
+  },
+  {
+   "id": 3664340,
+   "artist": "Avenged Sevenfold",
+   "title": "Bat Country",
+   "year": 2005
+  },
+  {
+   "id": 7675142,
+   "artist": "Bullet for My Valentine",
+   "title": "Tears Don't Fall",
+   "year": 2005
+  },
+  {
+   "id": 1138247,
+   "artist": "Fall Out Boy",
+   "title": "Sugar, We're Goin Down",
+   "year": 2005
+  },
+  {
+   "id": 679553202,
+   "artist": "Sabaton",
+   "title": "Primo Victoria",
+   "year": 2005
+  },
+  {
+   "id": 559789,
+   "artist": "System of a Down",
+   "title": "B.Y.O.B.",
+   "year": 2005
+  },
+  {
+   "id": 3090875,
+   "artist": "Thirty Seconds to Mars",
+   "title": "The Kill",
+   "year": 2005
+  },
+  {
+   "id": 1182053,
+   "artist": "Wolfmother",
+   "title": "Joker and the Thief",
+   "year": 2005
+  },
+  {
+   "id": 3590186,
+   "artist": "Muse",
+   "title": "Supermassive Black Hole",
+   "year": 2006
+  },
+  {
+   "id": 676573,
+   "artist": "My Chemical Romance",
+   "title": "Welcome to the Black Parade",
+   "year": 2006
+  },
+  {
+   "id": 13167070,
+   "artist": "Three Days Grace",
+   "title": "Animal I Have Become",
+   "year": 2006
+  },
+  {
+   "id": 4311597,
+   "artist": "Foo Fighters",
+   "title": "The Pretender",
+   "year": 2007
+  },
+  {
+   "id": 676847,
+   "artist": "Linkin Park",
+   "title": "What I've Done",
+   "year": 2007
+  },
+  {
+   "id": 3829140,
+   "artist": "Paramore",
+   "title": "Misery Business",
+   "year": 2007
+  },
+  {
+   "id": 70876820,
+   "artist": "Amon Amarth",
+   "title": "Twilight of the Thunder God",
+   "year": 2008
+  },
+  {
+   "id": 15531170,
+   "artist": "Kings of Leon",
+   "title": "Sex on Fire",
+   "year": 2008
+  },
+  {
+   "id": 7419123,
+   "artist": "Rise Against",
+   "title": "Savior",
+   "year": 2008
+  },
+  {
+   "id": 599036032,
+   "artist": "Slipknot",
+   "title": "Psychosocial",
+   "year": 2008
+  },
+  {
+   "id": 3431342921,
+   "artist": "Volbeat",
+   "title": "Still Counting",
+   "year": 2008
+  },
+  {
+   "id": 4195713,
+   "artist": "Muse",
+   "title": "Uprising",
+   "year": 2009
+  },
+  {
+   "id": 14932098,
+   "artist": "The Black Keys",
+   "title": "Lonely Boy",
+   "year": 2011
+  },
+  {
+   "id": 142393383,
+   "artist": "Die Toten Hosen",
+   "title": "Tage wie diese",
+   "year": 2012
+  },
+  {
+   "id": 63510358,
+   "artist": "Imagine Dragons",
+   "title": "Radioactive",
+   "year": 2012
+  },
+  {
+   "id": 70322130,
+   "artist": "Arctic Monkeys",
+   "title": "Do I Wanna Know?",
+   "year": 2013
+  },
+  {
+   "id": 92872156,
+   "artist": "Fall Out Boy",
+   "title": "Centuries",
+   "year": 2014
+  },
+  {
+   "id": 106746752,
+   "artist": "Bring Me the Horizon",
+   "title": "Throne",
+   "year": 2015
+  },
+  {
+   "id": 105765234,
+   "artist": "Disturbed",
+   "title": "The Sound of Silence",
+   "year": 2015
+  },
+  {
+   "id": 132196994,
+   "artist": "Ghost",
+   "title": "Square Hammer",
+   "year": 2016
+  },
+  {
+   "id": 424587822,
+   "artist": "Greta Van Fleet",
+   "title": "Highway Tune",
+   "year": 2017
+  },
+  {
+   "id": 437046332,
+   "artist": "Måneskin",
+   "title": "Beggin'",
+   "year": 2017
+  },
+  {
+   "id": 1370715682,
+   "artist": "Powerwolf feat. Alissa White-Gluz",
+   "title": "Demons Are a Girl's Best Friend",
+   "year": 2018
+  },
+  {
+   "id": 803968452,
+   "artist": "Falling in Reverse",
+   "title": "Popular Monster",
+   "year": 2019
+  },
+  {
+   "id": 1881054427,
+   "artist": "Ghost",
+   "title": "Mary on a Cross",
+   "year": 2019
+  },
+  {
+   "id": 678687242,
+   "artist": "Rammstein",
+   "title": "Deutschland",
+   "year": 2019
+  },
+  {
+   "id": 984138262,
+   "artist": "Electric Callboy",
+   "title": "Hypa Hypa",
+   "year": 2020
+  },
+  {
+   "id": 1279728532,
+   "artist": "Måneskin",
+   "title": "I Wanna Be Your Slave",
+   "year": 2021
+  },
+  {
+   "id": 3390202191,
+   "artist": "Bad Omens",
+   "title": "Just Pretend",
+   "year": 2022
+  },
+  {
+   "id": 2134778427,
+   "artist": "Sleep Token",
+   "title": "The Summoning",
+   "year": 2023
+  }
+ ]
+}

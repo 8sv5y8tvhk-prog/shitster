@@ -1,0 +1,829 @@
+{
+ "id": "dekaden",
+ "name": "80er, 90er & 2000er",
+ "description": "Die größten Hits aus drei Jahrzehnten – von Michael Jackson über Eurodance bis Eminem.",
+ "songs": [
+  {
+   "id": 4092324041,
+   "artist": "Queen",
+   "title": "Another One Bites the Dust",
+   "year": 1980
+  },
+  {
+   "id": 68513610,
+   "artist": "Depeche Mode",
+   "title": "Just Can't Get Enough",
+   "year": 1981
+  },
+  {
+   "id": 625643,
+   "artist": "Journey",
+   "title": "Don't Stop Believin'",
+   "year": 1981
+  },
+  {
+   "id": 1030221,
+   "artist": "Men at Work",
+   "title": "Down Under",
+   "year": 1981
+  },
+  {
+   "id": 134036212,
+   "artist": "Phil Collins",
+   "title": "In the Air Tonight",
+   "year": 1981
+  },
+  {
+   "id": 1173622,
+   "artist": "Soft Cell",
+   "title": "Tainted Love",
+   "year": 1981
+  },
+  {
+   "id": 3152080,
+   "artist": "The Human League",
+   "title": "Don't You Want Me",
+   "year": 1981
+  },
+  {
+   "id": 106344460,
+   "artist": "Dexys Midnight Runners",
+   "title": "Come On Eileen",
+   "year": 1982
+  },
+  {
+   "id": 4603408,
+   "artist": "Michael Jackson",
+   "title": "Billie Jean",
+   "year": 1982
+  },
+  {
+   "id": 4763165,
+   "artist": "Michael Jackson",
+   "title": "Beat It",
+   "year": 1982
+  },
+  {
+   "id": 555639,
+   "artist": "Michael Jackson",
+   "title": "Thriller",
+   "year": 1982
+  },
+  {
+   "id": 576431,
+   "artist": "Survivor",
+   "title": "Eye of the Tiger",
+   "year": 1982
+  },
+  {
+   "id": 1079668,
+   "artist": "Toto",
+   "title": "Africa",
+   "year": 1982
+  },
+  {
+   "id": 532349,
+   "artist": "Bonnie Tyler",
+   "title": "Total Eclipse of the Heart",
+   "year": 1983
+  },
+  {
+   "id": 3152791,
+   "artist": "Culture Club",
+   "title": "Karma Chameleon",
+   "year": 1983
+  },
+  {
+   "id": 72194071,
+   "artist": "Cyndi Lauper",
+   "title": "Girls Just Want to Have Fun",
+   "year": 1983
+  },
+  {
+   "id": 561836,
+   "artist": "Eurythmics",
+   "title": "Sweet Dreams (Are Made of This)",
+   "year": 1983
+  },
+  {
+   "id": 3413905571,
+   "artist": "Irene Cara",
+   "title": "Flashdance... What a Feeling",
+   "year": 1983
+  },
+  {
+   "id": 920062,
+   "artist": "Lionel Richie",
+   "title": "All Night Long (All Night)",
+   "year": 1983
+  },
+  {
+   "id": 3786206112,
+   "artist": "Nena",
+   "title": "99 Luftballons",
+   "year": 1983
+  },
+  {
+   "id": 3605281,
+   "artist": "Peter Schilling",
+   "title": "Major Tom (völlig losgelöst)",
+   "year": 1983
+  },
+  {
+   "id": 2525864,
+   "artist": "The Police",
+   "title": "Every Breath You Take",
+   "year": 1983
+  },
+  {
+   "id": 2580769662,
+   "artist": "Dead or Alive feat. Gusted",
+   "title": "You Spin Me Round (Like a Record)",
+   "year": 1984
+  },
+  {
+   "id": 14525086,
+   "artist": "George Michael",
+   "title": "Careless Whisper",
+   "year": 1984
+  },
+  {
+   "id": 678336,
+   "artist": "Madonna",
+   "title": "Like a Virgin",
+   "year": 1984
+  },
+  {
+   "id": 548507,
+   "artist": "Modern Talking",
+   "title": "You're My Heart, You're My Soul",
+   "year": 1984
+  },
+  {
+   "id": 15379465,
+   "artist": "Opus",
+   "title": "Live Is Life",
+   "year": 1984
+  },
+  {
+   "id": 374283061,
+   "artist": "Prince",
+   "title": "Purple Rain",
+   "year": 1984
+  },
+  {
+   "id": 3120266,
+   "artist": "Tina Turner",
+   "title": "What's Love Got to Do with It",
+   "year": 1984
+  },
+  {
+   "id": 15194531,
+   "artist": "Wham!",
+   "title": "Wake Me Up Before You Go-Go",
+   "year": 1984
+  },
+  {
+   "id": 542016,
+   "artist": "Falco",
+   "title": "Rock Me Amadeus",
+   "year": 1985
+  },
+  {
+   "id": 2173954687,
+   "artist": "Kate Bush",
+   "title": "Running Up That Hill (A Deal with God)",
+   "year": 1985
+  },
+  {
+   "id": 462775272,
+   "artist": "Pet Shop Boys",
+   "title": "West End Girls",
+   "year": 1985
+  },
+  {
+   "id": 3158973,
+   "artist": "Simple Minds",
+   "title": "Don't You (Forget About Me)",
+   "year": 1985
+  },
+  {
+   "id": 2234314,
+   "artist": "Tears for Fears",
+   "title": "Everybody Wants to Rule the World",
+   "year": 1985
+  },
+  {
+   "id": 664107,
+   "artist": "a-ha",
+   "title": "Take On Me",
+   "year": 1985
+  },
+  {
+   "id": 858371,
+   "artist": "Europe",
+   "title": "The Final Countdown",
+   "year": 1986
+  },
+  {
+   "id": 664178,
+   "artist": "Prince",
+   "title": "Kiss",
+   "year": 1986
+  },
+  {
+   "id": 4603400,
+   "artist": "Michael Jackson",
+   "title": "Smooth Criminal",
+   "year": 1987
+  },
+  {
+   "id": 14408104,
+   "artist": "Rick Astley",
+   "title": "Never Gonna Give You Up",
+   "year": 1987
+  },
+  {
+   "id": 75981528,
+   "artist": "Whitney Houston",
+   "title": "I Wanna Dance with Somebody (Who Loves Me)",
+   "year": 1987
+  },
+  {
+   "id": 3127387,
+   "artist": "Bobby McFerrin",
+   "title": "Don't Worry Be Happy",
+   "year": 1988
+  },
+  {
+   "id": 3092167,
+   "artist": "Roxette",
+   "title": "The Look",
+   "year": 1988
+  },
+  {
+   "id": 664507,
+   "artist": "Madonna",
+   "title": "Like a Prayer",
+   "year": 1989
+  },
+  {
+   "id": 3142379,
+   "artist": "Tina Turner",
+   "title": "The Best",
+   "year": 1989
+  },
+  {
+   "id": 68515055,
+   "artist": "Depeche Mode",
+   "title": "Enjoy the Silence",
+   "year": 1990
+  },
+  {
+   "id": 3136389,
+   "artist": "MC Hammer",
+   "title": "U Can't Touch This",
+   "year": 1990
+  },
+  {
+   "id": 723903,
+   "artist": "Madonna",
+   "title": "Vogue",
+   "year": 1990
+  },
+  {
+   "id": 3098301,
+   "artist": "Roxette",
+   "title": "It Must Have Been Love",
+   "year": 1990
+  },
+  {
+   "id": 2397026,
+   "artist": "Vanilla Ice",
+   "title": "Ice Ice Baby",
+   "year": 1990
+  },
+  {
+   "id": 1182159,
+   "artist": "Bryan Adams",
+   "title": "(Everything I Do) I Do It for You",
+   "year": 1991
+  },
+  {
+   "id": 15593566,
+   "artist": "Michael Jackson",
+   "title": "Black or White",
+   "year": 1991
+  },
+  {
+   "id": 94676692,
+   "artist": "Ace of Base",
+   "title": "All That She Wants",
+   "year": 1992
+  },
+  {
+   "id": 4300806,
+   "artist": "Die Fantastischen Vier",
+   "title": "Die Da!?!",
+   "year": 1992
+  },
+  {
+   "id": 3785942552,
+   "artist": "Snap!",
+   "title": "Rhythm Is a Dancer",
+   "year": 1992
+  },
+  {
+   "id": 7675403,
+   "artist": "Whitney Houston",
+   "title": "I Will Always Love You",
+   "year": 1992
+  },
+  {
+   "id": 134706074,
+   "artist": "2 Unlimited",
+   "title": "No Limit",
+   "year": 1993
+  },
+  {
+   "id": 3413806581,
+   "artist": "Corona",
+   "title": "The Rhythm of the Night",
+   "year": 1993
+  },
+  {
+   "id": 29794781,
+   "artist": "Culture Beat",
+   "title": "Mr. Vain",
+   "year": 1993
+  },
+  {
+   "id": 3801648492,
+   "artist": "Haddaway",
+   "title": "What Is Love",
+   "year": 1993
+  },
+  {
+   "id": 419139102,
+   "artist": "Rednex",
+   "title": "Cotton Eye Joe",
+   "year": 1994
+  },
+  {
+   "id": 99348362,
+   "artist": "Scatman John",
+   "title": "Scatman (Ski-Ba-Bop-Ba-Dop-Bop)",
+   "year": 1994
+  },
+  {
+   "id": 65163036,
+   "artist": "2Pac",
+   "title": "California Love",
+   "year": 1995
+  },
+  {
+   "id": 789250,
+   "artist": "Alanis Morissette",
+   "title": "Ironic",
+   "year": 1995
+  },
+  {
+   "id": 1584416372,
+   "artist": "Coolio & L.V.",
+   "title": "Gangsta's Paradise",
+   "year": 1995
+  },
+  {
+   "id": 990761,
+   "artist": "Los Del Rio",
+   "title": "Macarena",
+   "year": 1995
+  },
+  {
+   "id": 24246391,
+   "artist": "No Doubt",
+   "title": "Don't Speak",
+   "year": 1995
+  },
+  {
+   "id": 985745702,
+   "artist": "Oasis",
+   "title": "Wonderwall",
+   "year": 1995
+  },
+  {
+   "id": 848836952,
+   "artist": "Take That",
+   "title": "Back for Good",
+   "year": 1995
+  },
+  {
+   "id": 869548,
+   "artist": "Fugees",
+   "title": "Killing Me Softly with His Song",
+   "year": 1996
+  },
+  {
+   "id": 6907156,
+   "artist": "Gala",
+   "title": "Freed from Desire",
+   "year": 1996
+  },
+  {
+   "id": 62126191,
+   "artist": "The Prodigy",
+   "title": "Firestarter",
+   "year": 1996
+  },
+  {
+   "id": 1115044,
+   "artist": "Aqua",
+   "title": "Barbie Girl",
+   "year": 1997
+  },
+  {
+   "id": 15608663,
+   "artist": "Backstreet Boys",
+   "title": "Everybody (Backstreet's Back)",
+   "year": 1997
+  },
+  {
+   "id": 14552280,
+   "artist": "Celine Dion",
+   "title": "My Heart Will Go On",
+   "year": 1997
+  },
+  {
+   "id": 58831601,
+   "artist": "Chumbawamba",
+   "title": "Tubthumping",
+   "year": 1997
+  },
+  {
+   "id": 88685889,
+   "artist": "Hanson",
+   "title": "MMMBop",
+   "year": 1997
+  },
+  {
+   "id": 992131,
+   "artist": "Natalie Imbruglia",
+   "title": "Torn",
+   "year": 1997
+  },
+  {
+   "id": 3138729,
+   "artist": "Robbie Williams",
+   "title": "Angels",
+   "year": 1997
+  },
+  {
+   "id": 15177682,
+   "artist": "Savage Garden",
+   "title": "Truly Madly Deeply",
+   "year": 1997
+  },
+  {
+   "id": 3134155,
+   "artist": "Spice Girls",
+   "title": "Spice Up Your Life",
+   "year": 1997
+  },
+  {
+   "id": 432946922,
+   "artist": "The Verve",
+   "title": "Bitter Sweet Symphony",
+   "year": 1997
+  },
+  {
+   "id": 61639624,
+   "artist": "ATB",
+   "title": "9 PM (Till I Come)",
+   "year": 1998
+  },
+  {
+   "id": 89629717,
+   "artist": "Eiffel 65",
+   "title": "Blue (Da Ba Dee)",
+   "year": 1998
+  },
+  {
+   "id": 2168791217,
+   "artist": "Scooter",
+   "title": "How Much Is the Fish?",
+   "year": 1998
+  },
+  {
+   "id": 1802253167,
+   "artist": "Vengaboys",
+   "title": "Boom, Boom, Boom, Boom!!",
+   "year": 1998
+  },
+  {
+   "id": 11390027,
+   "artist": "Darude",
+   "title": "Sandstorm",
+   "year": 1999
+  },
+  {
+   "id": 580936,
+   "artist": "Destiny's Child",
+   "title": "Say My Name",
+   "year": 1999
+  },
+  {
+   "id": 128743581,
+   "artist": "Dr. Dre feat. Snoop Dogg",
+   "title": "Still D.R.E.",
+   "year": 1999
+  },
+  {
+   "id": 1109729,
+   "artist": "Eminem",
+   "title": "My Name Is",
+   "year": 1999
+  },
+  {
+   "id": 434625962,
+   "artist": "Lou Bega",
+   "title": "Mambo No. 5 (A Little Bit of...)",
+   "year": 1999
+  },
+  {
+   "id": 13704591,
+   "artist": "Ricky Martin",
+   "title": "Livin' la Vida Loca",
+   "year": 1999
+  },
+  {
+   "id": 1075781,
+   "artist": "TLC",
+   "title": "No Scrubs",
+   "year": 1999
+  },
+  {
+   "id": 143169102,
+   "artist": "Craig David",
+   "title": "7 Days",
+   "year": 2000
+  },
+  {
+   "id": 1109737,
+   "artist": "Eminem",
+   "title": "The Real Slim Shady",
+   "year": 2000
+  },
+  {
+   "id": 70179720,
+   "artist": "Modjo",
+   "title": "Lady (Hear Me Tonight)",
+   "year": 2000
+  },
+  {
+   "id": 2122532,
+   "artist": "Shaggy feat. Ricardo Ducent",
+   "title": "It Wasn't Me",
+   "year": 2000
+  },
+  {
+   "id": 959183,
+   "artist": "Alicia Keys",
+   "title": "Fallin'",
+   "year": 2001
+  },
+  {
+   "id": 671140,
+   "artist": "Missy Elliott",
+   "title": "Get Ur Freak On",
+   "year": 2001
+  },
+  {
+   "id": 13839055,
+   "artist": "Benny Benassi & The Biz",
+   "title": "Satisfaction",
+   "year": 2002
+  },
+  {
+   "id": 916424,
+   "artist": "Eminem",
+   "title": "Without Me",
+   "year": 2002
+  },
+  {
+   "id": 1109731,
+   "artist": "Eminem",
+   "title": "Lose Yourself",
+   "year": 2002
+  },
+  {
+   "id": 476739482,
+   "artist": "Las Ketchup",
+   "title": "The Ketchup Song (Aserejé)",
+   "year": 2002
+  },
+  {
+   "id": 1165301,
+   "artist": "Maroon 5",
+   "title": "This Love",
+   "year": 2002
+  },
+  {
+   "id": 2447436,
+   "artist": "Nelly",
+   "title": "Hot in Herre",
+   "year": 2002
+  },
+  {
+   "id": 364292561,
+   "artist": "Sean Paul",
+   "title": "Get Busy",
+   "year": 2002
+  },
+  {
+   "id": 1141668,
+   "artist": "50 Cent",
+   "title": "In da Club",
+   "year": 2003
+  },
+  {
+   "id": 1697351967,
+   "artist": "Black Eyed Peas",
+   "title": "Where Is the Love?",
+   "year": 2003
+  },
+  {
+   "id": 2279314797,
+   "artist": "Kelis",
+   "title": "Milkshake",
+   "year": 2003
+  },
+  {
+   "id": 340051261,
+   "artist": "Eric Prydz",
+   "title": "Call on Me",
+   "year": 2004
+  },
+  {
+   "id": 2659940,
+   "artist": "James Blunt",
+   "title": "You're Beautiful",
+   "year": 2004
+  },
+  {
+   "id": 1761305797,
+   "artist": "Snoop Dogg feat. Pharrell Williams",
+   "title": "Drop It Like It's Hot",
+   "year": 2004
+  },
+  {
+   "id": 13783449,
+   "artist": "Usher feat. Lil Jon & Ludacris",
+   "title": "Yeah!",
+   "year": 2004
+  },
+  {
+   "id": 3420337401,
+   "artist": "Bob Sinclar feat. Gary Pine",
+   "title": "Love Generation",
+   "year": 2005
+  },
+  {
+   "id": 387670601,
+   "artist": "Crazy Frog",
+   "title": "Axel F",
+   "year": 2005
+  },
+  {
+   "id": 6685848,
+   "artist": "Daniel Powter",
+   "title": "Bad Day",
+   "year": 2005
+  },
+  {
+   "id": 3129407,
+   "artist": "Gorillaz & De La Soul",
+   "title": "Feel Good Inc.",
+   "year": 2005
+  },
+  {
+   "id": 1184309,
+   "artist": "Kanye West feat. Jamie Foxx",
+   "title": "Gold Digger",
+   "year": 2005
+  },
+  {
+   "id": 2511970,
+   "artist": "Mariah Carey",
+   "title": "We Belong Together",
+   "year": 2005
+  },
+  {
+   "id": 2953166,
+   "artist": "Rihanna",
+   "title": "Pon de Replay",
+   "year": 2005
+  },
+  {
+   "id": 7674865,
+   "artist": "The Fray",
+   "title": "How to Save a Life",
+   "year": 2005
+  },
+  {
+   "id": 7718640,
+   "artist": "Tokio Hotel",
+   "title": "Durch den Monsun",
+   "year": 2005
+  },
+  {
+   "id": 979041,
+   "artist": "Akon feat. Eminem",
+   "title": "Smack That",
+   "year": 2006
+  },
+  {
+   "id": 2794160,
+   "artist": "Gnarls Barkley",
+   "title": "Crazy",
+   "year": 2006
+  },
+  {
+   "id": 15489383,
+   "artist": "Justin Timberlake feat. Timbaland",
+   "title": "SexyBack",
+   "year": 2006
+  },
+  {
+   "id": 1190325,
+   "artist": "Basshunter feat. DJ Mental Theo's Bazzheadz",
+   "title": "Now You're Gone",
+   "year": 2007
+  },
+  {
+   "id": 717358,
+   "artist": "Flo Rida feat. T-Pain",
+   "title": "Low",
+   "year": 2007
+  },
+  {
+   "id": 1178682,
+   "artist": "Kanye West",
+   "title": "Stronger",
+   "year": 2007
+  },
+  {
+   "id": 365067,
+   "artist": "Leona Lewis",
+   "title": "Bleeding Love",
+   "year": 2007
+  },
+  {
+   "id": 7923756,
+   "artist": "Mark Ronson feat. Amy Winehouse",
+   "title": "Valerie",
+   "year": 2007
+  },
+  {
+   "id": 953602,
+   "artist": "Mika",
+   "title": "Grace Kelly",
+   "year": 2007
+  },
+  {
+   "id": 4685514,
+   "artist": "Timbaland feat. Keri Hilson & D.O.E.",
+   "title": "The Way I Are",
+   "year": 2007
+  },
+  {
+   "id": 13444256,
+   "artist": "Coldplay",
+   "title": "Viva la Vida",
+   "year": 2008
+  },
+  {
+   "id": 2200206,
+   "artist": "Peter Fox",
+   "title": "Haus am See",
+   "year": 2008
+  },
+  {
+   "id": 3445820,
+   "artist": "David Guetta feat. Kelly Rowland",
+   "title": "When Love Takes Over",
+   "year": 2009
+  },
+  {
+   "id": 90533119,
+   "artist": "JAY-Z feat. Alicia Keys",
+   "title": "Empire State of Mind",
+   "year": 2009
+  },
+  {
+   "id": 4216277,
+   "artist": "Pitbull",
+   "title": "I Know You Want Me (Calle Ocho)",
+   "year": 2009
+  }
+ ]
+}
