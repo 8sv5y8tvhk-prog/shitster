@@ -572,16 +572,16 @@ function paintStage() {
       <div class="challenge-box">
         <h2>${G.isDrink(s) ? 'KONTER!' : 'HITSTER!'}</h2>
         <p>${G.isDrink(s)
-          ? `Liegt ${esc(me.name)} falsch? Tippe deinen Namen und dann eine freie Lücke. Richtig: du klaust die Karte. Falsch: du trinkst ${G.sips(s, G.SIPS.counterWrong)}.`
-          : `Liegt ${esc(me.name)} falsch? Tippe deinen Namen und dann eine freie Lücke. Kostet 1 Token – wer richtig liegt, klaut die Karte.`}</p>
+          ? `Liegt ${esc(me.name)} falsch? Tippe deinen Namen und dann eine freie Lücke – nochmal antippen zum Ändern. Richtig: du klaust die Karte. Falsch: du trinkst ${G.sips(s, G.SIPS.counterWrong)}.`
+          : `Liegt ${esc(me.name)} falsch? Tippe deinen Namen und dann eine freie Lücke – nochmal antippen zum Ändern. Kostet 1 Token – wer richtig liegt, klaut die Karte.`}</p>
         <div class="chips">
           ${cands.map(p => {
             const isDone = done.has(p.id);
             const on = ui.pendingChallenger === p.id;
             const dis = !isDone && !G.canChallenge(s, p);
             const left = G.isDrink(s) ? (p.counters == null ? '' : `${icon('bolt')}${p.counters}`) : `<span class="token"></span>${p.tokens}`;
-            return `<button class="chip ${isDone ? 'done' : ''} ${on ? 'on' : ''}" style="--c:${p.color}" data-a="${isDone ? 'unchallenge' : 'pickchallenger'}" data-id="${p.id}" ${dis ? 'disabled' : ''}>
-              ${avatar(p)}${esc(p.name)}${isDone ? `<span class="x">${icon('x')}</span>` : (left ? `<span class="t chip-left">${left}</span>` : '')}
+            return `<button class="chip ${isDone ? 'done' : ''} ${on ? 'on' : ''}" style="--c:${p.color}" data-a="pickchallenger" data-id="${p.id}" ${dis ? 'disabled' : ''}>
+              ${avatar(p)}${esc(p.name)}${isDone ? `<span class="x">${icon('check')}</span>` : (left ? `<span class="t chip-left">${left}</span>` : '')}
             </button>`;
           }).join('')}
         </div>
@@ -645,11 +645,12 @@ function gapLabel(tl, g) {
   return `Zwischen ${tl[g - 1].year} und ${tl[g].year}`;
 }
 
-function timelineHTML(tl, { selected = null, claims = new Map(), canTap = () => false, newId = null } = {}) {
+function timelineHTML(tl, { selected = null, claims = new Map(), canTap = () => false, newId = null, editClaim = null } = {}) {
   let h = '';
   for (let g = 0; g <= tl.length; g++) {
     const claim = claims.get(g);
     if (g === selected) h += `<div class="gap selected" data-gapi="${g}"><div class="slot">?</div></div>`;
+    else if (claim && claim.id === editClaim) h += `<button class="gap claimed editing" style="--c:${claim.color}" data-a="gap" data-gap="${g}" aria-label="Konter zurücknehmen"><div class="slot">${icon('x')}</div></button>`;
     else if (claim) h += `<div class="gap claimed" style="--c:${claim.color}" data-gapi="${g}"><div class="slot">${esc(initial(claim.name))}</div></div>`;
     else if (canTap(g)) h += `<button class="gap interactive" data-a="gap" data-gap="${g}" aria-label="${gapLabel(tl, g)}"><div class="slot">${icon('plus')}</div></button>`;
     else h += `<div class="gap"><div class="slot"></div></div>`;
@@ -700,9 +701,10 @@ function paintTimeline() {
   } else if (s.phase === 'challenge') {
     const claims = new Map(s.turn.challenges.map(c => [c.gap, G.playerById(s, c.playerId)]));
     const taken = G.takenGaps(s);
-    html = timelineHTML(me.timeline, { selected: s.turn.gap, claims, canTap: g => ui.pendingChallenger && !taken.has(g) });
+    html = timelineHTML(me.timeline, { selected: s.turn.gap, claims, canTap: g => ui.pendingChallenger && !taken.has(g), editClaim: ui.pendingChallenger });
     const pc = ui.pendingChallenger && G.playerById(s, ui.pendingChallenger);
-    hint = pc ? `${esc(pc.name)}: Tippe auf eine freie Lücke` : s.turn.challenges.length ? 'Noch jemand? Sonst aufdecken!' : `${esc(me.name)} sagt: ${gapLabel(me.timeline, s.turn.gap)}`;
+    hint = pc && G.challengeOf(s, pc.id) ? `${esc(pc.name)}: Andere Lücke wählen – oder ✕ zum Zurücknehmen`
+      : pc ? `${esc(pc.name)}: Tippe auf eine freie Lücke` : s.turn.challenges.length ? 'Noch jemand? Sonst aufdecken!' : `${esc(me.name)} sagt: ${gapLabel(me.timeline, s.turn.gap)}`;
   } else if (s.phase === 'reveal') {
     const r = s.lastResult;
     owner = r.winnerId ? G.playerById(s, r.winnerId) : me;
@@ -834,7 +836,11 @@ async function onGameClick(e) {
       paintTimeline();
       paintBottom();
     } else if (s.phase === 'challenge' && ui.pendingChallenger) {
-      G.addChallenge(s, ui.pendingChallenger, g);
+      const pid = ui.pendingChallenger;
+      const existing = G.challengeOf(s, pid);
+      if (existing && existing.gap === g) G.removeChallenge(s, pid); // eigene Markierung → zurücknehmen
+      else if (existing) G.moveChallenge(s, pid, g); // andere Lücke → verschieben
+      else G.addChallenge(s, pid, g);
       ui.pendingChallenger = null;
       haptic([15, 30, 15]);
       save();
@@ -856,14 +862,6 @@ async function onGameClick(e) {
   if (a === 'pickchallenger') {
     haptic(6);
     ui.pendingChallenger = ui.pendingChallenger === el.dataset.id ? null : el.dataset.id;
-    paintStage();
-    paintTimeline();
-    return;
-  }
-  if (a === 'unchallenge') {
-    G.removeChallenge(s, el.dataset.id);
-    save();
-    paintTop();
     paintStage();
     paintTimeline();
     return;

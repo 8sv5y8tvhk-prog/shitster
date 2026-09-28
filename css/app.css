@@ -535,6 +535,7 @@ button.row:active, .row.tappable:active { background: var(--cell-pressed); trans
   width: 34px; height: 34px; border-radius: 50%; border: 0; background: var(--c); color: #fff; font-weight: 700; font-size: 14px;
   box-shadow: 0 0 0 2px rgba(255,255,255,0.85), 0 4px 14px rgba(0,0,0,0.4);
 }
+.gap.claimed.editing .slot { font-size: 15px; animation: pulse 1.4s ease-in-out infinite; box-shadow: 0 0 0 2px #fff, 0 0 18px var(--c); }
 .gap.edge-hint .slot::after { content: attr(data-hint); }
 
 .game-bottom { padding: 8px 16px calc(12px + var(--safe-bottom)); }

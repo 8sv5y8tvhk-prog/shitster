@@ -169,6 +169,15 @@ export function addChallenge(s, playerId, gap) {
   s.turn.challenges.push({ playerId, gap });
 }
 
+// Bereits gesetzten Konter auf eine andere freie Lücke verschieben (kostet nichts extra)
+export function moveChallenge(s, playerId, gap) {
+  const c = s.turn.challenges.find(x => x.playerId === playerId);
+  if (s.phase !== 'challenge' || !c || takenGaps(s).has(gap)) return;
+  c.gap = gap;
+}
+
+export const challengeOf = (s, playerId) => s.turn?.challenges.find(c => c.playerId === playerId) || null;
+
 export function removeChallenge(s, playerId) {
   const idx = s.turn.challenges.findIndex(c => c.playerId === playerId);
   if (idx < 0) return;
