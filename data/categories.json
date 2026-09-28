@@ -54,5 +54,19 @@
   "count": 140,
   "from": 1964,
   "to": 2023
+ },
+ {
+  "id": "edm",
+  "name": "EDM",
+  "description": "Festival-Banger und Club-Hits – von Avicii und Swedish House Mafia bis Fred again.. und Peggy Gou.",
+  "file": "edm.json",
+  "icon": "eq",
+  "colors": [
+   "#00d4ff",
+   "#bf5af2"
+  ],
+  "count": 132,
+  "from": 1995,
+  "to": 2024
  }
 ]

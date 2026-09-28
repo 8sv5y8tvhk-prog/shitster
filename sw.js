@@ -1,5 +1,5 @@
 // Offline-Cache für die App-Hülle. Songs kommen immer live von Deezer.
-const CACHE = 'shitster-v8';
+const CACHE = 'shitster-v9';
 const SHELL = [
   './',
   'index.html',
@@ -14,6 +14,7 @@ const SHELL = [
   'data/whitegirl.json',
   'data/dekaden.json',
   'data/rock.json',
+  'data/edm.json',
   'assets/icon.svg',
   'assets/icon-180.png',
   'manifest.webmanifest',

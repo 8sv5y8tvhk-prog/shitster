@@ -38,6 +38,7 @@ const ICONS = {
   heart: '<path d="M12 20.6s-7.6-4.6-9.3-9.4C1.5 7.8 3.8 4.4 7.3 4.4c2 0 3.6 1.1 4.7 2.8 1.1-1.7 2.7-2.8 4.7-2.8 3.5 0 5.8 3.4 4.6 6.8-1.7 4.8-9.3 9.4-9.3 9.4z" fill="currentColor"/>',
   cassette: `<rect x="2.5" y="5" width="19" height="14" rx="2.6" fill="currentColor"/><circle cx="8.5" cy="11" r="2" fill="#000" opacity=".35"/><circle cx="15.5" cy="11" r="2" fill="#000" opacity=".35"/><path d="M7 19l1.5-3.5h7L17 19z" fill="#000" opacity=".3"/>`,
   flame: '<path d="M12.5 2.5c.6 3.3 4.2 5.1 4.9 9 .8 4.6-2.2 9-5.9 9s-6.3-3-6.3-6.4c0-2.6 1.3-4.3 2.6-5.6.2 1.7 1 2.9 2.2 3.4-.4-3.8.8-6.9 2.5-9.4z" fill="currentColor"/>',
+  eq: '<rect x="3" y="10" width="3" height="10" rx="1.5" fill="currentColor"/><rect x="8" y="5" width="3" height="15" rx="1.5" fill="currentColor"/><rect x="13" y="8" width="3" height="12" rx="1.5" fill="currentColor"/><rect x="18" y="3" width="3" height="17" rx="1.5" fill="currentColor"/>',
   glass: `<path d="M5.5 3h13l-1.4 15.6A2.6 2.6 0 0 1 14.5 21h-5a2.6 2.6 0 0 1-2.6-2.4z" ${S} stroke-width="2"/><path d="M6.6 9.5h10.8l-.9 8.8a1.3 1.3 0 0 1-1.3 1.2H8.8a1.3 1.3 0 0 1-1.3-1.2z" fill="currentColor"/>`,
   swords: `<path d="M4 4l9.5 9.5M20 4l-9.5 9.5M7 14.5l2.5 2.5M17 14.5 14.5 17M3.5 20.5 7 17M20.5 20.5 17 17" ${S} stroke-width="2.2"/>`,
   calendar: `<rect x="3.5" y="5" width="17" height="15.5" rx="3.2" ${S} stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" ${S} stroke-width="2"/>`,

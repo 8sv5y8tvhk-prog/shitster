@@ -30,6 +30,11 @@ def norm(s):
     return re.sub(r'[^a-z0-9]', '', s)
 
 
+def raw(s):
+    # wie norm, aber Klammer-Inhalte bleiben erhalten (für gezielte Remix-Suche)
+    return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', s.lower()))
+
+
 def artist_ok(want, got):
     w, g = norm(want), norm(got)
     return w in g or g in w
@@ -42,15 +47,21 @@ def main(src, dst):
         if not line or line.startswith('#'):
             continue
         artist, title = line.split('|')
-        d = get("https://api.deezer.com/search?limit=50&q=" + urllib.parse.quote(f'artist:"{artist}" track:"{title}"'))
+        base = re.sub(r'\s*\([^)]*remix[^)]*\)', '', title, flags=re.I)
+        d = get("https://api.deezer.com/search?limit=50&q=" + urllib.parse.quote(f'artist:"{artist}" track:"{base}"'))
         hits = [t for t in d.get('data', []) if norm(title) in norm(t['title']) and artist_ok(artist, t['artist']['name'])]
         if not hits:
-            d = get("https://api.deezer.com/search?limit=50&q=" + urllib.parse.quote(f'{artist} {title}'))
+            d = get("https://api.deezer.com/search?limit=50&q=" + urllib.parse.quote(f'{artist} {title.replace("(", "").replace(")", "")}'))
             hits = [t for t in d.get('data', []) if norm(title) in norm(t['title']) and artist_ok(artist, t['artist']['name'])]
         if not hits:
             print('MISSING', artist, '-', title, flush=True)
             continue
-        clean = [t for t in hits if not BAD.search(t['title']) and not BAD.search(t.get('title_version') or '')]
+        remix = re.search(r'\(([^)]*remix[^)]*)\)', title, re.I)
+        if remix:
+            # Gewünschter Remix steht in der Liste → genau diese Version, Remixe nicht aussortieren
+            clean = [t for t in hits if raw(remix.group(1)) in raw(t['title'] + (t.get('title_version') or ''))]
+        else:
+            clean = [t for t in hits if not BAD.search(t['title']) and not BAD.search(t.get('title_version') or '')]
         best = max(clean or hits, key=lambda t: t['rank'])
         dz = []
         for t in (clean or hits)[:10]:

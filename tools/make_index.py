@@ -11,6 +11,7 @@ META = {
     'whitegirl': {'icon': 'heart', 'colors': ['#ff6fb5', '#a855f7']},
     'dekaden': {'icon': 'cassette', 'colors': ['#40c8e0', '#5e5ce6']},
     'rock': {'icon': 'flame', 'colors': ['#ff453a', '#3a0a0a']},
+    'edm': {'icon': 'eq', 'colors': ['#00d4ff', '#bf5af2']},
 }
 
 index = []

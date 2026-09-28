@@ -1,0 +1,799 @@
+{
+ "id": "edm",
+ "name": "EDM",
+ "description": "Festival-Banger und Club-Hits – von Avicii und Swedish House Mafia bis Fred again.. und Peggy Gou.",
+ "songs": [
+  {
+   "id": 91348522,
+   "artist": "Robert Miles",
+   "title": "Children",
+   "year": 1995
+  },
+  {
+   "id": 3129775,
+   "artist": "Daft Punk",
+   "title": "Around the World",
+   "year": 1997
+  },
+  {
+   "id": 695110932,
+   "artist": "Stardust",
+   "title": "Music Sounds Better with You",
+   "year": 1998
+  },
+  {
+   "id": 2076053797,
+   "artist": "Gigi D'Agostino",
+   "title": "L'amour toujours",
+   "year": 1999
+  },
+  {
+   "id": 3135553,
+   "artist": "Daft Punk",
+   "title": "One More Time",
+   "year": 2000
+  },
+  {
+   "id": 3135556,
+   "artist": "Daft Punk",
+   "title": "Harder, Better, Faster, Stronger",
+   "year": 2001
+  },
+  {
+   "id": 132560802,
+   "artist": "Tiësto",
+   "title": "Adagio for Strings",
+   "year": 2004
+  },
+  {
+   "id": 3420337441,
+   "artist": "Bob Sinclar feat. Steve Edwards",
+   "title": "World, Hold On (Children of the Sky)",
+   "year": 2006
+  },
+  {
+   "id": 1134280742,
+   "artist": "Fedde Le Grand",
+   "title": "Put Your Hands Up for Detroit",
+   "year": 2006
+  },
+  {
+   "id": 7949127,
+   "artist": "David Guetta",
+   "title": "Love Is Gone",
+   "year": 2007
+  },
+  {
+   "id": 144535404,
+   "artist": "Eric Prydz",
+   "title": "Pjanoo",
+   "year": 2008
+  },
+  {
+   "id": 1761983427,
+   "artist": "Paul Kalkbrenner & Fritz Kalkbrenner",
+   "title": "Sky and Sand",
+   "year": 2008
+  },
+  {
+   "id": 73460627,
+   "artist": "Axwell, Sebastian Ingrosso & Steve Angello feat. Laidback Luke & Deborah Cox",
+   "title": "Leave the World Behind",
+   "year": 2009
+  },
+  {
+   "id": 673165762,
+   "artist": "David Guetta feat. Akon",
+   "title": "Sexy Bitch",
+   "year": 2009
+  },
+  {
+   "id": 5400243,
+   "artist": "David Guetta feat. Kid Cudi",
+   "title": "Memories",
+   "year": 2009
+  },
+  {
+   "id": 5150299,
+   "artist": "Deadmau5",
+   "title": "Strobe",
+   "year": 2009
+  },
+  {
+   "id": 4222410282,
+   "artist": "Afrojack feat. Eva Simons",
+   "title": "Take Over Control",
+   "year": 2010
+  },
+  {
+   "id": 2942220821,
+   "artist": "Flux Pavilion",
+   "title": "I Can't Stop",
+   "year": 2010
+  },
+  {
+   "id": 3803035232,
+   "artist": "Martin Solveig & Dragonette",
+   "title": "Hello",
+   "year": 2010
+  },
+  {
+   "id": 14615940,
+   "artist": "Skrillex",
+   "title": "Scary Monsters and Nice Sprites",
+   "year": 2010
+  },
+  {
+   "id": 6517508,
+   "artist": "Swedish House Mafia",
+   "title": "One (Your Name)",
+   "year": 2010
+  },
+  {
+   "id": 12245061,
+   "artist": "Swedish House Mafia & Tinie Tempah",
+   "title": "Miami 2 Ibiza",
+   "year": 2010
+  },
+  {
+   "id": 14383880,
+   "artist": "Avicii",
+   "title": "Levels",
+   "year": 2011
+  },
+  {
+   "id": 61142285,
+   "artist": "Calvin Harris",
+   "title": "Feel So Close",
+   "year": 2011
+  },
+  {
+   "id": 62847142,
+   "artist": "David Guetta feat. Sia",
+   "title": "Titanium",
+   "year": 2011
+  },
+  {
+   "id": 62847145,
+   "artist": "David Guetta feat. Usher",
+   "title": "Without You",
+   "year": 2011
+  },
+  {
+   "id": 15781392,
+   "artist": "Skrillex feat. Sirah",
+   "title": "Bangarang",
+   "year": 2011
+  },
+  {
+   "id": 11234004,
+   "artist": "Swedish House Mafia",
+   "title": "Save the World",
+   "year": 2011
+  },
+  {
+   "id": 24276241,
+   "artist": "Avicii",
+   "title": "Silhouettes",
+   "year": 2012
+  },
+  {
+   "id": 63017512,
+   "artist": "Avicii & Nicky Romero",
+   "title": "I Could Be the One",
+   "year": 2012
+  },
+  {
+   "id": 60977514,
+   "artist": "Calvin Harris feat. Florence Welch",
+   "title": "Sweet Nothing",
+   "year": 2012
+  },
+  {
+   "id": 61142290,
+   "artist": "Calvin Harris feat. Ellie Goulding",
+   "title": "I Need Your Love",
+   "year": 2012
+  },
+  {
+   "id": 62847144,
+   "artist": "David Guetta feat. Sia",
+   "title": "She Wolf (Falling to Pieces)",
+   "year": 2012
+  },
+  {
+   "id": 75526535,
+   "artist": "Disclosure & Sam Smith",
+   "title": "Latch",
+   "year": 2012
+  },
+  {
+   "id": 1818071587,
+   "artist": "Hardwell feat. Mitch Crown",
+   "title": "Spaceman",
+   "year": 2012
+  },
+  {
+   "id": 1818069397,
+   "artist": "Hardwell feat. Amba Shepherd",
+   "title": "Apollo",
+   "year": 2012
+  },
+  {
+   "id": 33993921,
+   "artist": "Knife Party",
+   "title": "Bonfire",
+   "year": 2012
+  },
+  {
+   "id": 1355491752,
+   "artist": "Otto Knows",
+   "title": "Million Voices",
+   "year": 2012
+  },
+  {
+   "id": 68171409,
+   "artist": "Sebastian Ingrosso, Tommy Trash & John Martin",
+   "title": "Reload",
+   "year": 2012
+  },
+  {
+   "id": 60842360,
+   "artist": "Swedish House Mafia feat. John Martin",
+   "title": "Don't You Worry Child",
+   "year": 2012
+  },
+  {
+   "id": 49582501,
+   "artist": "Swedish House Mafia",
+   "title": "Greyhound",
+   "year": 2012
+  },
+  {
+   "id": 60904700,
+   "artist": "Zedd feat. Foxes",
+   "title": "Clarity",
+   "year": 2012
+  },
+  {
+   "id": 72327967,
+   "artist": "Armin van Buuren feat. Trevor Guthrie",
+   "title": "This Is What It Feels Like",
+   "year": 2013
+  },
+  {
+   "id": 70266756,
+   "artist": "Avicii",
+   "title": "Wake Me Up",
+   "year": 2013
+  },
+  {
+   "id": 70266758,
+   "artist": "Avicii",
+   "title": "Hey Brother",
+   "year": 2013
+  },
+  {
+   "id": 73707710,
+   "artist": "DJ Snake & Lil Jon",
+   "title": "Turn Down for What",
+   "year": 2013
+  },
+  {
+   "id": 70322528,
+   "artist": "Klingande",
+   "title": "Jubel",
+   "year": 2013
+  },
+  {
+   "id": 2102633427,
+   "artist": "Martin Garrix",
+   "title": "Animals",
+   "year": 2013
+  },
+  {
+   "id": 78527813,
+   "artist": "OneRepublic feat. Alesso",
+   "title": "If I Lose Myself (Alesso vs OneRepublic)",
+   "year": 2013
+  },
+  {
+   "id": 78933237,
+   "artist": "Tiësto",
+   "title": "Red Lights",
+   "year": 2013
+  },
+  {
+   "id": 79942796,
+   "artist": "Zedd feat. Hayley Williams",
+   "title": "Stay the Night",
+   "year": 2013
+  },
+  {
+   "id": 100068938,
+   "artist": "Alesso feat. Tove Lo",
+   "title": "Heroes (We Could Be)",
+   "year": 2014
+  },
+  {
+   "id": 90632837,
+   "artist": "Avicii",
+   "title": "The Nights",
+   "year": 2014
+  },
+  {
+   "id": 88936747,
+   "artist": "Calvin Harris",
+   "title": "Summer",
+   "year": 2014
+  },
+  {
+   "id": 88936737,
+   "artist": "Calvin Harris feat. John Newman",
+   "title": "Blame",
+   "year": 2014
+  },
+  {
+   "id": 88936743,
+   "artist": "Calvin Harris feat. Ellie Goulding",
+   "title": "Outside",
+   "year": 2014
+  },
+  {
+   "id": 73982869,
+   "artist": "Clean Bandit feat. Jess Glynne",
+   "title": "Rather Be",
+   "year": 2014
+  },
+  {
+   "id": 90250621,
+   "artist": "David Guetta feat. Afrojack, Bebe Rexha & Nicki Minaj",
+   "title": "Hey Mama",
+   "year": 2014
+  },
+  {
+   "id": 90250609,
+   "artist": "David Guetta feat. Sam Martin",
+   "title": "Lovers on the Sun",
+   "year": 2014
+  },
+  {
+   "id": 76520669,
+   "artist": "David Guetta & Showtek feat. Vassy",
+   "title": "Bad",
+   "year": 2014
+  },
+  {
+   "id": 88210781,
+   "artist": "Deorro",
+   "title": "Five Hours",
+   "year": 2014
+  },
+  {
+   "id": 1777963277,
+   "artist": "Dimitri Vegas & Like Mike & Martin Garrix",
+   "title": "Tremor",
+   "year": 2014
+  },
+  {
+   "id": 86453925,
+   "artist": "Galantis",
+   "title": "Runaway (U & I)",
+   "year": 2014
+  },
+  {
+   "id": 90726629,
+   "artist": "Kygo & Conrad Sewell",
+   "title": "Firestone",
+   "year": 2014
+  },
+  {
+   "id": 84908527,
+   "artist": "Lilly Wood And The Prick feat. Robin Schulz",
+   "title": "Prayer in C (Robin Schulz Remix)",
+   "year": 2014
+  },
+  {
+   "id": 81300218,
+   "artist": "Lost Frequencies",
+   "title": "Are You With Me",
+   "year": 2014
+  },
+  {
+   "id": 1084861832,
+   "artist": "Mr. Probz feat. Robin Schulz",
+   "title": "Waves (Robin Schulz Remix)",
+   "year": 2014
+  },
+  {
+   "id": 78098991,
+   "artist": "OMI feat. Felix Jaehn",
+   "title": "Cheerleader (Felix Jaehn Remix)",
+   "year": 2014
+  },
+  {
+   "id": 79959534,
+   "artist": "Oliver Heldens",
+   "title": "Gecko (Overdrive)",
+   "year": 2014
+  },
+  {
+   "id": 3601122502,
+   "artist": "Timmy Trumpet",
+   "title": "Freaks",
+   "year": 2014
+  },
+  {
+   "id": 77633484,
+   "artist": "Tiësto feat. Matthew Koma",
+   "title": "Wasted",
+   "year": 2014
+  },
+  {
+   "id": 140295501,
+   "artist": "Alan Walker",
+   "title": "Faded",
+   "year": 2015
+  },
+  {
+   "id": 107346368,
+   "artist": "Avicii",
+   "title": "Waiting for Love",
+   "year": 2015
+  },
+  {
+   "id": 437979092,
+   "artist": "Axwell Λ Ingrosso",
+   "title": "Sun Is Shining",
+   "year": 2015
+  },
+  {
+   "id": 103996098,
+   "artist": "Calvin Harris & DISCIPLΞS",
+   "title": "How Deep Is Your Love",
+   "year": 2015
+  },
+  {
+   "id": 104847438,
+   "artist": "Duke Dumont",
+   "title": "Ocean Drive",
+   "year": 2015
+  },
+  {
+   "id": 118585342,
+   "artist": "Eric Prydz",
+   "title": "Opus",
+   "year": 2015
+  },
+  {
+   "id": 95978792,
+   "artist": "Felix Jaehn feat. Jasmine Thompson",
+   "title": "Ain't Nobody (Loves Me Better)",
+   "year": 2015
+  },
+  {
+   "id": 114396428,
+   "artist": "Jonas Blue feat. Dakota",
+   "title": "Fast Car",
+   "year": 2015
+  },
+  {
+   "id": 96818170,
+   "artist": "Kygo & Parson James",
+   "title": "Stole the Show",
+   "year": 2015
+  },
+  {
+   "id": 100654376,
+   "artist": "Lost Frequencies feat. Janieck",
+   "title": "Reality",
+   "year": 2015
+  },
+  {
+   "id": 113876568,
+   "artist": "Major Lazer feat. MØ & DJ Snake",
+   "title": "Lean On",
+   "year": 2015
+  },
+  {
+   "id": 630193812,
+   "artist": "Major Lazer feat. Nyla & Fuse ODG",
+   "title": "Light It Up (Remix)",
+   "year": 2015
+  },
+  {
+   "id": 124550860,
+   "artist": "Mike Posner feat. SeeB",
+   "title": "I Took a Pill in Ibiza (Seeb Remix)",
+   "year": 2015
+  },
+  {
+   "id": 107471416,
+   "artist": "Robin Schulz feat. Francesco Yates",
+   "title": "Sugar",
+   "year": 2015
+  },
+  {
+   "id": 97998552,
+   "artist": "Robin Schulz feat. Ilsey",
+   "title": "Headlights",
+   "year": 2015
+  },
+  {
+   "id": 559465302,
+   "artist": "Sigala",
+   "title": "Easy Love",
+   "year": 2015
+  },
+  {
+   "id": 110148950,
+   "artist": "The Chainsmokers feat. ROZES",
+   "title": "Roses",
+   "year": 2015
+  },
+  {
+   "id": 452769552,
+   "artist": "Alok, Zeeba & Bruno Martini",
+   "title": "Hear Me Now",
+   "year": 2016
+  },
+  {
+   "id": 129632340,
+   "artist": "DJ Snake feat. Justin Bieber",
+   "title": "Let Me Love You",
+   "year": 2016
+  },
+  {
+   "id": 135373112,
+   "artist": "Kungs & Cookin' On 3 Burners",
+   "title": "This Girl",
+   "year": 2016
+  },
+  {
+   "id": 128817967,
+   "artist": "Major Lazer feat. Justin Bieber & MØ",
+   "title": "Cold Water",
+   "year": 2016
+  },
+  {
+   "id": 125244224,
+   "artist": "Marshmello",
+   "title": "Alone",
+   "year": 2016
+  },
+  {
+   "id": 129313094,
+   "artist": "Martin Garrix & Bebe Rexha",
+   "title": "In the Name of Love",
+   "year": 2016
+  },
+  {
+   "id": 119302924,
+   "artist": "The Chainsmokers feat. Daya",
+   "title": "Don't Let Me Down",
+   "year": 2016
+  },
+  {
+   "id": 401358872,
+   "artist": "Alan Walker",
+   "title": "The Spectre",
+   "year": 2017
+  },
+  {
+   "id": 393460732,
+   "artist": "Avicii & Sandro Cavazza",
+   "title": "Without You",
+   "year": 2017
+  },
+  {
+   "id": 362795841,
+   "artist": "Axwell Λ Ingrosso",
+   "title": "More Than You Know",
+   "year": 2017
+  },
+  {
+   "id": 374051471,
+   "artist": "Calvin Harris feat. Pharrell Williams, Katy Perry & Big Sean",
+   "title": "Feels",
+   "year": 2017
+  },
+  {
+   "id": 142328215,
+   "artist": "Kygo & Selena Gomez",
+   "title": "It Ain't Me",
+   "year": 2017
+  },
+  {
+   "id": 140856305,
+   "artist": "Martin Garrix & Dua Lipa",
+   "title": "Scared to Be Lonely",
+   "year": 2017
+  },
+  {
+   "id": 142706538,
+   "artist": "The Chainsmokers & Coldplay",
+   "title": "Something Just Like This",
+   "year": 2017
+  },
+  {
+   "id": 757592622,
+   "artist": "Armin van Buuren",
+   "title": "Blah Blah Blah",
+   "year": 2018
+  },
+  {
+   "id": 525334532,
+   "artist": "Fisher",
+   "title": "Losing It",
+   "year": 2018
+  },
+  {
+   "id": 2441318935,
+   "artist": "Marshmello & Bastille",
+   "title": "Happier",
+   "year": 2018
+  },
+  {
+   "id": 532182272,
+   "artist": "Martin Garrix feat. Bonn",
+   "title": "High on Life",
+   "year": 2018
+  },
+  {
+   "id": 623723282,
+   "artist": "Meduza & GOODBOYS",
+   "title": "Piece of Your Heart",
+   "year": 2019
+  },
+  {
+   "id": 769757652,
+   "artist": "Meduza, Becky Hill & GOODBOYS",
+   "title": "Lose Control",
+   "year": 2019
+  },
+  {
+   "id": 708907602,
+   "artist": "Regard",
+   "title": "Ride It",
+   "year": 2019
+  },
+  {
+   "id": 770293952,
+   "artist": "SAINt JHN feat. Imanbek",
+   "title": "Roses (Imanbek Remix)",
+   "year": 2019
+  },
+  {
+   "id": 831917182,
+   "artist": "Topic & A7S",
+   "title": "Breaking Me",
+   "year": 2019
+  },
+  {
+   "id": 1006845912,
+   "artist": "Joel Corry feat. MNEK",
+   "title": "Head & Heart",
+   "year": 2020
+  },
+  {
+   "id": 914108092,
+   "artist": "Purple Disco Machine & Sophie and the Giants",
+   "title": "Hypnotized",
+   "year": 2020
+  },
+  {
+   "id": 1087667882,
+   "artist": "Tiësto",
+   "title": "The Business",
+   "year": 2020
+  },
+  {
+   "id": 3482503451,
+   "artist": "Acraze feat. Cherish",
+   "title": "Do It to It",
+   "year": 2021
+  },
+  {
+   "id": 1457025872,
+   "artist": "Elton John & Dua Lipa feat. Pnau",
+   "title": "Cold Heart (PNAU Remix)",
+   "year": 2021
+  },
+  {
+   "id": 1239694902,
+   "artist": "Fred again.. & The Blessed Madonna",
+   "title": "Marea (We've Lost Dancing)",
+   "year": 2021
+  },
+  {
+   "id": 1372169352,
+   "artist": "Kungs",
+   "title": "Never Going Home",
+   "year": 2021
+  },
+  {
+   "id": 1432930542,
+   "artist": "Lost Frequencies & Calum Scott",
+   "title": "Where Are You Now",
+   "year": 2021
+  },
+  {
+   "id": 1713175757,
+   "artist": "Swedish House Mafia & The Weeknd",
+   "title": "Moth to a Flame",
+   "year": 2021
+  },
+  {
+   "id": 2107937657,
+   "artist": "David Guetta & Bebe Rexha",
+   "title": "I'm Good (Blue)",
+   "year": 2022
+  },
+  {
+   "id": 1862856457,
+   "artist": "Eliza Rose & Interplanetary Criminal",
+   "title": "B.O.T.A. (Baddest Of Them All)",
+   "year": 2022
+  },
+  {
+   "id": 1832599647,
+   "artist": "Fred again.. & Swedish House Mafia feat. Future",
+   "title": "Turn On the Lights again..",
+   "year": 2022
+  },
+  {
+   "id": 1899047597,
+   "artist": "Kx5 feat. Hayla",
+   "title": "Escape",
+   "year": 2022
+  },
+  {
+   "id": 1914037957,
+   "artist": "Mau P",
+   "title": "Drugs From Amsterdam",
+   "year": 2022
+  },
+  {
+   "id": 1986024307,
+   "artist": "Tiësto & Tate McRae",
+   "title": "10:35",
+   "year": 2022
+  },
+  {
+   "id": 2182322087,
+   "artist": "Calvin Harris & Ellie Goulding",
+   "title": "Miracle",
+   "year": 2023
+  },
+  {
+   "id": 2403785095,
+   "artist": "Cassö, Raye & D-Block Europe",
+   "title": "Prada",
+   "year": 2023
+  },
+  {
+   "id": 2216207477,
+   "artist": "David Guetta, Anne-Marie & Coi Leray",
+   "title": "Baby Don't Hurt Me",
+   "year": 2023
+  },
+  {
+   "id": 2472925871,
+   "artist": "Dom Dolla",
+   "title": "Saving Up",
+   "year": 2023
+  },
+  {
+   "id": 2444007035,
+   "artist": "Peggy Gou",
+   "title": "(It Goes Like) Nanana",
+   "year": 2023
+  },
+  {
+   "id": 2887264442,
+   "artist": "Hugel, Topic & Arash feat. Daecolm",
+   "title": "I Adore You",
+   "year": 2024
+  }
+ ]
+}

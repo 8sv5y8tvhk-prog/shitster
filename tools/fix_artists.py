@@ -14,9 +14,10 @@ DATA = os.path.join(os.path.dirname(__file__), '..', 'data')
 UA = {'User-Agent': 'Shitster/0.2 (private music quiz)'}
 # Deezer listet bei manchen Bands die Mitglieder/Produzenten als Haupt-Interpreten → ausblenden
 BAND_MEMBERS = {'Eurythmics': {'Annie Lennox', 'Dave Stewart'}, 'Gnarls Barkley': {'CeeLo Green', 'Danger Mouse'},
-                'Gala': {'Molella', 'Phil Jay'}}
+                'Gala': {'Molella', 'Phil Jay'}, 'Axwell Λ Ingrosso': {'Axwell', 'Sebastian Ingrosso'},
+                'Kx5': {'Deadmau5', 'deadmau5', 'Kaskade'}, 'Stardust': {'Benjamin Diamond', 'Alan Braxe', 'Thomas Bangalter'}}
 # Einheitliche Schreibweisen (Deezer ist nicht konsistent)
-NAME_FIX = {'JAY Z': 'JAY-Z', 'JAŸ-Z': 'JAY-Z', 'Charli xcx': 'Charli XCX', 'Charli Xcx': 'Charli XCX', 'ZEDD': 'Zedd', 'Volo': 'VOLO'}
+NAME_FIX = {'Axwell /\\ Ingrosso': 'Axwell Λ Ingrosso', 'cassö': 'Cassö', 'HUGEL': 'Hugel', 'JAY Z': 'JAY-Z', 'JAŸ-Z': 'JAY-Z', 'Charli xcx': 'Charli XCX', 'Charli Xcx': 'Charli XCX', 'ZEDD': 'Zedd', 'Volo': 'VOLO'}
 
 
 def get(url):
@@ -56,6 +57,7 @@ def artist_line(track):
     for band, members in BAND_MEMBERS.items():
         if band in main:
             main = [m for m in main if m not in members]
+            feat = [f for f in feat if f not in members]
     # Wer als Gast geführt wird, ist kein Haupt-Interpret (Deezer listet manche doppelt)
     main = [m for m in main if norm(m) not in {norm(f) for f in feat}] or main[:1]
     if not main:
