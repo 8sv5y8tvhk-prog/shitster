@@ -1,0 +1,817 @@
+{
+ "id": "whitegirl",
+ "name": "White Girl Music",
+ "description": "Pop-Banger zum Mitgrölen – Rihanna, Gaga, Britney, Taylor & Co. Schwerpunkt ab 2000.",
+ "songs": [
+  {
+   "id": 3133738,
+   "artist": "Spice Girls",
+   "title": "Wannabe",
+   "year": 1996
+  },
+  {
+   "id": 540175,
+   "artist": "Britney Spears",
+   "title": "...Baby One More Time",
+   "year": 1998
+  },
+  {
+   "id": 13141170,
+   "artist": "Backstreet Boys",
+   "title": "I Want It That Way",
+   "year": 1999
+  },
+  {
+   "id": 15627386,
+   "artist": "Christina Aguilera",
+   "title": "Genie in a Bottle",
+   "year": 1999
+  },
+  {
+   "id": 13142617,
+   "artist": "Britney Spears",
+   "title": "Oops!...I Did It Again",
+   "year": 2000
+  },
+  {
+   "id": 5817089,
+   "artist": "Destiny's Child",
+   "title": "Survivor",
+   "year": 2001
+  },
+  {
+   "id": 4006939,
+   "artist": "Destiny's Child",
+   "title": "Bootylicious",
+   "year": 2001
+  },
+  {
+   "id": 3098100,
+   "artist": "Kylie Minogue",
+   "title": "Can't Get You out of My Head",
+   "year": 2001
+  },
+  {
+   "id": 655356162,
+   "artist": "P!nk",
+   "title": "Get the Party Started",
+   "year": 2001
+  },
+  {
+   "id": 15211178,
+   "artist": "Shakira",
+   "title": "Whenever, Wherever",
+   "year": 2001
+  },
+  {
+   "id": 15587465,
+   "artist": "Avril Lavigne",
+   "title": "Complicated",
+   "year": 2002
+  },
+  {
+   "id": 15587466,
+   "artist": "Avril Lavigne",
+   "title": "Sk8er Boi",
+   "year": 2002
+  },
+  {
+   "id": 965215,
+   "artist": "Christina Aguilera feat. Redman",
+   "title": "Dirrty",
+   "year": 2002
+  },
+  {
+   "id": 983832,
+   "artist": "Vanessa Carlton",
+   "title": "A Thousand Miles",
+   "year": 2002
+  },
+  {
+   "id": 884756,
+   "artist": "t.A.T.u.",
+   "title": "All the Things She Said",
+   "year": 2002
+  },
+  {
+   "id": 13166294,
+   "artist": "Beyoncé feat. JAY-Z",
+   "title": "Crazy in Love",
+   "year": 2003
+  },
+  {
+   "id": 15391618,
+   "artist": "Britney Spears",
+   "title": "Toxic",
+   "year": 2003
+  },
+  {
+   "id": 80274512,
+   "artist": "Evanescence",
+   "title": "Bring Me to Life",
+   "year": 2003
+  },
+  {
+   "id": 628266,
+   "artist": "Outkast",
+   "title": "Hey Ya!",
+   "year": 2003
+  },
+  {
+   "id": 953097,
+   "artist": "The Killers",
+   "title": "Mr. Brightside",
+   "year": 2003
+  },
+  {
+   "id": 983450,
+   "artist": "Gwen Stefani",
+   "title": "Hollaback Girl",
+   "year": 2004
+  },
+  {
+   "id": 62118993,
+   "artist": "Kelly Clarkson",
+   "title": "Since U Been Gone",
+   "year": 2004
+  },
+  {
+   "id": 1240000812,
+   "artist": "Natasha Bedingfield",
+   "title": "Unwritten",
+   "year": 2004
+  },
+  {
+   "id": 921959412,
+   "artist": "Plain White T's",
+   "title": "Hey There Delilah",
+   "year": 2005
+  },
+  {
+   "id": 1161005,
+   "artist": "The Pussycat Dolls feat. Busta Rhymes",
+   "title": "Don't Cha",
+   "year": 2005
+  },
+  {
+   "id": 2176852,
+   "artist": "Amy Winehouse",
+   "title": "Rehab",
+   "year": 2006
+  },
+  {
+   "id": 4264585742,
+   "artist": "Beyoncé",
+   "title": "Irreplaceable",
+   "year": 2006
+  },
+  {
+   "id": 882287,
+   "artist": "Fergie",
+   "title": "Fergalicious",
+   "year": 2006
+  },
+  {
+   "id": 1575417,
+   "artist": "Gwen Stefani",
+   "title": "The Sweet Escape",
+   "year": 2006
+  },
+  {
+   "id": 1151141,
+   "artist": "Nelly Furtado",
+   "title": "Maneater",
+   "year": 2006
+  },
+  {
+   "id": 2430338,
+   "artist": "Nelly Furtado feat. Timbaland",
+   "title": "Promiscuous",
+   "year": 2006
+  },
+  {
+   "id": 1574660,
+   "artist": "Rihanna",
+   "title": "SOS",
+   "year": 2006
+  },
+  {
+   "id": 88897841,
+   "artist": "Shakira feat. Wyclef Jean",
+   "title": "Hips Don't Lie",
+   "year": 2006
+  },
+  {
+   "id": 1576190,
+   "artist": "Snow Patrol",
+   "title": "Chasing Cars",
+   "year": 2006
+  },
+  {
+   "id": 5495885,
+   "artist": "Avril Lavigne",
+   "title": "Girlfriend",
+   "year": 2007
+  },
+  {
+   "id": 3829140,
+   "artist": "Paramore",
+   "title": "Misery Business",
+   "year": 2007
+  },
+  {
+   "id": 925108,
+   "artist": "Rihanna",
+   "title": "Don't Stop the Music",
+   "year": 2007
+  },
+  {
+   "id": 925106,
+   "artist": "Rihanna feat. JAY-Z",
+   "title": "Umbrella",
+   "year": 2007
+  },
+  {
+   "id": 2485118,
+   "artist": "Beyoncé",
+   "title": "Single Ladies (Put a Ring on It)",
+   "year": 2008
+  },
+  {
+   "id": 2553265,
+   "artist": "Beyoncé",
+   "title": "Halo",
+   "year": 2008
+  },
+  {
+   "id": 82199332,
+   "artist": "Britney Spears",
+   "title": "Womanizer",
+   "year": 2008
+  },
+  {
+   "id": 3169161,
+   "artist": "Katy Perry",
+   "title": "I Kissed a Girl",
+   "year": 2008
+  },
+  {
+   "id": 3160142,
+   "artist": "Katy Perry",
+   "title": "Hot N Cold",
+   "year": 2008
+  },
+  {
+   "id": 2603558,
+   "artist": "Lady Gaga",
+   "title": "Poker Face",
+   "year": 2008
+  },
+  {
+   "id": 4709947,
+   "artist": "Lady Gaga feat. Colby O’Donis",
+   "title": "Just Dance",
+   "year": 2008
+  },
+  {
+   "id": 2281107,
+   "artist": "P!nk",
+   "title": "So What",
+   "year": 2008
+  },
+  {
+   "id": 925118,
+   "artist": "Rihanna",
+   "title": "Disturbia",
+   "year": 2008
+  },
+  {
+   "id": 2917264,
+   "artist": "Taylor Swift",
+   "title": "Love Story",
+   "year": 2008
+  },
+  {
+   "id": 4634582,
+   "artist": "Taylor Swift",
+   "title": "You Belong With Me",
+   "year": 2008
+  },
+  {
+   "id": 4619466,
+   "artist": "Black Eyed Peas",
+   "title": "I Gotta Feeling",
+   "year": 2009
+  },
+  {
+   "id": 13393735,
+   "artist": "Cascada",
+   "title": "Evacuate the Dancefloor",
+   "year": 2009
+  },
+  {
+   "id": 4764905,
+   "artist": "Kesha",
+   "title": "TiK ToK",
+   "year": 2009
+  },
+  {
+   "id": 4601933,
+   "artist": "Lady Gaga",
+   "title": "Bad Romance",
+   "year": 2009
+  },
+  {
+   "id": 4709944,
+   "artist": "Lady Gaga feat. Beyoncé",
+   "title": "Telephone",
+   "year": 2009
+  },
+  {
+   "id": 4233792,
+   "artist": "Miley Cyrus",
+   "title": "Party in the U.S.A.",
+   "year": 2009
+  },
+  {
+   "id": 8086126,
+   "artist": "Adele",
+   "title": "Rolling in the Deep",
+   "year": 2010
+  },
+  {
+   "id": 17135108,
+   "artist": "Katy Perry",
+   "title": "Teenage Dream",
+   "year": 2010
+  },
+  {
+   "id": 13460186,
+   "artist": "Katy Perry",
+   "title": "Firework",
+   "year": 2010
+  },
+  {
+   "id": 17135109,
+   "artist": "Katy Perry",
+   "title": "Last Friday Night (T.G.I.F.)",
+   "year": 2010
+  },
+  {
+   "id": 17135110,
+   "artist": "Katy Perry feat. Snoop Dogg",
+   "title": "California Gurls",
+   "year": 2010
+  },
+  {
+   "id": 412843352,
+   "artist": "Nicki Minaj",
+   "title": "Super Bass",
+   "year": 2010
+  },
+  {
+   "id": 13529563,
+   "artist": "Rihanna",
+   "title": "Only Girl (In the World)",
+   "year": 2010
+  },
+  {
+   "id": 13529559,
+   "artist": "Rihanna",
+   "title": "S&M",
+   "year": 2010
+  },
+  {
+   "id": 8086136,
+   "artist": "Adele",
+   "title": "Someone Like You",
+   "year": 2011
+  },
+  {
+   "id": 10686934,
+   "artist": "Beyoncé",
+   "title": "Run the World (Girls)",
+   "year": 2011
+  },
+  {
+   "id": 60726419,
+   "artist": "Carly Rae Jepsen",
+   "title": "Call Me Maybe",
+   "year": 2011
+  },
+  {
+   "id": 14405185,
+   "artist": "Jessie J feat. B.o.B",
+   "title": "Price Tag",
+   "year": 2011
+  },
+  {
+   "id": 14241633,
+   "artist": "Kelly Clarkson",
+   "title": "Stronger (What Doesn't Kill You)",
+   "year": 2011
+  },
+  {
+   "id": 12565420,
+   "artist": "LMFAO",
+   "title": "Party Rock Anthem",
+   "year": 2011
+  },
+  {
+   "id": 11747931,
+   "artist": "Lady Gaga",
+   "title": "Born This Way",
+   "year": 2011
+  },
+  {
+   "id": 16667911,
+   "artist": "One Direction",
+   "title": "What Makes You Beautiful",
+   "year": 2011
+  },
+  {
+   "id": 14525574,
+   "artist": "Rihanna feat. Calvin Harris",
+   "title": "We Found Love",
+   "year": 2011
+  },
+  {
+   "id": 90305559,
+   "artist": "Selena Gomez & The Scene",
+   "title": "Love You Like a Love Song",
+   "year": 2011
+  },
+  {
+   "id": 69959333,
+   "artist": "Icona Pop feat. Charli XCX",
+   "title": "I Love It",
+   "year": 2012
+  },
+  {
+   "id": 62710229,
+   "artist": "Kesha",
+   "title": "Die Young",
+   "year": 2012
+  },
+  {
+   "id": 16047072,
+   "artist": "Lana Del Rey",
+   "title": "Summertime Sadness",
+   "year": 2012
+  },
+  {
+   "id": 70403437,
+   "artist": "Lorde",
+   "title": "Royals",
+   "year": 2012
+  },
+  {
+   "id": 28852751,
+   "artist": "Nicki Minaj",
+   "title": "Starships",
+   "year": 2012
+  },
+  {
+   "id": 60978718,
+   "artist": "Rihanna",
+   "title": "Diamonds",
+   "year": 2012
+  },
+  {
+   "id": 529117841,
+   "artist": "Taylor Swift",
+   "title": "We Are Never Ever Getting Back Together",
+   "year": 2012
+  },
+  {
+   "id": 529117821,
+   "artist": "Taylor Swift",
+   "title": "22",
+   "year": 2012
+  },
+  {
+   "id": 71645431,
+   "artist": "Katy Perry",
+   "title": "Roar",
+   "year": 2013
+  },
+  {
+   "id": 71137166,
+   "artist": "Miley Cyrus",
+   "title": "Wrecking Ball",
+   "year": 2013
+  },
+  {
+   "id": 83844544,
+   "artist": "Ariana Grande",
+   "title": "Break Free",
+   "year": 2014
+  },
+  {
+   "id": 83844534,
+   "artist": "Ariana Grande feat. Iggy Azalea",
+   "title": "Problem",
+   "year": 2014
+  },
+  {
+   "id": 77349246,
+   "artist": "Iggy Azalea feat. Charli XCX",
+   "title": "Fancy",
+   "year": 2014
+  },
+  {
+   "id": 81609384,
+   "artist": "Jessie J, Ariana Grande & Nicki Minaj",
+   "title": "Bang Bang",
+   "year": 2014
+  },
+  {
+   "id": 113420702,
+   "artist": "Meghan Trainor",
+   "title": "All About That Bass",
+   "year": 2014
+  },
+  {
+   "id": 79587580,
+   "artist": "Sia",
+   "title": "Chandelier",
+   "year": 2014
+  },
+  {
+   "id": 89077555,
+   "artist": "Taylor Swift",
+   "title": "Shake It Off",
+   "year": 2014
+  },
+  {
+   "id": 89077547,
+   "artist": "Taylor Swift",
+   "title": "Blank Space",
+   "year": 2014
+  },
+  {
+   "id": 109703218,
+   "artist": "Demi Lovato",
+   "title": "Cool for the Summer",
+   "year": 2015
+  },
+  {
+   "id": 111780476,
+   "artist": "Ellie Goulding",
+   "title": "Love Me Like You Do",
+   "year": 2015
+  },
+  {
+   "id": 124995668,
+   "artist": "Ariana Grande feat. Nicki Minaj",
+   "title": "Side to Side",
+   "year": 2016
+  },
+  {
+   "id": 123883254,
+   "artist": "Calvin Harris feat. Rihanna",
+   "title": "This Is What You Came For",
+   "year": 2016
+  },
+  {
+   "id": 118190298,
+   "artist": "Rihanna feat. Drake",
+   "title": "Work",
+   "year": 2016
+  },
+  {
+   "id": 129310248,
+   "artist": "The Chainsmokers feat. Halsey",
+   "title": "Closer",
+   "year": 2016
+  },
+  {
+   "id": 447098092,
+   "artist": "Camila Cabello feat. Young Thug",
+   "title": "Havana",
+   "year": 2017
+  },
+  {
+   "id": 1065583332,
+   "artist": "Dua Lipa",
+   "title": "New Rules",
+   "year": 2017
+  },
+  {
+   "id": 674416352,
+   "artist": "Lizzo",
+   "title": "Truth Hurts",
+   "year": 2017
+  },
+  {
+   "id": 435491492,
+   "artist": "Taylor Swift",
+   "title": "Look What You Made Me Do",
+   "year": 2017
+  },
+  {
+   "id": 629899852,
+   "artist": "Ariana Grande",
+   "title": "thank u, next",
+   "year": 2018
+  },
+  {
+   "id": 539562302,
+   "artist": "Ava Max",
+   "title": "Sweet but Psycho",
+   "year": 2018
+  },
+  {
+   "id": 482990352,
+   "artist": "Calvin Harris & Dua Lipa",
+   "title": "One Kiss",
+   "year": 2018
+  },
+  {
+   "id": 561856742,
+   "artist": "Lady Gaga & Bradley Cooper",
+   "title": "Shallow",
+   "year": 2018
+  },
+  {
+   "id": 629899842,
+   "artist": "Ariana Grande",
+   "title": "7 rings",
+   "year": 2019
+  },
+  {
+   "id": 655095912,
+   "artist": "Billie Eilish",
+   "title": "bad guy",
+   "year": 2019
+  },
+  {
+   "id": 797228462,
+   "artist": "Doja Cat",
+   "title": "Say So",
+   "year": 2019
+  },
+  {
+   "id": 788708262,
+   "artist": "Dua Lipa",
+   "title": "Don't Start Now",
+   "year": 2019
+  },
+  {
+   "id": 830336922,
+   "artist": "Harry Styles",
+   "title": "Watermelon Sugar",
+   "year": 2019
+  },
+  {
+   "id": 737967292,
+   "artist": "Taylor Swift",
+   "title": "Cruel Summer",
+   "year": 2019
+  },
+  {
+   "id": 2454854845,
+   "artist": "Chappell Roan",
+   "title": "Pink Pony Club",
+   "year": 2020
+  },
+  {
+   "id": 1122003492,
+   "artist": "Dua Lipa",
+   "title": "Levitating",
+   "year": 2020
+  },
+  {
+   "id": 1410738172,
+   "artist": "Doja Cat feat. SZA",
+   "title": "Kiss Me More",
+   "year": 2021
+  },
+  {
+   "id": 1378342592,
+   "artist": "Olivia Rodrigo",
+   "title": "drivers license",
+   "year": 2021
+  },
+  {
+   "id": 1378342622,
+   "artist": "Olivia Rodrigo",
+   "title": "good 4 u",
+   "year": 2021
+  },
+  {
+   "id": 1842063507,
+   "artist": "Beyoncé",
+   "title": "Break My Soul",
+   "year": 2022
+  },
+  {
+   "id": 1703487577,
+   "artist": "Harry Styles",
+   "title": "As It Was",
+   "year": 2022
+  },
+  {
+   "id": 1976903157,
+   "artist": "Taylor Swift",
+   "title": "Anti-Hero",
+   "year": 2022
+  },
+  {
+   "id": 2454854795,
+   "artist": "Chappell Roan",
+   "title": "HOT TO GO!",
+   "year": 2023
+  },
+  {
+   "id": 2525537871,
+   "artist": "Dua Lipa",
+   "title": "Houdini",
+   "year": 2023
+  },
+  {
+   "id": 2105158337,
+   "artist": "Miley Cyrus",
+   "title": "Flowers",
+   "year": 2023
+  },
+  {
+   "id": 2440763155,
+   "artist": "Olivia Rodrigo",
+   "title": "vampire",
+   "year": 2023
+  },
+  {
+   "id": 2444176345,
+   "artist": "Tate McRae",
+   "title": "greedy",
+   "year": 2023
+  },
+  {
+   "id": 2614318122,
+   "artist": "Ariana Grande",
+   "title": "yes, and?",
+   "year": 2024
+  },
+  {
+   "id": 2801558052,
+   "artist": "Billie Eilish",
+   "title": "Birds of a Feather",
+   "year": 2024
+  },
+  {
+   "id": 2728070371,
+   "artist": "Chappell Roan",
+   "title": "Good Luck, Babe!",
+   "year": 2024
+  },
+  {
+   "id": 3047560351,
+   "artist": "Gracie Abrams",
+   "title": "That's So True",
+   "year": 2024
+  },
+  {
+   "id": 2947516331,
+   "artist": "Lady Gaga & Bruno Mars",
+   "title": "Die With A Smile",
+   "year": 2024
+  },
+  {
+   "id": 3050380851,
+   "artist": "ROSÉ & Bruno Mars",
+   "title": "APT.",
+   "year": 2024
+  },
+  {
+   "id": 2743578151,
+   "artist": "Sabrina Carpenter",
+   "title": "Espresso",
+   "year": 2024
+  },
+  {
+   "id": 2831602002,
+   "artist": "Sabrina Carpenter",
+   "title": "Please Please Please",
+   "year": 2024
+  },
+  {
+   "id": 3214169391,
+   "artist": "Lady Gaga",
+   "title": "Abracadabra",
+   "year": 2025
+  },
+  {
+   "id": 3400077541,
+   "artist": "Sabrina Carpenter",
+   "title": "Manchild",
+   "year": 2025
+  },
+  {
+   "id": 3579685431,
+   "artist": "Taylor Swift",
+   "title": "The Fate of Ophelia",
+   "year": 2025
+  }
+ ]
+}

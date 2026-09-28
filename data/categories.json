@@ -12,5 +12,19 @@
   "count": 129,
   "from": 2004,
   "to": 2026
+ },
+ {
+  "id": "whitegirl",
+  "name": "White Girl Music",
+  "description": "Pop-Banger zum Mitgrölen – Rihanna, Gaga, Britney, Taylor & Co. Schwerpunkt ab 2000.",
+  "file": "whitegirl.json",
+  "icon": "heart",
+  "colors": [
+   "#ff6fb5",
+   "#a855f7"
+  ],
+  "count": 135,
+  "from": 1996,
+  "to": 2025
  }
 ]

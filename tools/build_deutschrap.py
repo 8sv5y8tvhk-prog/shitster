@@ -1,5 +1,5 @@
 import json, re
-res = {f"{e['artist']}|{e['title']}": e for e in json.load(open('resolved.json'))}
+res = {f"{e['artist']}|{e['title']}": e for e in json.load(open('resolved-deutschrap.json'))}
 # Geprüfte Originaljahre (Deezer/MusicBrainz abgeglichen). None = raus (unsicherer Treffer).
 YEAR = {
  'Fler|NDW 2005':2005,'Azad|Prison Break Anthem':2007,'K.I.Z|Walpurgisnacht':2007,'Kollegah|Mondfinsternis':None,
@@ -61,9 +61,6 @@ songs.sort(key=lambda s: (s['year'], s['artist']))
 cat = {'id': 'deutschrap', 'name': 'Deutschrap', 'description': 'Straße, Gangsta-Rap & Klassiker – Schwerpunkt 2013 bis heute.', 'songs': songs}
 json.dump(cat, open('../data/deutschrap.json', 'w'), ensure_ascii=False, indent=1)
 years = [s['year'] for s in songs]
-idx = [{'id': 'deutschrap', 'name': 'Deutschrap', 'description': cat['description'], 'file': 'deutschrap.json', 'icon': 'mic',
-        'colors': ['#ff375f', '#5e5ce6'], 'count': len(songs), 'from': min(years), 'to': max(years)}]
-json.dump(idx, open('../data/categories.json', 'w'), ensure_ascii=False, indent=1)
 from collections import Counter
 print(len(songs), 'Songs'); print(sorted(Counter(years).items()))
-print('ab 2013:', sum(y >= 2013 for y in years))
+print('Index neu bauen: python3 make_index.py')
