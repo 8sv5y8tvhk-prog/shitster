@@ -1,0 +1,5 @@
+.DS_Store
+tools/*.json
+tools/*.log
+!tools/songs.txt
+.claude/

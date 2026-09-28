@@ -1,0 +1,781 @@
+{
+ "id": "deutschrap",
+ "name": "Deutschrap",
+ "description": "Straße, Gangsta-Rap & Klassiker – Schwerpunkt 2013 bis heute.",
+ "songs": [
+  {
+   "id": 955106,
+   "artist": "Bushido",
+   "title": "Sonnenbank Flavour",
+   "year": 2004
+  },
+  {
+   "id": 3786047722,
+   "artist": "Sido",
+   "title": "Mein Block",
+   "year": 2004
+  },
+  {
+   "id": 3786046532,
+   "artist": "Fler",
+   "title": "NDW 2005",
+   "year": 2005
+  },
+  {
+   "id": 1728324707,
+   "artist": "Massiv",
+   "title": "Wenn der Mond in mein Ghetto kracht",
+   "year": 2006
+  },
+  {
+   "id": 3802719952,
+   "artist": "Sido",
+   "title": "Strassenjunge",
+   "year": 2006
+  },
+  {
+   "id": 1163878,
+   "artist": "Azad",
+   "title": "Prison Break Anthem (Ich glaub an Dich)",
+   "year": 2007
+  },
+  {
+   "id": 1143209,
+   "artist": "K.I.Z",
+   "title": "Walpurgisnacht",
+   "year": 2007
+  },
+  {
+   "id": 562729822,
+   "artist": "Xatar",
+   "title": "Ich will alles",
+   "year": 2008
+  },
+  {
+   "id": 740409582,
+   "artist": "Kollegah",
+   "title": "Mittelfinger hoch",
+   "year": 2009
+  },
+  {
+   "id": 1257241312,
+   "artist": "Bushido",
+   "title": "Zeiten ändern dich",
+   "year": 2010
+  },
+  {
+   "id": 82173122,
+   "artist": "Haftbefehl",
+   "title": "Azzlack Stereotyp",
+   "year": 2010
+  },
+  {
+   "id": 97312030,
+   "artist": "Kool Savas",
+   "title": "Aura",
+   "year": 2011
+  },
+  {
+   "id": 692774012,
+   "artist": "Celo & Abdi",
+   "title": "Besuchstag",
+   "year": 2012
+  },
+  {
+   "id": 463173312,
+   "artist": "Haftbefehl",
+   "title": "Chabos wissen wer der Babo ist",
+   "year": 2012
+  },
+  {
+   "id": 82112822,
+   "artist": "Haftbefehl",
+   "title": "Crackküchenmukke",
+   "year": 2012
+  },
+  {
+   "id": 740402072,
+   "artist": "Genetikk",
+   "title": "Lieb's oder lass es",
+   "year": 2013
+  },
+  {
+   "id": 518474472,
+   "artist": "SSIO",
+   "title": "Nuttööö",
+   "year": 2013
+  },
+  {
+   "id": 68853628,
+   "artist": "Shindy feat. Bushido",
+   "title": "Stress ohne Grund",
+   "year": 2013
+  },
+  {
+   "id": 89845391,
+   "artist": "Haftbefehl",
+   "title": "Ihr Hurensöhne",
+   "year": 2014
+  },
+  {
+   "id": 89845401,
+   "artist": "Haftbefehl",
+   "title": "Saudi Arabi Money Rich",
+   "year": 2014
+  },
+  {
+   "id": 89845411,
+   "artist": "Haftbefehl",
+   "title": "Russisch Roulette",
+   "year": 2014
+  },
+  {
+   "id": 89845405,
+   "artist": "Haftbefehl",
+   "title": "Ich rolle mit meim Besten",
+   "year": 2014
+  },
+  {
+   "id": 89845397,
+   "artist": "Haftbefehl",
+   "title": "Lass die Affen aus'm Zoo",
+   "year": 2014
+  },
+  {
+   "id": 740404702,
+   "artist": "Kollegah",
+   "title": "Du bist Boss",
+   "year": 2014
+  },
+  {
+   "id": 79419575,
+   "artist": "Kontra K",
+   "title": "Wölfe",
+   "year": 2014
+  },
+  {
+   "id": 92715364,
+   "artist": "Shindy",
+   "title": "JFK",
+   "year": 2014
+  },
+  {
+   "id": 107763524,
+   "artist": "Gzuz",
+   "title": "Ebbe & Flut",
+   "year": 2015
+  },
+  {
+   "id": 115746250,
+   "artist": "Haftbefehl",
+   "title": "069",
+   "year": 2015
+  },
+  {
+   "id": 115746272,
+   "artist": "Haftbefehl",
+   "title": "Golden Brown",
+   "year": 2015
+  },
+  {
+   "id": 102597866,
+   "artist": "K.I.Z",
+   "title": "Hurra die Welt geht unter",
+   "year": 2015
+  },
+  {
+   "id": 91855102,
+   "artist": "Kontra K",
+   "title": "Erfolg ist kein Glück",
+   "year": 2015
+  },
+  {
+   "id": 518487172,
+   "artist": "Xatar",
+   "title": "Iz da",
+   "year": 2015
+  },
+  {
+   "id": 123861018,
+   "artist": "AK Ausserkontrolle",
+   "title": "Echte Berliner",
+   "year": 2016
+  },
+  {
+   "id": 1756060727,
+   "artist": "Azet",
+   "title": "Fast Life",
+   "year": 2016
+  },
+  {
+   "id": 138394775,
+   "artist": "Bonez MC",
+   "title": "Ohne mein Team",
+   "year": 2016
+  },
+  {
+   "id": 138394771,
+   "artist": "Bonez MC",
+   "title": "Palmen aus Plastik",
+   "year": 2016
+  },
+  {
+   "id": 138394773,
+   "artist": "Bonez MC & RAF Camora",
+   "title": "Mörder",
+   "year": 2016
+  },
+  {
+   "id": 518493012,
+   "artist": "SSIO",
+   "title": "Nullkommaneun",
+   "year": 2016
+  },
+  {
+   "id": 136386632,
+   "artist": "Sido",
+   "title": "Masafaka",
+   "year": 2016
+  },
+  {
+   "id": 120466438,
+   "artist": "UFO361",
+   "title": "Ich bin ein Berliner",
+   "year": 2016
+  },
+  {
+   "id": 382971731,
+   "artist": "187 Strassenbande",
+   "title": "Millionär",
+   "year": 2017
+  },
+  {
+   "id": 142307035,
+   "artist": "AK Ausserkontrolle",
+   "title": "Kristall",
+   "year": 2017
+  },
+  {
+   "id": 379049021,
+   "artist": "CAPO",
+   "title": "Alles auf Rot",
+   "year": 2017
+  },
+  {
+   "id": 356779151,
+   "artist": "KC Rebell",
+   "title": "Murcielago",
+   "year": 2017
+  },
+  {
+   "id": 145498434,
+   "artist": "Luciano",
+   "title": "Jäger",
+   "year": 2017
+  },
+  {
+   "id": 371619861,
+   "artist": "Nimo",
+   "title": "Heute mit mir",
+   "year": 2017
+  },
+  {
+   "id": 1785844357,
+   "artist": "UFO361",
+   "title": "Für die Gang",
+   "year": 2017
+  },
+  {
+   "id": 552381152,
+   "artist": "Bonez MC",
+   "title": "Kokain",
+   "year": 2018
+  },
+  {
+   "id": 535600192,
+   "artist": "Bonez MC",
+   "title": "500 PS",
+   "year": 2018
+  },
+  {
+   "id": 836374702,
+   "artist": "Capital Bra",
+   "title": "Neymar",
+   "year": 2018
+  },
+  {
+   "id": 836374672,
+   "artist": "Capital Bra",
+   "title": "Berlin lebt",
+   "year": 2018
+  },
+  {
+   "id": 607504642,
+   "artist": "Capital Bra",
+   "title": "Benzema",
+   "year": 2018
+  },
+  {
+   "id": 528346221,
+   "artist": "Eno",
+   "title": "Mercedes",
+   "year": 2018
+  },
+  {
+   "id": 1785316967,
+   "artist": "Loredana",
+   "title": "SONNENBRILLE",
+   "year": 2018
+  },
+  {
+   "id": 571884012,
+   "artist": "Luciano",
+   "title": "Meer",
+   "year": 2018
+  },
+  {
+   "id": 521607822,
+   "artist": "Luciano",
+   "title": "Ballin",
+   "year": 2018
+  },
+  {
+   "id": 1754379167,
+   "artist": "MERO",
+   "title": "Baller los",
+   "year": 2018
+  },
+  {
+   "id": 460338892,
+   "artist": "Olexesh",
+   "title": "Magisch",
+   "year": 2018
+  },
+  {
+   "id": 1226419202,
+   "artist": "Samra",
+   "title": "Cataleya",
+   "year": 2018
+  },
+  {
+   "id": 531941511,
+   "artist": "Summer Cem",
+   "title": "Tamam Tamam",
+   "year": 2018
+  },
+  {
+   "id": 531941451,
+   "artist": "Summer Cem",
+   "title": "Casanova",
+   "year": 2018
+  },
+  {
+   "id": 482596842,
+   "artist": "Sun Diego",
+   "title": "Eloah",
+   "year": 2018
+  },
+  {
+   "id": 518477182,
+   "artist": "Veysel",
+   "title": "Habibo",
+   "year": 2018
+  },
+  {
+   "id": 735495312,
+   "artist": "Apache 207",
+   "title": "Roller",
+   "year": 2019
+  },
+  {
+   "id": 756890392,
+   "artist": "Apache 207",
+   "title": "200 km/h",
+   "year": 2019
+  },
+  {
+   "id": 696967382,
+   "artist": "Capital Bra",
+   "title": "Tilidin",
+   "year": 2019
+  },
+  {
+   "id": 756918912,
+   "artist": "Capital Bra",
+   "title": "110",
+   "year": 2019
+  },
+  {
+   "id": 672190002,
+   "artist": "Capital Bra",
+   "title": "Cherry Lady",
+   "year": 2019
+  },
+  {
+   "id": 730097272,
+   "artist": "Dardan",
+   "title": "gENAuSo",
+   "year": 2019
+  },
+  {
+   "id": 686528752,
+   "artist": "Fero47",
+   "title": "NENENE",
+   "year": 2019
+  },
+  {
+   "id": 761796682,
+   "artist": "Gringo",
+   "title": "Pink Panther",
+   "year": 2019
+  },
+  {
+   "id": 688674622,
+   "artist": "Kalazh44",
+   "title": "Royal Rumble",
+   "year": 2019
+  },
+  {
+   "id": 685839992,
+   "artist": "Luciano",
+   "title": "La Haine",
+   "year": 2019
+  },
+  {
+   "id": 755665682,
+   "artist": "Lucio101 feat. Omar101",
+   "title": "6 Nullen",
+   "year": 2019
+  },
+  {
+   "id": 1758720677,
+   "artist": "MERO",
+   "title": "Hobby Hobby",
+   "year": 2019
+  },
+  {
+   "id": 769313522,
+   "artist": "RIN",
+   "title": "Keine Liebe",
+   "year": 2019
+  },
+  {
+   "id": 678689412,
+   "artist": "Samra",
+   "title": "Wieder Lila",
+   "year": 2019
+  },
+  {
+   "id": 709627962,
+   "artist": "Samra",
+   "title": "Zombie",
+   "year": 2019
+  },
+  {
+   "id": 677554542,
+   "artist": "Shindy",
+   "title": "Nautilus",
+   "year": 2019
+  },
+  {
+   "id": 611337312,
+   "artist": "Shindy",
+   "title": "DODI",
+   "year": 2019
+  },
+  {
+   "id": 1081055442,
+   "artist": "Azet",
+   "title": "Fast Life 2",
+   "year": 2020
+  },
+  {
+   "id": 963570042,
+   "artist": "Bonez MC",
+   "title": "Roadrunner",
+   "year": 2020
+  },
+  {
+   "id": 1034517122,
+   "artist": "Kool Savas",
+   "title": "AMG",
+   "year": 2020
+  },
+  {
+   "id": 957653672,
+   "artist": "Pashanim",
+   "title": "Airwaves",
+   "year": 2020
+  },
+  {
+   "id": 917042862,
+   "artist": "Shindy",
+   "title": "What's Luv",
+   "year": 2020
+  },
+  {
+   "id": 907183842,
+   "artist": "Symba",
+   "title": "Angels Sippen",
+   "year": 2020
+  },
+  {
+   "id": 1760778567,
+   "artist": "UFO361",
+   "title": "Emotions",
+   "year": 2020
+  },
+  {
+   "id": 1362721922,
+   "artist": "187 Strassenbande",
+   "title": "Extasy",
+   "year": 2021
+  },
+  {
+   "id": 1567567752,
+   "artist": "Luciano",
+   "title": "SUVs",
+   "year": 2021
+  },
+  {
+   "id": 1408516272,
+   "artist": "Pashanim",
+   "title": "Sommergewitter",
+   "year": 2021
+  },
+  {
+   "id": 1753961777,
+   "artist": "RAF Camora",
+   "title": "Blaues Licht",
+   "year": 2021
+  },
+  {
+   "id": 1884362847,
+   "artist": "Bonez MC",
+   "title": "Taxi",
+   "year": 2022
+  },
+  {
+   "id": 1759569827,
+   "artist": "Farid Bang",
+   "title": "BERETTA",
+   "year": 2022
+  },
+  {
+   "id": 1613959212,
+   "artist": "KC Rebell",
+   "title": "Mogli",
+   "year": 2022
+  },
+  {
+   "id": 1728459227,
+   "artist": "Nizi19 feat. Pashanim",
+   "title": "2wasser2sprite",
+   "year": 2022
+  },
+  {
+   "id": 1812972437,
+   "artist": "Pashanim",
+   "title": "Kleiner Prinz",
+   "year": 2022
+  },
+  {
+   "id": 2485810141,
+   "artist": "Kärdo",
+   "title": "RACHE (SABAH SABAH)",
+   "year": 2023
+  },
+  {
+   "id": 1924251547,
+   "artist": "Luciano",
+   "title": "Bamba",
+   "year": 2023
+  },
+  {
+   "id": 2128864237,
+   "artist": "Pajel feat. VOLO & Hanybal",
+   "title": "Blocckind",
+   "year": 2023
+  },
+  {
+   "id": 2251899577,
+   "artist": "Sira",
+   "title": "9 bis 9",
+   "year": 2023
+  },
+  {
+   "id": 2753062831,
+   "artist": "Amo",
+   "title": "Amo aller Amos",
+   "year": 2024
+  },
+  {
+   "id": 4155145222,
+   "artist": "Dardan",
+   "title": "Pablo",
+   "year": 2024
+  },
+  {
+   "id": 2835324012,
+   "artist": "Kalazh44",
+   "title": "Lichtblick",
+   "year": 2024
+  },
+  {
+   "id": 2791422862,
+   "artist": "LACAZETTE",
+   "title": "H&K",
+   "year": 2024
+  },
+  {
+   "id": 3011972191,
+   "artist": "LACAZETTE",
+   "title": "LID",
+   "year": 2024
+  },
+  {
+   "id": 3055521781,
+   "artist": "Olexesh",
+   "title": "Bandog 2",
+   "year": 2024
+  },
+  {
+   "id": 2812106842,
+   "artist": "Pashanim",
+   "title": "Mittelmeer",
+   "year": 2024
+  },
+  {
+   "id": 2959222461,
+   "artist": "Rap La Rue",
+   "title": "Lamine Yamal",
+   "year": 2024
+  },
+  {
+   "id": 3098166601,
+   "artist": "Sosa La M",
+   "title": "Butcher",
+   "year": 2024
+  },
+  {
+   "id": 3348860421,
+   "artist": "Azet",
+   "title": "Buscape",
+   "year": 2025
+  },
+  {
+   "id": 3315844351,
+   "artist": "Ion Miles",
+   "title": "iPhone 5s",
+   "year": 2025
+  },
+  {
+   "id": 3556969141,
+   "artist": "Kontra K",
+   "title": "Dreckig & Gemein",
+   "year": 2025
+  },
+  {
+   "id": 3546018261,
+   "artist": "Luciano",
+   "title": "Pole Position",
+   "year": 2025
+  },
+  {
+   "id": 3342939491,
+   "artist": "Pashanim",
+   "title": "Shabab(e)s im VIP",
+   "year": 2025
+  },
+  {
+   "id": 4075314491,
+   "artist": "AK Ausserkontrolle",
+   "title": "Hin und Her",
+   "year": 2026
+  },
+  {
+   "id": 3827845131,
+   "artist": "AK Ausserkontrolle",
+   "title": "BLN",
+   "year": 2026
+  },
+  {
+   "id": 4125093381,
+   "artist": "Capital Bra",
+   "title": "Ghetto Superstars",
+   "year": 2026
+  },
+  {
+   "id": 4154573382,
+   "artist": "Capital Bra",
+   "title": "Sonne über Berlin",
+   "year": 2026
+  },
+  {
+   "id": 4045679461,
+   "artist": "Farid Bang",
+   "title": "Requiem",
+   "year": 2026
+  },
+  {
+   "id": 3848906101,
+   "artist": "LACAZETTE",
+   "title": "CDY",
+   "year": 2026
+  },
+  {
+   "id": 4092163151,
+   "artist": "Luciano",
+   "title": "THUG LIFE",
+   "year": 2026
+  },
+  {
+   "id": 3892474131,
+   "artist": "Olexesh",
+   "title": "5 SKARABÄEN",
+   "year": 2026
+  },
+  {
+   "id": 4017882531,
+   "artist": "Pashanim",
+   "title": "Prada Sport",
+   "year": 2026
+  },
+  {
+   "id": 4182584942,
+   "artist": "SASHKO BRATE",
+   "title": "Dejavu",
+   "year": 2026
+  },
+  {
+   "id": 3837151481,
+   "artist": "Summer Cem",
+   "title": "KILLY MANJARO",
+   "year": 2026
+  },
+  {
+   "id": 4191755182,
+   "artist": "Summer Cem",
+   "title": "MO' MONEY MO' HATERS",
+   "year": 2026
+  },
+  {
+   "id": 3836232831,
+   "artist": "THIZZY52",
+   "title": "BLOCKKIDS",
+   "year": 2026
+  },
+  {
+   "id": 4076190781,
+   "artist": "THIZZY52",
+   "title": "BALOTELLI",
+   "year": 2026
+  },
+  {
+   "id": 3891571971,
+   "artist": "Yc",
+   "title": "Xalaz",
+   "year": 2026
+  }
+ ]
+}

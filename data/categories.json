@@ -1,0 +1,16 @@
+[
+ {
+  "id": "deutschrap",
+  "name": "Deutschrap",
+  "description": "Straße, Gangsta-Rap & Klassiker – Schwerpunkt 2013 bis heute.",
+  "file": "deutschrap.json",
+  "icon": "mic",
+  "colors": [
+   "#ff375f",
+   "#5e5ce6"
+  ],
+  "count": 129,
+  "from": 2004,
+  "to": 2026
+ }
+]
