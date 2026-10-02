@@ -548,7 +548,9 @@ function endgameBanner(s) {
   // Wer jetzt dran ist und das Ziel noch nicht hat, zieht gerade selbst nach
   const pulling = (reached.includes(me) ? [] : [me]).concat(G.pendingPlayers(s));
   const decided = G.isLastTurn(s);
-  const rest = decided && reached.includes(me) ? 'Uneinholbar – gleich wird ausgewertet'
+  const o = outcome(s);
+  const rest = o?.type === 'tiebreak' && eg.type === 'final' ? 'Gleichstand – es gibt ein Stechen'
+    : decided && reached.includes(me) ? 'Uneinholbar – gleich ist Siegerehrung'
     : decided ? `Letzter Zug: ${esc(me.name)}`
     : `Nachziehen: ${nameList(pulling)}`;
   return `<div class="endgame-banner">${icon('trophy')}<span><b>Letzte Runde</b> · ${nameList(reached)} ${reached.length > 1 ? 'haben' : 'hat'} ${s.settings.target} Karten · ${rest}</span></div>`;
@@ -786,9 +788,29 @@ function paintBottom() {
   }
 }
 
+// Steht der Ausgang nach diesem Zug schon fest? → Knopf sagt direkt, wohin es geht (kein Umweg über „Auswertung“)
+function outcome(s) {
+  if (!G.isLastTurn(s)) return null;
+  const top = G.leaders(s);
+  return top.length === 1 ? { type: 'win', winner: top[0] } : { type: 'tiebreak', players: top };
+}
+
 function nextLabel(s) {
-  // „Zur Auswertung“ nur am Ende der regulären letzten Runde, im Stechen einfach weiter
-  return G.isLastTurn(s) && s.endgame.type === 'final' ? icon('trophy') + 'Zur Auswertung' : 'Nächster Zug' + icon('chev');
+  const o = outcome(s);
+  if (o?.type === 'win') return icon('trophy') + 'Zur Siegerehrung';
+  // „Zum Stechen“ nur beim Übergang von der letzten Runde ins Stechen; innerhalb des Stechens einfach weiter
+  if (o?.type === 'tiebreak' && s.endgame.type === 'final') return icon('swords') + 'Zum Stechen';
+  return 'Nächster Zug' + icon('chev');
+}
+
+function showTiebreakDialog(players) {
+  haptic([20, 60, 20]);
+  alertBox({
+    icon: 'swords', tone: 'gold',
+    title: 'Stechen!',
+    message: `${nameList(players)} haben je <b>${players[0].timeline.length} Karten</b>. Nur ihr spielt weiter – Runde für Runde, bis jemand allein vorne liegt. Kontern dürfen alle.`,
+    actions: [{ label: 'Los geht’s', value: true, style: 'primary' }],
+  });
 }
 
 async function ensureTrack() {
@@ -937,21 +959,9 @@ async function onGameClick(e) {
     ui.preparedId = null;
     ui.track = null;
     ui.tlScroll = 0;
-    const tiebreakStarts = G.isLastTurn(s) && s.endgame.type === 'final';
     G.nextTurn(s);
     save();
     if (s.phase === 'over') return renderWinner('fade');
-    // Dialog nur einmal beim Start des Stechens, nicht nach jeder Stech-Runde
-    if (tiebreakStarts && s.endgame?.type === 'tiebreak') {
-      const top = s.players.filter(p => s.endgame.contenders.includes(p.id));
-      haptic([20, 60, 20]);
-      alertBox({
-        icon: 'swords', tone: 'gold',
-        title: 'Stechen!',
-        message: `${nameList(top)} haben je <b>${top[0].timeline.length} Karten</b>. Nur ihr spielt weiter – Runde für Runde, bis jemand allein vorne liegt. Kontern dürfen alle.`,
-        actions: [{ label: 'Los geht’s', value: true, style: 'primary' }],
-      });
-    }
     screen.querySelector('#g-tl').innerHTML = '';
     screen.classList.remove('enter-fade');
     void screen.offsetWidth;
@@ -1028,6 +1038,9 @@ async function onGameClick(e) {
 function afterPhaseChange() {
   paintGame();
   if (game.phase === 'reveal' && game.lastResult.winnerId) setTimeout(() => confetti(), 1100);
+  // Führt dieser Zug ins Stechen, kommt die Meldung direkt nach dem Aufdecken (nur einmal, beim Start des Stechens)
+  const o = game.phase === 'reveal' ? outcome(game) : null;
+  if (o?.type === 'tiebreak' && game.endgame.type === 'final') setTimeout(() => showTiebreakDialog(o.players), 1600);
 }
 
 function openScores() {

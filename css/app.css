@@ -76,7 +76,7 @@ input { font: inherit; letter-spacing: inherit; user-select: text; -webkit-user-
 [hidden] { display: none !important; }
 svg.i { width: 1em; height: 1em; display: block; flex: none; }
 
-#app { position: fixed; inset: 0; overflow: hidden; }
+#app { position: fixed; inset: 0; overflow: hidden; isolation: isolate; z-index: 0; } /* eigene Ebene: 3D-Karten bleiben unter Dialogen */
 
 .screen {
   position: absolute;
