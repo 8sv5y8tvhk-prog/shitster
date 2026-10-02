@@ -72,15 +72,15 @@
  {
   "id": "serien",
   "name": "Serien & Filme",
-  "description": "Serien-Intros, Kinderserien, Disney und Film-Klassiker – erkennst du die Serie?",
+  "description": "Kinderserien, Disney Channel und Filme von 1995 bis 2010 – erkennst du die Serie oder den Film?",
   "file": "serien.json",
   "icon": "tv",
   "colors": [
    "#ffd60a",
    "#ff6b35"
   ],
-  "count": 128,
-  "from": 1959,
-  "to": 2023
+  "count": 63,
+  "from": 1995,
+  "to": 2010
  }
 ]
