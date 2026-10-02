@@ -68,5 +68,19 @@
   "count": 132,
   "from": 1995,
   "to": 2024
+ },
+ {
+  "id": "serien",
+  "name": "Serien & Filme",
+  "description": "Serien-Intros, Kinderserien, Disney und Film-Klassiker – erkennst du die Serie?",
+  "file": "serien.json",
+  "icon": "tv",
+  "colors": [
+   "#ffd60a",
+   "#ff6b35"
+  ],
+  "count": 128,
+  "from": 1959,
+  "to": 2023
  }
 ]

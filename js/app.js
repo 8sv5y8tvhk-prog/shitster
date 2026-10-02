@@ -39,6 +39,7 @@ const ICONS = {
   cassette: `<rect x="2.5" y="5" width="19" height="14" rx="2.6" fill="currentColor"/><circle cx="8.5" cy="11" r="2" fill="#000" opacity=".35"/><circle cx="15.5" cy="11" r="2" fill="#000" opacity=".35"/><path d="M7 19l1.5-3.5h7L17 19z" fill="#000" opacity=".3"/>`,
   flame: '<path d="M12.5 2.5c.6 3.3 4.2 5.1 4.9 9 .8 4.6-2.2 9-5.9 9s-6.3-3-6.3-6.4c0-2.6 1.3-4.3 2.6-5.6.2 1.7 1 2.9 2.2 3.4-.4-3.8.8-6.9 2.5-9.4z" fill="currentColor"/>',
   eq: '<rect x="3" y="10" width="3" height="10" rx="1.5" fill="currentColor"/><rect x="8" y="5" width="3" height="15" rx="1.5" fill="currentColor"/><rect x="13" y="8" width="3" height="12" rx="1.5" fill="currentColor"/><rect x="18" y="3" width="3" height="17" rx="1.5" fill="currentColor"/>',
+  tv: `<rect x="2.5" y="6" width="19" height="13" rx="2.8" fill="currentColor"/><path d="M8 2.5l4 3.5 4-3.5" ${S} stroke-width="2"/><rect x="5.5" y="9" width="10" height="7" rx="1.2" fill="#000" opacity=".3"/><circle cx="18.3" cy="11" r="1.1" fill="#000" opacity=".35"/><circle cx="18.3" cy="14.5" r="1.1" fill="#000" opacity=".35"/>`,
   glass: `<path d="M5.5 3h13l-1.4 15.6A2.6 2.6 0 0 1 14.5 21h-5a2.6 2.6 0 0 1-2.6-2.4z" ${S} stroke-width="2"/><path d="M6.6 9.5h10.8l-.9 8.8a1.3 1.3 0 0 1-1.3 1.2H8.8a1.3 1.3 0 0 1-1.3-1.2z" fill="currentColor"/>`,
   swords: `<path d="M4 4l9.5 9.5M20 4l-9.5 9.5M7 14.5l2.5 2.5M17 14.5 14.5 17M3.5 20.5 7 17M20.5 20.5 17 17" ${S} stroke-width="2.2"/>`,
   calendar: `<rect x="3.5" y="5" width="17" height="15.5" rx="3.2" ${S} stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" ${S} stroke-width="2"/>`,
@@ -55,6 +56,10 @@ const haptic = (p = 10) => { try { navigator.vibrate?.(p); } catch {} };
 const fmtTime = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 const save = () => store.saveGame(game);
 const schluck = n => (n === 1 ? '1 Schluck' : `${n} Schlücke`);
+// Serien-/Film-Karten: Serienname ist der Haupttitel, Song und Interpret stehen darunter
+const cardTitle = c => c.show || c.title;
+const cardSub = c => (c.show ? `${c.title} · ${c.artist}` : c.artist);
+const bonusLabel = c => (c?.show ? 'Serie erkannt' : 'Titel & Interpret');
 
 function toast(msg, ms = 2200) {
   document.querySelectorAll('.toast').forEach(t => t.remove());
@@ -271,7 +276,7 @@ async function renderCategory(cat) {
   el.querySelector('#songs').innerHTML = songs.map(s => `
     <div class="row">
       <span class="year-pill" style="--h:${hue(s.year)}">${s.year}</span>
-      <div class="body"><div class="title">${esc(s.title)}</div><div class="detail">${esc(s.artist)}</div></div>
+      <div class="body"><div class="title">${esc(cardTitle(s))}</div><div class="detail">${esc(cardSub(s))}</div></div>
     </div>`).join('');
 }
 
@@ -292,14 +297,14 @@ function renderRules() {
       <p><b>4.</b> Aufdecken: Liegt die Karte richtig, bleibt sie in der Zeitleiste. Sonst fliegt sie raus. Gleiche Jahre dürfen vor oder hinter der Karte liegen.</p>
     </div></div></div>
     <div class="section"><div class="section-header">Tokens</div><div class="list"><div class="prose" style="padding-top:12px">
-      <p><b>+1 Token</b>: Wer dran ist und Titel <i>und</i> Interpret richtig nennt (max. 5 Tokens).</p>
+      <p><b>+1 Token</b>: Wer dran ist und Titel <i>und</i> Interpret richtig nennt (max. 5 Tokens). Bei Serien-Intros und Filmsongs reicht der Name der Serie bzw. des Films.</p>
       <p><b>Überspringen</b> (1 Token): Neuer Song, wenn du keinen Plan hast.</p>
       <p><b>HITSTER!</b> (1 Token): Glaubst du, die Person am Zug liegt falsch? Setz einen Token auf eine andere Lücke. Liegst du richtig, klaust du die Karte für deine eigene Zeitleiste.</p>
       <p><b>Karte kaufen</b> (3 Tokens): Jederzeit über die Spielerübersicht – die Karte wandert direkt richtig einsortiert in deine Zeitleiste.</p>
     </div></div></div>
     <div class="section"><div class="section-header">Trinkspiel</div><div class="list"><div class="prose" style="padding-top:12px">
       <p>Gleiche Zeitleiste, aber ohne Tokens. Nach jedem Aufdecken sagt die App an, wer trinkt und wer verteilt (Stufe „Normal“):</p>
-      <p><b>Falsch eingeordnet:</b> 2 trinken · <b>Richtig:</b> 1 verteilen<br><b>Titel &amp; Interpret gewusst:</b> +2 verteilen<br><b>Genaues Jahr:</b> alle anderen trinken 1<br><b>Alles perfekt:</b> Ex-Karte – jemand leert sein Glas oder du verteilst 5</p>
+      <p><b>Falsch eingeordnet:</b> 2 trinken · <b>Richtig:</b> 1 verteilen<br><b>Titel &amp; Interpret (bei Serien: Serie) gewusst:</b> +2 verteilen<br><b>Genaues Jahr:</b> alle anderen trinken 1<br><b>Alles perfekt:</b> Ex-Karte – jemand leert sein Glas oder du verteilst 5</p>
       <p><b>Konter:</b> Wählt eine andere Lücke. Richtig → du klaust die Karte und die Person am Zug trinkt 1 extra. Falsch → du trinkst 2. Konter lassen sich abschalten oder begrenzen.</p>
       <p><b>Duell:</b> Ab und zu treten zwei zufällig gewählte Personen gegeneinander an: Beide sagen ein Jahr, wer weiter weg liegt, trinkt 3.</p>
       <p><b>Skip:</b> kostet 1 Schluck. <b>Chillig</b> halbiert alle Schlücke, <b>Eskalation</b> verdoppelt sie.</p>
@@ -640,7 +645,7 @@ function flipHTML(card, compact) {
       <div class="flip-face flip-front" style="${cover ? `background-image:url('${esc(cover)}')` : `background:linear-gradient(160deg,hsl(${hue(card.year)} 80% 55%),#1c1c1e)`}"><span class="year">${card.year}</span></div>
       <div class="flip-face flip-back">?</div>
     </div></div>
-    <div class="song-meta"><div class="st">${esc(card.title)}</div><div class="sa">${esc(card.artist)}</div></div>`;
+    <div class="song-meta"><div class="st">${esc(cardTitle(card))}</div><div class="sa">${esc(cardSub(card))}</div></div>`;
 }
 
 function tallyHTML(s) {
@@ -648,7 +653,7 @@ function tallyHTML(s) {
   const { rows, exCard } = G.drinkTally(s);
   return `
     <div class="flags">
-      <button class="flag ${s.turn.title ? 'on' : ''}" data-a="flag" data-flag="title">${icon(s.turn.title ? 'check' : 'mic')}Titel &amp; Interpret</button>
+      <button class="flag ${s.turn.title ? 'on' : ''}" data-a="flag" data-flag="title">${icon(s.turn.title ? 'check' : 'mic')}${esc(bonusLabel(s.turn.card))}</button>
       <button class="flag ${s.turn.year ? 'on' : ''}" data-a="flag" data-flag="year">${icon(s.turn.year ? 'check' : 'calendar')}Genaues Jahr</button>
     </div>
     <div class="flags-hint">Hat ${esc(me.name)} das richtig gesagt? Antippen.</div>
@@ -680,7 +685,7 @@ function timelineHTML(tl, { selected = null, claims = new Map(), canTap = () => 
     else h += `<div class="gap"><div class="slot"></div></div>`;
     if (g < tl.length) {
       const c = tl[g];
-      h += `<div class="tl-card ${c.id === newId ? 'new' : ''}" style="--h:${hue(c.year)}"><div class="y">${c.year}</div><div><div class="t">${esc(c.title)}</div><div class="a">${esc(c.artist)}</div></div></div>`;
+      h += `<div class="tl-card ${c.id === newId ? 'new' : ''}" style="--h:${hue(c.year)}"><div class="y">${c.year}</div><div><div class="t">${esc(cardTitle(c))}</div><div class="a">${esc(cardSub(c))}</div></div></div>`;
     }
   }
   return h;
@@ -771,7 +776,7 @@ function paintBottom() {
     const full = me.tokens >= G.MAX_TOKENS && !s.turn.bonusApplied;
     b.innerHTML = `
       <label class="bonus-row">
-        <div class="body"><div class="ttl">Titel &amp; Interpret gewusst?</div><div class="sub">${full ? 'Maximum von 5 Tokens erreicht' : `+1 Token für ${esc(me.name)}`}</div></div>
+        <div class="body"><div class="ttl">${s.turn.card?.show ? 'Serie erkannt?' : 'Titel &amp; Interpret gewusst?'}</div><div class="sub">${full ? 'Maximum von 5 Tokens erreicht' : `+1 Token für ${esc(me.name)}`}</div></div>
         <span class="switch ${full ? 'maxed' : ''}"><input type="checkbox" data-a="bonus" ${s.turn.bonus ? 'checked' : ''}><span></span></span>
       </label>
       <button class="btn" data-a="next">${nextLabel(s)}</button>`;
@@ -1056,7 +1061,7 @@ function openScores() {
     if (!card) return;
     haptic([10, 40, 10]);
     save();
-    toast(`${esc(p.name)} bekommt ${card.year}: ${esc(card.title)}`, 3000);
+    toast(`${esc(p.name)} bekommt ${card.year}: ${esc(cardTitle(card))}`, 3000);
     sh.paint();
     paintTop();
     paintHead();

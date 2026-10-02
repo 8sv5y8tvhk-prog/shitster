@@ -12,6 +12,7 @@ META = {
     'dekaden': {'icon': 'cassette', 'colors': ['#40c8e0', '#5e5ce6']},
     'rock': {'icon': 'flame', 'colors': ['#ff453a', '#3a0a0a']},
     'edm': {'icon': 'eq', 'colors': ['#00d4ff', '#bf5af2']},
+    'serien': {'icon': 'tv', 'colors': ['#ffd60a', '#ff6b35']},
 }
 
 index = []
