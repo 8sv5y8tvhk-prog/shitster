@@ -60,6 +60,7 @@ export function createGame({ names, songs, target, categories, mode = 'classic',
     turnsSinceDuel: 0,
     lastResult: null,
     winner: null,
+    endgame: null,
   };
   for (const p of state.players) p.timeline.push(draw(state));
   startTurn(state);
@@ -270,18 +271,57 @@ export function buyCard(s, playerId) {
   return card;
 }
 
+// Spielende mit „gleichen Zügen“:
+// Erreicht jemand das Ziel, wird die Runde zu Ende gespielt (Runde = Sitzreihenfolge ab Spieler 1).
+// Danach gewinnt, wer allein die meisten Karten hat. Bei Gleichstand: Stechen nur unter den Gleichstehenden,
+// Runde für Runde, bis jemand allein vorne liegt.
+// s.endgame = { type: 'final' | 'tiebreak', contenders: [ids] | null, queue: [Sitzindizes, die in dieser Runde noch dran sind] }
 function checkWinner(s) {
-  const w = s.players.find(p => p.timeline.length >= s.settings.target);
-  if (w && !s.winner) s.winner = w.id;
+  if (s.endgame || s.winner) return;
+  if (!s.players.some(p => p.timeline.length >= s.settings.target)) return;
+  const queue = [];
+  for (let i = s.current + 1; i < s.players.length; i++) queue.push(i);
+  s.endgame = { type: 'final', contenders: null, queue };
 }
 
+export const cardCount = p => p.timeline.length;
+
+// Wer liegt vorne? Im Stechen zählen nur die Gleichstehenden.
+export function leaders(s) {
+  const pool = s.endgame?.contenders ? s.players.filter(p => s.endgame.contenders.includes(p.id)) : s.players;
+  const max = Math.max(...pool.map(cardCount));
+  return pool.filter(p => cardCount(p) === max);
+}
+
+// Ist der laufende Zug der letzte vor der Auswertung?
+export const isLastTurn = s => !!s.endgame && s.endgame.queue.length === 0;
+
+// Spieler, die in der laufenden Endrunde noch nachziehen
+export const pendingPlayers = s => (s.endgame ? s.endgame.queue.map(i => s.players[i]) : []);
+
 function shouldDuel(s) {
-  return isDrink(s) && s.settings.drink.duel && s.players.length >= 2 && s.turnsSinceDuel >= DUEL_MIN_GAP && Math.random() < DUEL_CHANCE;
+  return !s.endgame && isDrink(s) && s.settings.drink.duel && s.players.length >= 2 && s.turnsSinceDuel >= DUEL_MIN_GAP && Math.random() < DUEL_CHANCE;
 }
 
 export function nextTurn(s) {
   if (s.winner) {
     s.phase = 'over';
+    return;
+  }
+  if (s.endgame) {
+    if (!s.endgame.queue.length) {
+      const top = leaders(s);
+      if (top.length === 1) {
+        s.winner = top[0].id;
+        s.phase = 'over';
+        return;
+      }
+      // Gleichstand → Stechen unter den Gleichstehenden, in Sitzreihenfolge
+      const ids = top.map(p => p.id);
+      s.endgame = { type: 'tiebreak', contenders: ids, queue: s.players.map((p, i) => (ids.includes(p.id) ? i : -1)).filter(i => i >= 0) };
+    }
+    s.current = s.endgame.queue.shift();
+    startTurn(s);
     return;
   }
   s.current = (s.current + 1) % s.players.length;

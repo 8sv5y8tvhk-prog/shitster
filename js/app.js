@@ -282,6 +282,8 @@ function renderRules() {
     <div class="large-title">Spielregeln</div>
     <div class="section"><div class="section-header">Ziel</div><div class="list"><div class="prose" style="padding-top:12px">
       <p>Baue als Erste:r eine Zeitleiste aus <b>10 Songs</b> (einstellbar) – sortiert nach Erscheinungsjahr.</p>
+      <p><b>Gleiche Züge für alle:</b> Erreicht jemand das Ziel, wird die Runde noch zu Ende gespielt – wer später dran ist, darf nachziehen. Gewonnen hat, wer dann allein die meisten Karten hat.</p>
+      <p><b>Stechen:</b> Bei Gleichstand spielen nur die Gleichstehenden weiter, Runde für Runde, bis jemand allein vorne liegt.</p>
     </div></div></div>
     <div class="section"><div class="section-header">Ein Zug</div><div class="list"><div class="prose" style="padding-top:12px">
       <p><b>1.</b> Jede:r startet mit einer aufgedeckten Karte und 2 Tokens.</p>
@@ -494,7 +496,7 @@ function paintTop() {
   screen.querySelector('#g-top').innerHTML = `
     <button class="circle-btn" data-a="menu" aria-label="Pause">${icon('x')}</button>
     <div class="scoreboard">${s.players.map((p, i) => `
-      <button class="score-chip ${i === s.current ? 'active' : ''}" style="--c:${p.color}" data-a="scores">
+      <button class="score-chip ${i === s.current ? 'active' : ''} ${s.endgame?.contenders && !s.endgame.contenders.includes(p.id) ? 'out' : ''}" style="--c:${p.color}" data-a="scores">
         ${avatar(p)}<span class="n">${p.timeline.length}/${s.settings.target}</span>${chipExtra(s, p)}
       </button>`).join('')}</div>
     <button class="circle-btn" data-a="scores" aria-label="Spielerübersicht">${icon('people')}</button>`;
@@ -520,7 +522,28 @@ function paintHead() {
   head.innerHTML = `
     <div class="kicker">${kicker}</div>
     <h1><span class="name">${esc(me.name)}</span></h1>
-    ${extra}`;
+    ${extra}
+    ${endgameBanner(s)}`;
+}
+
+const nameList = ps => {
+  const n = ps.map(p => esc(p.name));
+  return n.length > 1 ? n.slice(0, -1).join(', ') + ' & ' + n[n.length - 1] : n[0] || '';
+};
+
+function endgameBanner(s) {
+  const eg = s.endgame;
+  if (!eg) return '';
+  if (eg.type === 'tiebreak') {
+    const top = s.players.filter(p => eg.contenders.includes(p.id));
+    return `<div class="endgame-banner tiebreak">${icon('swords')}<span><b>Stechen</b> · ${nameList(top)}</span></div>`;
+  }
+  const reached = s.players.filter(p => p.timeline.length >= s.settings.target);
+  const me = G.activePlayer(s);
+  // Wer jetzt dran ist und das Ziel noch nicht hat, zieht gerade selbst nach
+  const pulling = (reached.includes(me) ? [] : [me]).concat(G.pendingPlayers(s));
+  const rest = pulling.length ? `Nachziehen: ${nameList(pulling)}` : 'Gleich wird ausgewertet';
+  return `<div class="endgame-banner">${icon('trophy')}<span><b>Letzte Runde</b> · ${nameList(reached)} ${reached.length > 1 ? 'haben' : 'hat'} ${s.settings.target} Karten · ${rest}</span></div>`;
 }
 
 function playerHTML(big = true) {
@@ -743,7 +766,7 @@ function paintBottom() {
       ? `<button class="btn white" data-a="duelreveal">${icon('sparkle')}Auflösen</button>`
       : du.loser ? `<button class="btn" data-a="duelnext">Weiter zu ${esc(me.name)}${icon('chev')}</button>` : '';
   } else if (s.phase === 'reveal' && G.isDrink(s)) {
-    b.innerHTML = `<button class="btn" data-a="next">${s.winner ? icon('trophy') + 'Zur Siegerehrung' : 'Nächster Zug' + icon('chev')}</button>`;
+    b.innerHTML = `<button class="btn" data-a="next">${nextLabel(s)}</button>`;
   } else if (s.phase === 'reveal') {
     const full = me.tokens >= G.MAX_TOKENS && !s.turn.bonusApplied;
     b.innerHTML = `
@@ -751,8 +774,12 @@ function paintBottom() {
         <div class="body"><div class="ttl">Titel &amp; Interpret gewusst?</div><div class="sub">${full ? 'Maximum von 5 Tokens erreicht' : `+1 Token für ${esc(me.name)}`}</div></div>
         <span class="switch ${full ? 'maxed' : ''}"><input type="checkbox" data-a="bonus" ${s.turn.bonus ? 'checked' : ''}><span></span></span>
       </label>
-      <button class="btn" data-a="next">${s.winner ? icon('trophy') + 'Zur Siegerehrung' : 'Nächster Zug' + icon('chev')}</button>`;
+      <button class="btn" data-a="next">${nextLabel(s)}</button>`;
   }
+}
+
+function nextLabel(s) {
+  return G.isLastTurn(s) ? icon('trophy') + 'Zur Auswertung' : 'Nächster Zug' + icon('chev');
 }
 
 async function ensureTrack() {
@@ -901,9 +928,20 @@ async function onGameClick(e) {
     ui.preparedId = null;
     ui.track = null;
     ui.tlScroll = 0;
+    const evaluated = G.isLastTurn(s);
     G.nextTurn(s);
     save();
     if (s.phase === 'over') return renderWinner('fade');
+    if (evaluated && s.endgame?.type === 'tiebreak') {
+      const top = s.players.filter(p => s.endgame.contenders.includes(p.id));
+      haptic([20, 60, 20]);
+      alertBox({
+        icon: 'swords', tone: 'gold',
+        title: 'Stechen!',
+        message: `${nameList(top)} haben je <b>${top[0].timeline.length} Karten</b>. Nur ihr spielt weiter – Runde für Runde, bis jemand allein vorne liegt. Kontern dürfen alle.`,
+        actions: [{ label: 'Los geht’s', value: true, style: 'primary' }],
+      });
+    }
     screen.querySelector('#g-tl').innerHTML = '';
     screen.classList.remove('enter-fade');
     void screen.offsetWidth;
@@ -1020,12 +1058,6 @@ function openScores() {
     sh.paint();
     paintTop();
     paintHead();
-    if (s.phase === 'listen' && s.winner) {
-      sh.close();
-      G.nextTurn(s);
-      save();
-      setTimeout(() => renderWinner('fade'), 400);
-    }
   });
 }
 
