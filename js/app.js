@@ -547,7 +547,10 @@ function endgameBanner(s) {
   const me = G.activePlayer(s);
   // Wer jetzt dran ist und das Ziel noch nicht hat, zieht gerade selbst nach
   const pulling = (reached.includes(me) ? [] : [me]).concat(G.pendingPlayers(s));
-  const rest = pulling.length ? `Nachziehen: ${nameList(pulling)}` : 'Gleich wird ausgewertet';
+  const decided = G.isLastTurn(s);
+  const rest = decided && reached.includes(me) ? 'Uneinholbar – gleich wird ausgewertet'
+    : decided ? `Letzter Zug: ${esc(me.name)}`
+    : `Nachziehen: ${nameList(pulling)}`;
   return `<div class="endgame-banner">${icon('trophy')}<span><b>Letzte Runde</b> · ${nameList(reached)} ${reached.length > 1 ? 'haben' : 'hat'} ${s.settings.target} Karten · ${rest}</span></div>`;
 }
 

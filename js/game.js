@@ -293,8 +293,28 @@ export function leaders(s) {
   return pool.filter(p => cardCount(p) === max);
 }
 
+// Bestmöglicher Kartengewinn eines Nachziehers bis Rundenende (obere Schranke):
+// eigener Zug +1, Karten kaufen mit Tokens (inkl. möglichem Bonus-Token), je ein Konter/HITSTER! in den Zügen der anderen Nachzieher.
+function maxGain(s, p) {
+  const others = s.endgame.queue.filter(i => s.players[i].id !== p.id).length;
+  const buys = isDrink(s) ? 0 : Math.floor((p.tokens + 1) / BUY_COST);
+  const steals = isDrink(s) && s.settings.drink.counter === 'off' ? 0 : others;
+  return 1 + buys + steals;
+}
+
+// Kann noch irgendein Nachzieher den Führenden einholen (Gleichstand reicht, dann gibt es ein Stechen)?
+function anyoneCanCatchUp(s) {
+  const top = cardCount(leaders(s)[0]);
+  return s.endgame.queue.some(i => {
+    const p = s.players[i];
+    if (s.endgame.contenders && !s.endgame.contenders.includes(p.id)) return false;
+    return cardCount(p) + maxGain(s, p) >= top;
+  });
+}
+
 // Ist der laufende Zug der letzte vor der Auswertung?
-export const isLastTurn = s => !!s.endgame && s.endgame.queue.length === 0;
+// Auch dann, wenn die übrigen Nachzieher den Führenden rechnerisch nicht mehr einholen können.
+export const isLastTurn = s => !!s.endgame && (s.endgame.queue.length === 0 || !anyoneCanCatchUp(s));
 
 // Spieler, die in der laufenden Endrunde noch nachziehen
 export const pendingPlayers = s => (s.endgame ? s.endgame.queue.map(i => s.players[i]) : []);
@@ -309,7 +329,7 @@ export function nextTurn(s) {
     return;
   }
   if (s.endgame) {
-    if (!s.endgame.queue.length) {
+    if (isLastTurn(s)) {
       const top = leaders(s);
       if (top.length === 1) {
         s.winner = top[0].id;
