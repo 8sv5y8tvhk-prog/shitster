@@ -779,7 +779,8 @@ function paintBottom() {
 }
 
 function nextLabel(s) {
-  return G.isLastTurn(s) ? icon('trophy') + 'Zur Auswertung' : 'Nächster Zug' + icon('chev');
+  // „Zur Auswertung“ nur am Ende der regulären letzten Runde, im Stechen einfach weiter
+  return G.isLastTurn(s) && s.endgame.type === 'final' ? icon('trophy') + 'Zur Auswertung' : 'Nächster Zug' + icon('chev');
 }
 
 async function ensureTrack() {
@@ -928,11 +929,12 @@ async function onGameClick(e) {
     ui.preparedId = null;
     ui.track = null;
     ui.tlScroll = 0;
-    const evaluated = G.isLastTurn(s);
+    const tiebreakStarts = G.isLastTurn(s) && s.endgame.type === 'final';
     G.nextTurn(s);
     save();
     if (s.phase === 'over') return renderWinner('fade');
-    if (evaluated && s.endgame?.type === 'tiebreak') {
+    // Dialog nur einmal beim Start des Stechens, nicht nach jeder Stech-Runde
+    if (tiebreakStarts && s.endgame?.type === 'tiebreak') {
       const top = s.players.filter(p => s.endgame.contenders.includes(p.id));
       haptic([20, 60, 20]);
       alertBox({
