@@ -25,6 +25,13 @@
    "show": "Space Jam"
   },
   {
+   "id": 5221072,
+   "artist": "Wolfi",
+   "title": "Welcome to the Club",
+   "year": 1996,
+   "show": "Tigerenten Club"
+  },
+  {
    "id": 531228911,
    "artist": "Susan Egan",
    "title": "I Won't Say (I'm in Love)",
@@ -72,6 +79,13 @@
    "title": "I'll Make a Man Out of You",
    "year": 1998,
    "show": "Mulan"
+  },
+  {
+   "id": 5221076,
+   "artist": "Fourtunes",
+   "title": "Alles ist relativ",
+   "year": 1998,
+   "show": "Schloss Einstein"
   },
   {
    "id": 603896,
@@ -158,6 +172,13 @@
    "show": "Kim Possible"
   },
   {
+   "id": 5221070,
+   "artist": "Alf Klimek",
+   "title": "Lauras Stern",
+   "year": 2002,
+   "show": "Lauras Stern"
+  },
+  {
    "id": 3118019,
    "artist": "Mark Keali'i Ho'omalu",
    "title": "Hawaiian Roller Coaster Ride",
@@ -170,6 +191,13 @@
    "title": "Main Title",
    "year": 2002,
    "show": "Spider-Man"
+  },
+  {
+   "id": 5221074,
+   "artist": "Ecco Meineke",
+   "title": "Willi wills wissen",
+   "year": 2002,
+   "show": "Willi wills wissen"
   },
   {
    "id": 635038,
@@ -226,6 +254,13 @@
    "title": "Found a Way",
    "year": 2004,
    "show": "Drake & Josh"
+  },
+  {
+   "id": 5221068,
+   "artist": "Saskia Tanfal",
+   "title": "Lilli legt los",
+   "year": 2004,
+   "show": "Hexe Lilli"
   },
   {
    "id": 79494752,
@@ -289,6 +324,20 @@
    "title": "We're All in This Together",
    "year": 2006,
    "show": "High School Musical"
+  },
+  {
+   "id": 5221075,
+   "artist": "Little Amadeus",
+   "title": "Little Amadeus, der Song",
+   "year": 2006,
+   "show": "Little Amadeus"
+  },
+  {
+   "id": 5221069,
+   "artist": "Eki Maas",
+   "title": "Die Welt ist elefantastisch",
+   "year": 2007,
+   "show": "Die Sendung mit dem Elefanten"
   },
   {
    "id": 5323464,
@@ -387,6 +436,13 @@
    "title": "Live to Party",
    "year": 2009,
    "show": "Jonas"
+  },
+  {
+   "id": 7488828,
+   "artist": "Kikaninchen",
+   "title": "KiKANiNCHEN-Titellied",
+   "year": 2009,
+   "show": "KiKANiNCHEN"
   },
   {
    "id": 3852711,

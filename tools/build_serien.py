@@ -23,6 +23,15 @@ SONGS = [
  ('Avatar – Der Herr der Elemente', 2005, 3466172801, 'Main Title', 'Jeremy Zuckerman'),
  ('H2O – Plötzlich Meerjungfrau', 2006, 1766399697, 'No Ordinary Girl', 'Kate Alexa'),
  ('Phineas und Ferb', 2007, 3725658642, 'Titelsong', 'Manuel Straube'),
+ # Deutsche Kinderserien (offizielle Titelsongs, KiKA/ARD)
+ ('Tigerenten Club', 1996, 5221072, 'Welcome to the Club', 'Wolfi'),
+ ('Schloss Einstein', 1998, 5221076, 'Alles ist relativ', 'Fourtunes'),
+ ('Lauras Stern', 2002, 5221070, 'Lauras Stern', 'Alf Klimek'),
+ ('Willi wills wissen', 2002, 5221074, 'Willi wills wissen', 'Ecco Meineke'),
+ ('Hexe Lilli', 2004, 5221068, 'Lilli legt los', 'Saskia Tanfal'),
+ ('Little Amadeus', 2006, 5221075, 'Little Amadeus, der Song', 'Little Amadeus'),
+ ('Die Sendung mit dem Elefanten', 2007, 5221069, 'Die Welt ist elefantastisch', 'Eki Maas'),
+ ('KiKANiNCHEN', 2009, 7488828, 'KiKANiNCHEN-Titellied', 'Kikaninchen'),
  # Disney Channel & Nickelodeon
  ('Raven blickt durch', 2003, 1165064092, "That's So Raven", 'Raven-Symoné'),
  ('Drake & Josh', 2004, 914388672, 'Found a Way', 'Drake Bell'),
